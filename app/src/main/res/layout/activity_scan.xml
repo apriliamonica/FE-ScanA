@@ -1,57 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#333333"
-    android:padding="16dp">
+    android:background="#000000">
 
-    <!-- Tombol Kembali -->
-    <LinearLayout
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/scanning_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_alignParentStart="true">
+        android:text="memindai..."
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_arrow_back"
-            android:contentDescription="Kembali" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kembali"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:layout_marginStart="8dp" />
-    </LinearLayout>
-
-    <!-- Kotak Kamera Real-Time -->
-    <FrameLayout
-        android:id="@+id/cameraPreview"
+    <ImageView
+        android:id="@+id/frame_overlay"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@drawable/scan_border"
-        android:layout_centerInParent="true">
+        android:src="@drawable/ic_scan_frame"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-        <androidx.camera.view.PreviewView
-            android:id="@+id/previewView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitCenter" />
-    </FrameLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/capture_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        android:background="#1E2550"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <!-- Tombol Scan -->
-    <ImageButton
-        android:id="@+id/btnScan"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_below="@id/cameraPreview"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/ic_camera_button"
-        android:contentDescription="Tombol Scan Kamera" />
-
-</RelativeLayout>
+        <ImageButton
+            android:id="@+id/capture_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_camera"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"/>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
