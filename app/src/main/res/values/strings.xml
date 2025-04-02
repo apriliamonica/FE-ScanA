@@ -1,0 +1,32 @@
+<resources>
+    <!-- Aplikasi name -->
+    <string name="app_name">Presensi Telapak Tangan</string>
+
+    <!-- Login -->
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login_button">Login</string>
+
+    <!-- Register -->
+    <string name="register">Pendaftaran</string>
+    <string name="register_button">Daftar</string>
+    <string name="confirm_password">Konfirmasi Password</string>
+
+    <!-- Riwayat Kehadiran -->
+    <string name="attendance_history">Riwayat Kehadiran</string>
+    <string name="view_attendance">Lihat Kehadiran</string>
+
+    <!-- Admin -->
+    <string name="admin">Halaman Admin</string>
+    <string name="admin_scan_hand">Scan Telapak Tangan</string>
+
+    <!-- Error Messages -->
+    <string name="error_invalid_credentials">Username atau Password salah.</string>
+    <string name="error_network">Terjadi kesalahan jaringan. Coba lagi nanti.</string>
+    <string name="error_empty_fields">Semua kolom harus diisi.</string>
+
+    <!-- Labels -->
+    <string name="hand_scan">Scan Telapak Tangan</string>
+    <string name="attendance_status">Status Kehadiran</string>
+</resources>

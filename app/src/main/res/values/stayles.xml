@@ -1,0 +1,21 @@
+<resources>
+    <!-- Tema Utama Aplikasi -->
+    <style name="Theme.PresensiTelapakTangan" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Warna primer dan sekunder -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Background dan elemen lainnya -->
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <!-- Tema untuk Activity tanpa ActionBar (seperti login) -->
+    <style name="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+</resources>
