@@ -2,7 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -80,8 +80,17 @@ dependencies {
 }
 
 buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
     dependencies {
-        classpath "com.android.tools.build:gradle:8.1.0"
+        classpath 'com.android.tools.build:gradle:7.4.0'
         classpath "com.google.dagger:hilt-android-gradle-plugin:2.50"
     }
+}
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
 }

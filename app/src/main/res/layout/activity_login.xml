@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_blue">
@@ -13,7 +12,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="15dp"
-        android:src="@drawable/logo_scanA"/>
+        android:src="@drawable/logo_scanA" />
 
     <!-- Container untuk konten utama -->
     <LinearLayout
@@ -35,7 +34,7 @@
             android:shadowDx="3"
             android:shadowDy="3"
             android:shadowRadius="8"
-            android:layout_marginBottom="40dp"/>
+            android:layout_marginBottom="40dp" />
 
         <!-- Label Nama Pengguna -->
         <LinearLayout
@@ -44,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginBottom="5dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:layout_gravity="end"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
         <!-- Input Nama Pengguna -->
@@ -65,7 +65,7 @@
             android:textColorHint="@color/gray"
             android:textColor="@android:color/black"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginBottom="15dp" />
 
         <!-- Label Kata Sandi -->
         <LinearLayout
@@ -74,6 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginBottom="5dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -81,7 +82,7 @@
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:layout_gravity="end"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
         <!-- Input Kata Sandi -->
@@ -97,7 +98,7 @@
             android:inputType="textPassword"
             android:elevation="6dp"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginBottom="25dp"/>
+            android:layout_marginBottom="25dp" />
 
         <!-- Tombol Masuk -->
         <Button
@@ -109,7 +110,7 @@
             android:textColor="@color/black"
             android:textSize="15sp"
             android:elevation="8dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp" />
 
         <!-- Belum punya akun? Daftar -->
         <TextView
@@ -121,7 +122,7 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:clickable="true"
-            android:focusable="true"/>
+            android:focusable="true" />
 
     </LinearLayout>
 </RelativeLayout>
