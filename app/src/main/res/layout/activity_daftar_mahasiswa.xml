@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:background="#1A2345"
     android:padding="16dp"
-    tools:context=".ui.DaftarMahasiswaActivity">
+    tools:context=".ui.admin.DaftarMahasiswaActivity">
 
     <!-- Tombol Kembali -->
     <Button
