@@ -3,14 +3,29 @@ package com.example.handscanattendance.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.handscanattendance.data.UserRepository
+import androidx.lifecycle.viewModelScope
+import com.example.handscanattendance.data.model.AuthResponse
+import com.example.handscanattendance.repository.AuthRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class AuthViewModel : ViewModel() {
-    private val userRepository = UserRepository()
+@HiltViewModel
+class AuthViewModel @Inject constructor(
+    private val authRepository: AuthRepository
+) : ViewModel() {
 
-    fun login(email: String, password: String): LiveData<Boolean> {
-        val result = MutableLiveData<Boolean>()
-        result.value = userRepository.login(email, password)
-        return result
+    private val _authResponse = MutableLiveData<AuthResponse>()
+    val authResponse: LiveData<AuthResponse> get() = _authResponse
+
+    fun login(username: String, password: String) {
+        viewModelScope.launch {
+            try {
+                val response = authRepository.login(username, password)
+                _authResponse.postValue(response)
+            } catch (e: Exception) {
+                _authResponse.postValue(AuthResponse(false, "Login failed"))
+            }
+        }
     }
 }

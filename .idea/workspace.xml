@@ -5,43 +5,42 @@
       <config />
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_mahasiswa.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home_admin.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home_mahasiswa.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_jadwal_perkuliahan.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
         <config>
-          <night>night</night>
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_riwayat_kehadiran.xml">
-        <config>
-          <theme>@style/Theme.PresensiTelapakTangan</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_scan.xml">
         <config>
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/admin/activity_daftar_mahasiswaBaru.xml">
-        <config>
-          <theme>@style/Theme.PresensiTelapakTangan</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/admin/activity_home_admin.xml">
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_mahasiswa.xml">
         <config>
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/admin/activity_jadwal_perkuliahan.xml">
-        <config>
-          <theme>@style/Theme.PresensiTelapakTangan</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/admin/activity_scan.xml">
-        <config>
-          <theme>@android:style/Theme.Material.Light</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/mahasiswa/activity_register.xml">
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/popup_tambah_mahasiswa.xml">
         <config>
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
@@ -52,50 +51,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a6ec975-8229-43dd-9aab-fda07b37e8dc" name="Changes" comment="atur struktur file admin dan mahasiswa">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/HandRecognition/HandRecognitionHelper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/HandRecognition/HandRecognitionModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/model/JadwalPerkuliahan.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/model/Mahasiswa.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/model/MataKuliah.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/model/RiwayatKehadiran.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/repository/JadwalPerkuliahanRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/repository/RiwayatPerkuliahanRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/presenter/AdminPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/presenter/AutPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/presenter/MahasiswaPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/admin/LoginActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/admin/RiwayatKehadiranAdminActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/admin/TambahJadwalActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/admin/TambahMahasiswaActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/mahasiswa/RegisterActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/mahasiswa/RiwayatKehadiranMahasiswaActivity.kt" afterDir="false" />
+    <list default="true" id="95860601-3780-4095-8183-9cb13cf40263" name="Changes" comment="pupup tambah mahasiswa">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_mahasiswa.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/HandRecognition/HandModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/HandRecognition/handModels.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/ApiService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/Jadwal.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/Mahasiswa.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/Presensi.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/UserRepository.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/model/JadwalModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/model/MataKuliahModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/model/PresensiModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/model/mahasiswaModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/network/ApiClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/network/ApiClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/network/ApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/network/ApiService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/network/NetworkUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/network/NetworkUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/repository/JadwalRepository.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/repository/MahasiswaRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/repository/MahasiswaRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/repository/MataKuliahRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/repository/MataKuliahRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/repository/PresensiRepository.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/admin/AdminHomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/admin/HomeAdminActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/auth/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/auth/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/auth/RegisterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/data/auth/RegisterActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/mahasiswa/MahasiswaHomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/mahasiswa/HomeMahasiswaActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/mahasiswa/RiwayatKehadiranActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/mahasiswa/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/utils/network/ApiResponseHandler.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/utils/network/NetworkUtils.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,59 +69,15 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="valueResourceFile" />
-        <option value="resourceFile" />
+        <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/april" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -178,19 +92,13 @@
     &quot;accountId&quot;: &quot;e0ec18c0-34c8-47ad-a0fb-8c3fd2cdff0c&quot;
   }
 }</component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/app/src/res/layout/activity_login.xml" root0="SKIP_INSPECTION" />
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2v4xsIlAbV0HUvX6e7QC3xNfJ9O" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2vAXNCLFGJc0hA7Ya3pvPcjYfyY" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -198,42 +106,105 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Android App.app.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Application.scanA.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;april&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/KULIAH/SEM 6/PPL/scanA/FE-ScanA&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/KULIAH/SEM 6/PPL/ScanA/FE-ScanA/app/src/main/res/layout/activity_home_admin.xml&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalResources&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app" />
+      <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\res\layout" />
       <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\res\layout\admin" />
-      <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\res\layout\mahasiswa" />
-      <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\java\com\example\handscanattendance\utils\auth" />
-      <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src" />
-      <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main" />
-    </key>
-    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="com.example.handscanattendance.utils.validation" />
-      <recent name="com.example.handscanattendance.utils.network" />
-      <recent name="com.example.handscanattendance.utils.date" />
-      <recent name="com.example.handscanattendance.ui.auth" />
-      <recent name="com.example.handscanattendance.ui" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example.handscanattendance" />
+      <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\java\com\example\handscanattendance" />
+      <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\java\com\example\handscanattendance\view\auth" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Android App.DaftarMahasiswaActivity">
+    <configuration name="DaftarMahasiswaActivity" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="FE-ScanA.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="specific_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="com.example.handscanattendance.ui.admin.DaftarMahasiswaActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="FE-ScanA.app" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
@@ -306,129 +277,70 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Android App.DaftarMahasiswaActivity" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6a6ec975-8229-43dd-9aab-fda07b37e8dc" name="Changes" comment="" />
-      <created>1743418352851</created>
+      <changelist id="95860601-3780-4095-8183-9cb13cf40263" name="Changes" comment="" />
+      <created>1743588819116</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1743418352851</updated>
+      <updated>1743588819116</updated>
     </task>
-    <task id="LOCAL-00001" summary="login">
+    <task id="LOCAL-00001" summary="hilt">
       <option name="closed" value="true" />
-      <created>1743430634414</created>
+      <created>1743597724825</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1743430634414</updated>
+      <updated>1743597724825</updated>
     </task>
-    <task id="LOCAL-00002" summary="activity">
+    <task id="LOCAL-00002" summary="home admin xml">
       <option name="closed" value="true" />
-      <created>1743430657622</created>
+      <created>1743671279958</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1743430657622</updated>
+      <updated>1743671279958</updated>
     </task>
-    <task id="LOCAL-00003" summary="rename">
+    <task id="LOCAL-00003" summary="grid home admin">
       <option name="closed" value="true" />
-      <created>1743469938755</created>
+      <created>1743672956636</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1743469938755</updated>
+      <updated>1743672956636</updated>
     </task>
-    <task id="LOCAL-00004" summary="build.gradle app adn project">
+    <task id="LOCAL-00004" summary="home mahasiswa">
       <option name="closed" value="true" />
-      <created>1743477388821</created>
+      <created>1743679496415</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1743477388821</updated>
+      <updated>1743679496415</updated>
     </task>
-    <task id="LOCAL-00005" summary="activity login">
+    <task id="LOCAL-00005" summary="Daftar mahasiswa xml">
       <option name="closed" value="true" />
-      <created>1743485099967</created>
+      <created>1743733216651</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1743485099967</updated>
+      <updated>1743733216651</updated>
     </task>
-    <task id="LOCAL-00006" summary="input rounded file">
+    <task id="LOCAL-00006" summary="pupup tambah mahasiswa">
       <option name="closed" value="true" />
-      <created>1743497390165</created>
+      <created>1743735444082</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1743497390165</updated>
+      <updated>1743735444082</updated>
     </task>
-    <task id="LOCAL-00007" summary="login xml">
-      <option name="closed" value="true" />
-      <created>1743505405848</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1743505405848</updated>
-    </task>
-    <task id="LOCAL-00008" summary="home gridlayout">
-      <option name="closed" value="true" />
-      <created>1743515605889</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1743515605889</updated>
-    </task>
-    <task id="LOCAL-00009" summary="home fitur button">
-      <option name="closed" value="true" />
-      <created>1743515662479</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1743515662479</updated>
-    </task>
-    <task id="LOCAL-00010" summary="add cameraactivity">
-      <option name="closed" value="true" />
-      <created>1743518116958</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1743518116960</updated>
-    </task>
-    <task id="LOCAL-00011" summary="strings.xml">
-      <option name="closed" value="true" />
-      <created>1743518171974</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1743518171974</updated>
-    </task>
-    <task id="LOCAL-00012" summary="add stayles.xml">
-      <option name="closed" value="true" />
-      <created>1743518288012</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1743518288012</updated>
-    </task>
-    <task id="LOCAL-00013" summary="struktur mvvp">
-      <option name="closed" value="true" />
-      <created>1743570233239</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1743570233239</updated>
-    </task>
-    <task id="LOCAL-00014" summary="atur struktur file admin dan mahasiswa">
-      <option name="closed" value="true" />
-      <created>1743573954188</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1743573954189</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -443,33 +355,40 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="login" />
-    <MESSAGE value="activity" />
-    <MESSAGE value="rename" />
-    <MESSAGE value="build.gradle app adn project" />
-    <MESSAGE value="activity login" />
-    <MESSAGE value="input rounded file" />
-    <MESSAGE value="login xml" />
-    <MESSAGE value="home gridlayout" />
-    <MESSAGE value="home fitur button" />
-    <MESSAGE value="add cameraactivity" />
-    <MESSAGE value="strings.xml" />
-    <MESSAGE value="add stayles.xml" />
-    <MESSAGE value="struktur mvvp" />
-    <MESSAGE value="atur struktur file admin dan mahasiswa" />
-    <option name="LAST_COMMIT_MESSAGE" value="atur struktur file admin dan mahasiswa" />
+    <MESSAGE value="hilt" />
+    <MESSAGE value="home admin xml" />
+    <MESSAGE value="grid home admin" />
+    <MESSAGE value="home mahasiswa" />
+    <MESSAGE value="Daftar mahasiswa xml" />
+    <MESSAGE value="pupup tambah mahasiswa" />
+    <option name="LAST_COMMIT_MESSAGE" value="pupup tambah mahasiswa" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/admin/DaftarMahasiswaActivity.kt</url>
+          <line>11</line>
+          <properties class="com.example.handscanattendance.ui.admin.DaftarMahasiswaActivity" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.example.handscanattendance">
           <value>
-            <CheckInfo lastCheckTimestamp="1743569949671" />
+            <CheckInfo lastCheckTimestamp="1743668499180" />
           </value>
         </entry>
         <entry key="com.example.handscanattendance.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1743569949671" />
+            <CheckInfo lastCheckTimestamp="1743668499179" />
           </value>
         </entry>
       </map>

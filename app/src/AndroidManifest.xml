@@ -1,47 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.presensitelapaktangan">
+    package="com.example.handscanattendance">
 
-    <!-- Izin untuk mengakses kamera -->
-    <uses-permission android:name="android.permission.CAMERA" />
-
-    <!-- Izin untuk akses internet -->
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <!-- Izin untuk penyimpanan jika diperlukan -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-    <!-- Fitur yang dibutuhkan oleh aplikasi -->
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
-    <uses-feature android:name="android.hardware.camera.front" android:required="true" />
-    <uses-feature android:name="android.hardware.touchscreen" android:required="true" />
-
-    <!-- Definisikan aplikasi dan versi SDK -->
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.PresensiTelapakTangan">
-        <!-- Main Activity (misalnya Activity Login) -->
-        <activity android:name=".LoginActivity"
-            android:label="@string/login"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <!-- Activity untuk pendaftaran -->
-        <activity android:name=".RegisterActivity" android:label="@string/register" />
-        <!-- Activity untuk riwayat kehadiran -->
-        <activity android:name=".AttendanceHistoryActivity" android:label="@string/attendance_history" />
-        <!-- Activity untuk scan telapak tangan (hanya untuk admin) -->
-        <activity android:name=".ScanActivity" android:label="@string/scan_hand" />
-        <!-- Activity untuk halaman admin -->
-        <activity android:name=".AdminActivity" android:label="@string/admin" />
-
-    </application>
-</manifest>
+        android:name=".MyApplication" <!-- Menunjukkan kelas MyApplication -->
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:theme="@style/Theme.ScanA">
+    <!-- Daftar aktivitas dan komponen lainnya -->
+    <activity
+        android:name=".ui.auth.LoginActivity"
+        android:label="Login"
+        android:theme="@style/Theme.ScanA">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+</application>
+    </manifest>
