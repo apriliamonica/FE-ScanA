@@ -30,12 +30,37 @@
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_riwayat_kehadiran.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_scan.xml">
         <config>
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_mahasiswa.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/popup_hapus_mahasiswa.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/popup_tambah_jadwal.xml">
         <config>
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
@@ -51,8 +76,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95860601-3780-4095-8183-9cb13cf40263" name="Changes" comment="pupup tambah mahasiswa">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_mahasiswa.xml" afterDir="false" />
+    <list default="true" id="95860601-3780-4095-8183-9cb13cf40263" name="Changes" comment="dafta mahasiswa">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/popup_tambah_jadwal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,8 +98,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -99,6 +125,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2vAXNCLFGJc0hA7Ya3pvPcjYfyY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -125,11 +154,15 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\java\com\example\handscanattendance\ui\admin" />
       <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app" />
       <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\res\layout" />
       <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\res\layout\admin" />
       <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\java\com\example\handscanattendance" />
-      <recent name="E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\java\com\example\handscanattendance\view\auth" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.handscanattendance.ui.admin.dialogs" />
+      <recent name="com.example.handscanattendance.data.auth" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.DaftarMahasiswaActivity">
@@ -340,7 +373,31 @@
       <option name="project" value="LOCAL" />
       <updated>1743735444082</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="item mahasiswa">
+      <option name="closed" value="true" />
+      <created>1743737943596</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743737943596</updated>
+    </task>
+    <task id="LOCAL-00008" summary="popup hapus xml">
+      <option name="closed" value="true" />
+      <created>1743749584706</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743749584706</updated>
+    </task>
+    <task id="LOCAL-00009" summary="dafta mahasiswa">
+      <option name="closed" value="true" />
+      <created>1743839129680</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743839129680</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -361,34 +418,22 @@
     <MESSAGE value="home mahasiswa" />
     <MESSAGE value="Daftar mahasiswa xml" />
     <MESSAGE value="pupup tambah mahasiswa" />
-    <option name="LAST_COMMIT_MESSAGE" value="pupup tambah mahasiswa" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/admin/DaftarMahasiswaActivity.kt</url>
-          <line>11</line>
-          <properties class="com.example.handscanattendance.ui.admin.DaftarMahasiswaActivity" method="&lt;init&gt;">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="item mahasiswa" />
+    <MESSAGE value="popup hapus xml" />
+    <MESSAGE value="dafta mahasiswa" />
+    <option name="LAST_COMMIT_MESSAGE" value="dafta mahasiswa" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.example.handscanattendance">
           <value>
-            <CheckInfo lastCheckTimestamp="1743668499180" />
+            <CheckInfo lastCheckTimestamp="1743842099103" />
           </value>
         </entry>
         <entry key="com.example.handscanattendance.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1743668499179" />
+            <CheckInfo lastCheckTimestamp="1743842099103" />
           </value>
         </entry>
       </map>

@@ -1,4 +1,4 @@
-package com.example.handscanattendance.data.repository
+package com.example.handscanattendance.repository
 
 class MataKuliahRepository {
 }

@@ -48,12 +48,12 @@
         <EditText
             android:id="@+id/et_nim"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_weight="1"
-            android:hint="Masukkan NIM"
             android:background="@android:color/white"
-            android:padding="8dp"
-            android:layout_marginStart="8dp"/>
+            android:hint="Masukkan NIM"
+            android:padding="8dp" />
 
         <Button
             android:id="@+id/btn_cari"
@@ -152,13 +152,54 @@
             android:layout_marginStart="8dp"/>
     </LinearLayout>
 
-    <!-- RecyclerView untuk tabel mahasiswa -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_daftar_mahasiswa"
+<!--    &lt;!&ndash; RecyclerView untuk tabel mahasiswa &ndash;&gt;-->
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_daftar_mahasiswa"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:background="@android:color/white"-->
+<!--        android:padding="8dp"/>-->
+<!--    -->
+    <!-- tabel daftar mahasiswa-->
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tableLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_weight="1"
-        android:background="@android:color/white"
-        android:padding="8dp"/>
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TableRow android:background="#CCCCCC">
+            <TextView
+                android:text="No"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="NIM"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Nama Mahasiswa"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Kelas"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Status"
+                android:padding="6dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="1" android:padding="8dp" android:textColor="@color/white"/>
+            <TextView android:text="22013022" android:padding="8dp" android:textColor="@color/white"/>
+            <TextView android:text="Monica Pandeiroth" android:padding="8dp" android:textColor="@color/white"/>
+            <TextView android:text="B" android:padding="8dp" android:textColor="@color/white"/>
+            <TextView android:text="Aktif" android:padding="10dp" android:textColor="@color/white"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout
