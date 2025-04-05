@@ -1,6 +1,5 @@
 package com.example.handscanattendance.network
 
-import com.example.handscanattendance.data.model.AuthResponse
 import retrofit2.http.Body
 import retrofit2.http.POST
 
