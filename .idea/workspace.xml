@@ -76,9 +76,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95860601-3780-4095-8183-9cb13cf40263" name="Changes" comment="dafta mahasiswa">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/popup_tambah_jadwal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
+    <list default="true" id="95860601-3780-4095-8183-9cb13cf40263" name="Changes" comment="popup tambah jadwal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -397,7 +395,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743839129680</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="popup tambah jadwal">
+      <option name="closed" value="true" />
+      <created>1743854036955</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743854036955</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -421,19 +427,20 @@
     <MESSAGE value="item mahasiswa" />
     <MESSAGE value="popup hapus xml" />
     <MESSAGE value="dafta mahasiswa" />
-    <option name="LAST_COMMIT_MESSAGE" value="dafta mahasiswa" />
+    <MESSAGE value="popup tambah jadwal" />
+    <option name="LAST_COMMIT_MESSAGE" value="popup tambah jadwal" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.example.handscanattendance">
           <value>
-            <CheckInfo lastCheckTimestamp="1743842099103" />
+            <CheckInfo lastCheckTimestamp="1743943836253" />
           </value>
         </entry>
         <entry key="com.example.handscanattendance.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1743842099103" />
+            <CheckInfo lastCheckTimestamp="1743943836253" />
           </value>
         </entry>
       </map>
