@@ -1,17 +1,13 @@
-package com.example.scanapp
+package com.example.handscanattendance.ui
 
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import android.view.Surface
-import android.view.View
-import android.widget.ImageButton
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.handscanattendance.databinding.ActivityScanBinding
 import java.util.concurrent.ExecutorService
