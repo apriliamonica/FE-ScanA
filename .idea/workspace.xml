@@ -40,16 +40,6 @@
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
-        <config>
-          <theme>@android:style/Theme.Material.Light</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_riwayat_kehadiran.xml">
-        <config>
-          <theme>@android:style/Theme.Material.Light</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_scan.xml">
         <config>
           <theme>@android:style/Theme.Material.Light</theme>
@@ -60,22 +50,22 @@
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_tambah_mata_kuliah.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_mahasiswa.xml">
         <config>
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/popup_hapus_mahasiswa.xml">
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_mahasiswa_per_mk.xml">
         <config>
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/popup_tambah_jadwal.xml">
-        <config>
-          <theme>@android:style/Theme.Material.Light</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/popup_tambah_mahasiswa.xml">
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_mata_kuliah.xml">
         <config>
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
@@ -86,30 +76,24 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95860601-3780-4095-8183-9cb13cf40263" name="Changes" comment="atur folder">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mahasiswa_per_mk.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mata_kuliah.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_tambah_mahasiswa.xml" afterDir="false" />
+    <list default="true" id="95860601-3780-4095-8183-9cb13cf40263" name="Changes" comment="ubah dialog_tambah_mata_kuliah.xml">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.10/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/MyApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/MyApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/admin/AdminHomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/admin/AdminHomeActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/admin/JadwalActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/admin/JadwalActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/admin/ScanActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/admin/ScanActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logo_scanA.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/logo_scana.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_mahasiswa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_mahasiswa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home_admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_riwayat_kehadiran.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/auth/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/ui/auth/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/view/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/handscanattendance/view/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +103,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=FirebaseDirectAccess, isTemplate=true, identifier=model_id=tokay/34)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\ACER\.android\avd\Pixel_8.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -377,7 +361,39 @@
       <option name="project" value="LOCAL" />
       <updated>1743961471782</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="mata kuliah xml">
+      <option name="closed" value="true" />
+      <created>1744703798231</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1744703798231</updated>
+    </task>
+    <task id="LOCAL-00014" summary="mata kuliah xml">
+      <option name="closed" value="true" />
+      <created>1744703824883</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1744703824883</updated>
+    </task>
+    <task id="LOCAL-00015" summary="tambah mahasiswa di mata kuliah">
+      <option name="closed" value="true" />
+      <created>1744704974660</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1744704974660</updated>
+    </task>
+    <task id="LOCAL-00016" summary="ubah dialog_tambah_mata_kuliah.xml">
+      <option name="closed" value="true" />
+      <created>1744728630377</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1744728630378</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -403,19 +419,22 @@
     <MESSAGE value="dafta mahasiswa" />
     <MESSAGE value="popup tambah jadwal" />
     <MESSAGE value="atur folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="atur folder" />
+    <MESSAGE value="mata kuliah xml" />
+    <MESSAGE value="tambah mahasiswa di mata kuliah" />
+    <MESSAGE value="ubah dialog_tambah_mata_kuliah.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="ubah dialog_tambah_mata_kuliah.xml" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.example.handscanattendance">
           <value>
-            <CheckInfo lastCheckTimestamp="1744699238184" />
+            <CheckInfo lastCheckTimestamp="1744801127543" />
           </value>
         </entry>
         <entry key="com.example.handscanattendance.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1744699238168" />
+            <CheckInfo lastCheckTimestamp="1744801127541" />
           </value>
         </entry>
       </map>

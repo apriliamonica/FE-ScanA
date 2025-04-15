@@ -6,6 +6,9 @@ import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.handscanattendance.R
+import com.example.handscanattendance.ui.mahasiswa.MahasiswaActivity
+
+
 
 class AdminHomeActivity : AppCompatActivity() {
 
@@ -23,7 +26,7 @@ class AdminHomeActivity : AppCompatActivity() {
         // Logout
         logoutButton.setOnClickListener {
             // Kembali ke halaman login (misal LoginActivity)
-            val intent = Intent(this, com.example.handscanattendance.ui.LoginActivity::class.java)
+            val intent = Intent(this, com.example.handscanattendance.ui.auth.LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
