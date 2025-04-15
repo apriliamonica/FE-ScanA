@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pilih Mahasiswa"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <LinearLayout
+            android:id="@+id/container_mahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Checkbox untuk setiap mahasiswa akan ditambahkan via program -->
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_simpan_mahasiswa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:backgroundTint="#FFD700"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

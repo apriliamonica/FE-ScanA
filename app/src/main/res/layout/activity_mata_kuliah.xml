@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/dark_blue"
+    tools:context=".ui.MataKuliahActivity">
+
+    <Button
+        android:id="@+id/btn_kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\u2B05 Kembali"
+        android:textColor="@android:color/white"
+        android:background="@android:color/transparent"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DAFTAR MATA KULIAH"
+        android:textColor="#FFD700"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_tambah_mk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah Mata Kuliah"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFD700"
+        android:textColor="#000000" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TableLayout
+            android:id="@+id/tableLayoutMK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow android:background="#CCCCCC">
+                <TextView android:text="No" android:padding="8dp" android:textStyle="bold" />
+                <TextView android:text="ID MK" android:padding="8dp" android:textStyle="bold" />
+                <TextView android:text="Mata Kuliah" android:padding="8dp" android:textStyle="bold" />
+                <TextView android:text="Semester" android:padding="8dp" android:textStyle="bold" />
+                <TextView android:text="Tahun" android:padding="8dp" android:textStyle="bold" />
+                <TextView android:text="Aksi" android:padding="8dp" android:textStyle="bold" />
+            </TableRow>
+
+            <!-- Data akan diisi dinamis lewat kode -->
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

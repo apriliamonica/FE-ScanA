@@ -152,16 +152,16 @@
             android:layout_marginStart="8dp"/>
     </LinearLayout>
 
-<!--    &lt;!&ndash; RecyclerView untuk tabel mahasiswa &ndash;&gt;-->
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/rv_daftar_mahasiswa"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:layout_weight="1"-->
-<!--        android:background="@android:color/white"-->
-<!--        android:padding="8dp"/>-->
-<!--    -->
+        <!-- RecyclerView untuk tabel mahasiswa -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_daftar_mahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:padding="8dp"/>
+
     <!-- tabel daftar mahasiswa-->
     <TableLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -202,4 +202,4 @@
             <TextView android:text="Aktif" android:padding="10dp" android:textColor="@color/white"/>
         </TableRow>
     </TableLayout>
-</LinearLayout
+</LinearLayout>

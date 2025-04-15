@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1A2345">
+    android:background="#1A2345"
+    tools:context=".ui.admin.AdminHomeActivity">
 
     <!-- Tombol Logout -->
     <ImageButton
@@ -17,7 +18,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"/>
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Logout Button"/>
 
     <!-- Logo -->
     <ImageView
@@ -29,7 +31,8 @@
         app:layout_constraintTop_toBottomOf="@id/logout_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:contentDescription="Logo aplikasi ScanA"/>
 
     <!-- Nama Aplikasi -->
     <TextView
@@ -72,6 +75,7 @@
                 android:text="Scan Kehadiran"
                 android:textStyle="bold"
                 android:padding="12dp"
+                android:textColor="#1A2345"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
@@ -96,13 +100,15 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
                     android:layout_columnWeight="1"
-                    android:backgroundTint="@color/white">
+                    android:backgroundTint="@color/white"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground">
 
                     <Button
                         android:id="@+id/schedule_button"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:padding="5dp"
+                        android:padding="10dp"
                         android:text="Jadwal Perkuliahan"
                         android:textColor="#1A2345"
                         android:textStyle="bold"
@@ -117,7 +123,9 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
                     android:layout_columnWeight="1"
-                    android:backgroundTint="@color/white">
+                    android:backgroundTint="@color/white"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground">
 
                     <Button
                         android:id="@+id/student_list_button"
@@ -138,13 +146,15 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
                     android:layout_columnWeight="1"
-                    android:backgroundTint="@color/white">
+                    android:backgroundTint="@color/white"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground">
 
                     <Button
                         android:id="@+id/course_button"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:padding="5dp"
+                        android:padding="10dp"
                         android:text="Mata Kuliah"
                         android:textColor="#1A2345"
                         android:textStyle="bold"
@@ -159,7 +169,9 @@
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp"
                     android:layout_columnWeight="1"
-                    android:backgroundTint="@color/white">
+                    android:backgroundTint="@color/white"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground">
 
                     <Button
                         android:id="@+id/attendance_history_button"

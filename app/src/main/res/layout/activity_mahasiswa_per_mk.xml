@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btn_kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\u2B05 Kembali"
+        android:textColor="@android:color/white"
+        android:background="@android:color/transparent"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mahasiswa di MK: "
+        android:textColor="#FFD700"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_tambah_mahasiswa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah Mahasiswa"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFD700"
+        android:textColor="#000000" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <TableLayout
+            android:id="@+id/tableLayoutMahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow android:background="#CCCCCC">
+                <TextView android:text="No" android:padding="8dp" android:textStyle="bold" />
+                <TextView android:text="NIM" android:padding="8dp" android:textStyle="bold" />
+                <TextView android:text="Nama" android:padding="8dp" android:textStyle="bold" />
+                <TextView android:text="Aksi" android:padding="8dp" android:textStyle="bold" />
+            </TableRow>
+
+            <!-- Data mahasiswa akan dimuat dinamis -->
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
