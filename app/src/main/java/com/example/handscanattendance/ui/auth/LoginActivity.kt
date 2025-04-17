@@ -1,44 +1,65 @@
 package com.example.handscanattendance.ui.auth
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.*
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.handscanattendance.R
+import com.example.handscanattendance.api.ApiService
+import com.example.handscanattendance.model.LoginCredentials
+import com.example.handscanattendance.model.LoginResponse
+import com.example.handscanattendance.network.RetrofitClient
+import kotlinx.android.synthetic.main.activity_login.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
-
-    private lateinit var etUsername: EditText
-    private lateinit var etPassword: EditText
-    private lateinit var btnLogin: Button
-    private lateinit var tvRegister: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        etUsername = findViewById(R.id.etUsername)
-        etPassword = findViewById(R.id.etPassword)
-        btnLogin = findViewById(R.id.btnLogin)
-        tvRegister = findViewById(R.id.tvRegister)
-
+        // Ketika tombol login diklik
         btnLogin.setOnClickListener {
             val username = etUsername.text.toString()
             val password = etPassword.text.toString()
 
-            // Dummy Login: bisa ganti dengan API call
-            if (username == "admin" && password == "admin123") {
-                Toast.makeText(this, "Login berhasil sebagai Admin", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, AdminHomeActivity::class.java))
-                finish()
+            if (username.isNotEmpty() && password.isNotEmpty()) {
+                val credentials = LoginCredentials(username, password)
+                loginUser(credentials)
             } else {
-                Toast.makeText(this, "Username atau Password salah", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Harap isi semua kolom", Toast.LENGTH_SHORT).show()
             }
         }
+    }
 
-        tvRegister.setOnClickListener {
-            // Pindah ke halaman registrasi
-            startActivity(Intent(this, RegisterActivity::class.java))
-        }
+    private fun loginUser(credentials: LoginCredentials) {
+        val apiService = RetrofitClient.instance.create(ApiService::class.java)
+        val call = apiService.login(credentials)
+
+        call.enqueue(object : Callback<LoginResponse> {
+            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+                if (response.isSuccessful) {
+                    val loginResponse = response.body()
+                    if (loginResponse != null && loginResponse.success) {
+                        // Login berhasil, arahkan ke AdminHomeActivity
+                        Toast.makeText(applicationContext, "Login berhasil", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this@LoginActivity, AdminHomeActivity::class.java))
+                        finish()
+                    } else {
+                        // Login gagal
+                        Toast.makeText(applicationContext, "Username atau Password salah", Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    // Respons tidak sukses
+                    Toast.makeText(applicationContext, "Terjadi kesalahan saat login", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                // Jika gagal koneksi
+                Toast.makeText(applicationContext, "Gagal terkoneksi dengan server", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 }

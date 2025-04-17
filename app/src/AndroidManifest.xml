@@ -17,9 +17,18 @@
             </intent-filter>
         </activity>
 
+
         <!-- Login & Register -->
-        <activity android:name="com.example.handscanattendance.ui.auth.LoginActivity" />
-        <activity android:name="com.example.handscanattendance.ui.auth.RegisterActivity" />
+        <activity android:name=".ui.admin.AdminHomeActivity"/>
+        <activity android:name=".ui.auth.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <uses-permission android:name="android.permission.INTERNET"/>
+
 
         <!-- Admin Activities -->
         <activity android:name="com.example.handscanattendance.ui.admin.AdminHomeActivity" />

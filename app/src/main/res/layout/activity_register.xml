@@ -10,29 +10,31 @@
         android:orientation="vertical">
 
         <!-- Logo & Judul -->
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end|center_vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Daftar"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="@color/yellow"
+                android:gravity="center" />
 
             <ImageView
                 android:id="@+id/logoScanA"
                 android:layout_width="120dp"
                 android:layout_height="80dp"
-                android:layout_alignParentEnd="true"
                 android:src="@drawable/logo_scanA"
-                android:layout_marginTop="20dp" />
-
-            <TextView
-                android:id="@+id/tvTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Daftar"
-                android:textSize="36sp"
-                android:textStyle="bold"
-                android:textColor="@color/yellow"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp" />
-        </RelativeLayout>
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
 
         <View android:layout_height="30dp" android:layout_width="match_parent" />
 
@@ -40,15 +42,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NIM "
+            android:text="NIM *"
             android:textColor="@android:color/white"
-            android:textSize="14sp"
-            android:layout_marginTop="10dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*"
-            android:textColor="#FF0000"
             android:textSize="14sp" />
 
         <EditText
@@ -64,14 +59,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama Lengkap "
+            android:text="Nama Lengkap *"
             android:textColor="@android:color/white"
-            android:textSize="14sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*"
-            android:textColor="#FF0000"
             android:textSize="14sp" />
 
         <EditText
@@ -88,16 +77,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nomor Telepon "
+            android:text="Nomor Telepon *"
             android:textColor="@android:color/white"
             android:textSize="14sp"
             android:layout_marginTop="10dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*"
-            android:textColor="#FF0000"
-            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/etPhone"
@@ -113,16 +96,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email "
+            android:text="Email *"
             android:textColor="@android:color/white"
             android:textSize="14sp"
             android:layout_marginTop="10dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*"
-            android:textColor="#FF0000"
-            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/etEmail"
@@ -138,16 +115,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kelas "
+            android:text="Kelas *"
             android:textColor="@android:color/white"
             android:textSize="14sp"
             android:layout_marginTop="10dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*"
-            android:textColor="#FF0000"
-            android:textSize="14sp" />
 
         <Spinner
             android:id="@+id/spinnerKelas"
@@ -160,16 +131,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kata Sandi "
+            android:text="Kata Sandi *"
             android:textColor="@android:color/white"
             android:textSize="14sp"
             android:layout_marginTop="10dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*"
-            android:textColor="#FF0000"
-            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/etPassword"
@@ -185,16 +150,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Konfirmasi Kata Sandi "
+            android:text="Konfirmasi Kata Sandi *"
             android:textColor="@android:color/white"
             android:textSize="14sp"
             android:layout_marginTop="10dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*"
-            android:textColor="#FF0000"
-            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/etConfirmPassword"
@@ -274,6 +233,5 @@
             android:textColor="@android:color/white"
             android:textSize="14sp"
             android:layout_gravity="center" />
-
     </LinearLayout>
 </ScrollView>
