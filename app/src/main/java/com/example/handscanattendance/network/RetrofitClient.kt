@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    private const val BASE_URL = "https://your-backend-url.com/"  // Ganti dengan URL backend kamu
+    private const val BASE_URL = "http://192.168.218.39:5000"  // Ganti dengan URL backend kamu
 
     val instance: Retrofit by lazy {
         Retrofit.Builder()
