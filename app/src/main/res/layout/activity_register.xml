@@ -32,7 +32,7 @@
                 android:id="@+id/logoScanA"
                 android:layout_width="120dp"
                 android:layout_height="80dp"
-                android:src="@drawable/logo_scanA"
+                android:src="@drawable/logo_scana"
                 android:layout_marginStart="8dp" />
         </LinearLayout>
 

@@ -1,54 +1,70 @@
 [
     {
-        "merged": "com.example.handscanattendance.app-mergeDebugResources-39:/layout/item_mahasiswa_per_mk.xml",
-        "source": "com.example.handscanattendance.app-main-42:/layout/item_mahasiswa_per_mk.xml"
-    },
-    {
-        "merged": "com.example.handscanattendance.app-mergeDebugResources-39:/layout/activity_daftar_mahasiswa.xml",
-        "source": "com.example.handscanattendance.app-main-42:/layout/activity_daftar_mahasiswa.xml"
-    },
-    {
         "merged": "com.example.handscanattendance.app-mergeDebugResources-39:/layout/activity_home_admin.xml",
         "source": "com.example.handscanattendance.app-main-42:/layout/activity_home_admin.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-mergeDebugResources-39:/layout/dialog_tambah_mata_kuliah.xml",
-        "source": "com.example.handscanattendance.app-main-42:/layout/dialog_tambah_mata_kuliah.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\activity_home_mahasiswa.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\activity_home_mahasiswa.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-mergeDebugResources-39:/layout/activity_mata_kuliah.xml",
-        "source": "com.example.handscanattendance.app-main-42:/layout/activity_mata_kuliah.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\dialog_tambah_mata_kuliah.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\dialog_tambah_mata_kuliah.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-mergeDebugResources-39:/layout/activity_scan.xml",
-        "source": "com.example.handscanattendance.app-main-42:/layout/activity_scan.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\dialog_tambah_mahasiswa.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\dialog_tambah_mahasiswa.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-mergeDebugResources-39:/layout/activity_home_mahasiswa.xml",
-        "source": "com.example.handscanattendance.app-main-42:/layout/activity_home_mahasiswa.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\activity_mata_kuliah.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\activity_mata_kuliah.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-mergeDebugResources-39:/layout/activity_jadwal_perkuliahan.xml",
-        "source": "com.example.handscanattendance.app-main-42:/layout/activity_jadwal_perkuliahan.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\item_mahasiswa_per_mk.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\item_mahasiswa_per_mk.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-mergeDebugResources-39:/layout/dialog_tambah_mahasiswa.xml",
-        "source": "com.example.handscanattendance.app-main-42:/layout/dialog_tambah_mahasiswa.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\item_mata_kuliah.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\item_mata_kuliah.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-mergeDebugResources-39:/layout/item_mata_kuliah.xml",
-        "source": "com.example.handscanattendance.app-main-42:/layout/item_mata_kuliah.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\activity_scan.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\activity_scan.xml"
+    },
+    {
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\activity_daftar_mahasiswa.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\activity_daftar_mahasiswa.xml"
+    },
+    {
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\activity_jadwal_perkuliahan.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\activity_jadwal_perkuliahan.xml"
+    },
+    {
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\activity_register.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\item_mahasiswa.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\item_mahasiswa.xml"
     },
     {
         "merged": "com.example.handscanattendance.app-mergeDebugResources-39:/layout/activity_login.xml",
         "source": "com.example.handscanattendance.app-main-42:/layout/activity_login.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-mergeDebugResources-39:/layout/activity_mahasiswa_per_mk.xml",
-        "source": "com.example.handscanattendance.app-main-42:/layout/activity_mahasiswa_per_mk.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\activity_home_admin.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\activity_home_admin.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-mergeDebugResources-39:/layout/item_mahasiswa.xml",
-        "source": "com.example.handscanattendance.app-main-42:/layout/item_mahasiswa.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\activity_mahasiswa_per_mk.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\activity_mahasiswa_per_mk.xml"
+    },
+    {
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-39:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\activity_main.xml"
     }
 ]

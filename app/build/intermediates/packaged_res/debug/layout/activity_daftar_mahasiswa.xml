@@ -31,7 +31,7 @@
         android:gravity="center"
         android:layout_marginTop="16dp"/>
 
-    <!-- Form Pencarian -->
+    <!-- Form Pencarian: Nama -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,56 +42,44 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NIM"
-            android:textColor="@android:color/white"/>
+            android:text="Nama"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp"/>
 
         <EditText
-            android:id="@+id/et_nim"
+            android:id="@+id/et_nama"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:background="@android:color/white"
-            android:hint="Masukkan NIM"
+            android:hint="Masukkan nama"
             android:padding="8dp" />
 
         <Button
             android:id="@+id/btn_cari"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_marginStart="8dp"
             android:backgroundTint="@android:color/white"
             android:text="Cari"
             android:textColor="#000000" />
     </LinearLayout>
 
-    <!-- Filter Semester, Tahun Akademik, MK -->
+
+    <!-- Filter Tahun Akademik dan MK -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Semester"
+            android:text="Tahun"
             android:textColor="@android:color/white"/>
-
-        <Spinner
-            android:id="@+id/spinner_semester"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:background="@android:color/white"
-            android:layout_marginStart="8dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tahun Akademik"
-            android:textColor="@android:color/white"
-            android:layout_marginStart="8dp"/>
 
         <Spinner
             android:id="@+id/spinner_tahun"
@@ -100,29 +88,23 @@
             android:layout_weight="1"
             android:background="@android:color/white"
             android:layout_marginStart="8dp"/>
-    </LinearLayout>
-
-    <!-- Filter MK -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="8dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MK"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:layout_marginStart="8dp"/>
 
         <Spinner
             android:id="@+id/spinner_mk"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:background="@android:color/white"
             android:layout_marginStart="8dp"/>
     </LinearLayout>
+
 
     <!-- Tombol Tambah dan Hapus -->
     <LinearLayout
@@ -152,54 +134,41 @@
             android:layout_marginStart="8dp"/>
     </LinearLayout>
 
-        <!-- RecyclerView untuk tabel mahasiswa -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_daftar_mahasiswa"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:background="@android:color/white"
-            android:padding="8dp"/>
-
-    <!-- tabel daftar mahasiswa-->
-    <TableLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/tableLayout"
+    <!-- Tabel Daftar Mahasiswa -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:stretchColumns="*"
-        android:padding="16dp">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp">
 
-        <!-- Header -->
-        <TableRow android:background="#CCCCCC">
-            <TextView
-                android:text="No"
-                android:padding="8dp"
-                android:textStyle="bold"/>
-            <TextView
-                android:text="NIM"
-                android:padding="8dp"
-                android:textStyle="bold"/>
-            <TextView
-                android:text="Nama Mahasiswa"
-                android:padding="8dp"
-                android:textStyle="bold"/>
-            <TextView
-                android:text="Kelas"
-                android:padding="8dp"
-                android:textStyle="bold"/>
-            <TextView
-                android:text="Status"
-                android:padding="6dp"
-                android:textStyle="bold"/>
-        </TableRow>
-        <TableRow>
-            <TextView android:text="1" android:padding="8dp" android:textColor="@color/white"/>
-            <TextView android:text="22013022" android:padding="8dp" android:textColor="@color/white"/>
-            <TextView android:text="Monica Pandeiroth" android:padding="8dp" android:textColor="@color/white"/>
-            <TextView android:text="B" android:padding="8dp" android:textColor="@color/white"/>
-            <TextView android:text="Aktif" android:padding="10dp" android:textColor="@color/white"/>
-        </TableRow>
-    </TableLayout>
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="8dp">
+
+            <!-- Header -->
+            <TableRow android:background="#CCCCCC">
+                <TextView android:text="No" android:padding="8dp" android:textStyle="bold"/>
+                <TextView android:text="NIM" android:padding="8dp" android:textStyle="bold"/>
+                <TextView android:text="Nama" android:padding="8dp" android:textStyle="bold"/>
+                <TextView android:text="Kelas" android:padding="8dp" android:textStyle="bold"/>
+                <TextView android:text="Email" android:padding="8dp" android:textStyle="bold"/>
+                <TextView android:text="No. Telp" android:padding="8dp" android:textStyle="bold"/>
+                <TextView android:text="Status" android:padding="8dp" android:textStyle="bold"/>
+            </TableRow>
+
+            <!-- Contoh Data -->
+            <TableRow>
+                <TextView android:text="1" android:padding="8dp" android:textColor="@color/white"/>
+                <TextView android:text="22013022" android:padding="8dp" android:textColor="@color/white"/>
+                <TextView android:text="Monica Pandeiroth" android:padding="8dp" android:textColor="@color/white"/>
+                <TextView android:text="B" android:padding="8dp" android:textColor="@color/white"/>
+                <TextView android:text="monica@email.com" android:padding="8dp" android:textColor="@color/white"/>
+                <TextView android:text="08123456789" android:padding="8dp" android:textColor="@color/white"/>
+                <TextView android:text="Aktif" android:padding="8dp" android:textColor="@color/white"/>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
 </LinearLayout>

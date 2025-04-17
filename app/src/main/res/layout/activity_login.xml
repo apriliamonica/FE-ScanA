@@ -12,7 +12,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="15dp"
-        android:src="@drawable/logo_scanA" />
+        android:src="@drawable/logo_scana" />
 
     <!-- Container untuk konten utama -->
     <LinearLayout

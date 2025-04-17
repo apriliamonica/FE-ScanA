@@ -11,7 +11,6 @@ import android.widget.Spinner;
 import android.widget.TableLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.handscanattendance.R;
@@ -36,16 +35,10 @@ public final class ActivityDaftarMahasiswaBinding implements ViewBinding {
   public final Button btnTambah;
 
   @NonNull
-  public final EditText etNim;
-
-  @NonNull
-  public final RecyclerView rvDaftarMahasiswa;
+  public final EditText etNama;
 
   @NonNull
   public final Spinner spinnerMk;
-
-  @NonNull
-  public final Spinner spinnerSemester;
 
   @NonNull
   public final Spinner spinnerTahun;
@@ -55,18 +48,15 @@ public final class ActivityDaftarMahasiswaBinding implements ViewBinding {
 
   private ActivityDaftarMahasiswaBinding(@NonNull LinearLayout rootView, @NonNull Button btnCari,
       @NonNull Button btnHapus, @NonNull Button btnKembali, @NonNull Button btnTambah,
-      @NonNull EditText etNim, @NonNull RecyclerView rvDaftarMahasiswa, @NonNull Spinner spinnerMk,
-      @NonNull Spinner spinnerSemester, @NonNull Spinner spinnerTahun,
+      @NonNull EditText etNama, @NonNull Spinner spinnerMk, @NonNull Spinner spinnerTahun,
       @NonNull TableLayout tableLayout) {
     this.rootView = rootView;
     this.btnCari = btnCari;
     this.btnHapus = btnHapus;
     this.btnKembali = btnKembali;
     this.btnTambah = btnTambah;
-    this.etNim = etNim;
-    this.rvDaftarMahasiswa = rvDaftarMahasiswa;
+    this.etNama = etNama;
     this.spinnerMk = spinnerMk;
-    this.spinnerSemester = spinnerSemester;
     this.spinnerTahun = spinnerTahun;
     this.tableLayout = tableLayout;
   }
@@ -122,27 +112,15 @@ public final class ActivityDaftarMahasiswaBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.et_nim;
-      EditText etNim = ViewBindings.findChildViewById(rootView, id);
-      if (etNim == null) {
-        break missingId;
-      }
-
-      id = R.id.rv_daftar_mahasiswa;
-      RecyclerView rvDaftarMahasiswa = ViewBindings.findChildViewById(rootView, id);
-      if (rvDaftarMahasiswa == null) {
+      id = R.id.et_nama;
+      EditText etNama = ViewBindings.findChildViewById(rootView, id);
+      if (etNama == null) {
         break missingId;
       }
 
       id = R.id.spinner_mk;
       Spinner spinnerMk = ViewBindings.findChildViewById(rootView, id);
       if (spinnerMk == null) {
-        break missingId;
-      }
-
-      id = R.id.spinner_semester;
-      Spinner spinnerSemester = ViewBindings.findChildViewById(rootView, id);
-      if (spinnerSemester == null) {
         break missingId;
       }
 
@@ -159,8 +137,7 @@ public final class ActivityDaftarMahasiswaBinding implements ViewBinding {
       }
 
       return new ActivityDaftarMahasiswaBinding((LinearLayout) rootView, btnCari, btnHapus,
-          btnKembali, btnTambah, etNim, rvDaftarMahasiswa, spinnerMk, spinnerSemester, spinnerTahun,
-          tableLayout);
+          btnKembali, btnTambah, etNama, spinnerMk, spinnerTahun, tableLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
