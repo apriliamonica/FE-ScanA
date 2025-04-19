@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/et_semester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Semester"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_id_mk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID Mata Kuliah"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/et_nama_mk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Mata Kuliah"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/et_tahun_akademik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tahun Akademik (e.g. 2024/2025)"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btn_simpan_mk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFD700"
+        android:textColor="#000000" />
+</LinearLayout>
