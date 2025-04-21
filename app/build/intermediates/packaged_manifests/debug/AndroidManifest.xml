@@ -28,9 +28,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.HandScanAttendance" >
 
-        <!-- Entry Point -->
+        <!-- Login Activity sebagai entry point -->
         <activity
-            android:name="com.example.handscanattendance.view.MainActivity"
+            android:name="com.example.handscanattendance.ui.auth.LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,9 +39,9 @@
             </intent-filter>
         </activity>
 
-        <!-- Login Activity -->
+        <!-- Main activity tidak lagi jadi launcher -->
         <activity
-            android:name="com.example.handscanattendance.ui.auth.LoginActivity"
+            android:name="com.example.handscanattendance.view.MainActivity"
             android:exported="false" />
 
         <!-- Admin Activities -->

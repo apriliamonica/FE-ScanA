@@ -10,6 +10,7 @@ import com.example.handscanattendance.model.LoginResponse
 import com.example.handscanattendance.network.ApiService
 import com.example.handscanattendance.network.RetrofitClient
 import com.example.handscanattendance.ui.admin.AdminHomeActivity
+import com.example.handscanattendance.ui.mahasiswa.MahasiswaHomeActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -24,12 +25,18 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Cek jika sudah login sebelumnya
-        val sharedPref = getSharedPreferences("UserPrefs", MODE_PRIVATE)
-        val isLoggedIn = sharedPref.getBoolean("isLoggedIn", false)
+        val sharedPref = getSharedPreferences("user_prefs", MODE_PRIVATE)
+        val isLoggedIn = sharedPref.getBoolean("is_logged_in", false)
+        val role = sharedPref.getString("role", null)
 
-        if (isLoggedIn) {
-            // Skip langsung ke home jika sudah login
-            startActivity(Intent(this, AdminHomeActivity::class.java))
+        if (isLoggedIn && role != null) {
+            // Skip langsung ke home sesuai role
+            val intent = if (role == "admin") {
+                Intent(this, AdminHomeActivity::class.java)
+            } else {
+                Intent(this, MahasiswaHomeActivity::class.java)
+            }
+            startActivity(intent)
             finish()
             return
         }
@@ -56,17 +63,25 @@ class LoginActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val loginResponse = response.body()
                     if (loginResponse != null && loginResponse.success) {
-                        Toast.makeText(applicationContext, "Login berhasil", Toast.LENGTH_SHORT).show()
+                        val role = loginResponse.data?.role ?: "mahasiswa"
+                        val userName = loginResponse.data?.nama ?: "Pengguna"
 
-                        // Simpan status login
-                        val sharedPref = getSharedPreferences("UserPrefs", MODE_PRIVATE)
+                        // Simpan status login dan role
+                        val sharedPref = getSharedPreferences("user_prefs", MODE_PRIVATE)
                         with(sharedPref.edit()) {
-                            putBoolean("isLoggedIn", true)
+                            putBoolean("is_logged_in", true)
+                            putString("role", role)
+                            putString("user_name", userName)
                             apply()
                         }
 
-                        // Pindah ke AdminHomeActivity
-                        startActivity(Intent(this@LoginActivity, AdminHomeActivity::class.java))
+                        // Navigasi sesuai role
+                        val intent = if (role == "admin") {
+                            Intent(this@LoginActivity, AdminHomeActivity::class.java)
+                        } else {
+                            Intent(this@LoginActivity, MahasiswaHomeActivity::class.java)
+                        }
+                        startActivity(intent)
                         finish()
                     } else {
                         Toast.makeText(applicationContext, "Username atau Password salah", Toast.LENGTH_SHORT).show()
