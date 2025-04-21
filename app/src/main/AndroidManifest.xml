@@ -3,7 +3,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,17 +11,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HandScanAttendance">
 
-        <!-- Entry Point -->
-        <activity android:name="com.example.handscanattendance.view.MainActivity"
-            android:exported="true">
+        <!-- Login Activity sebagai entry point -->
+        <activity android:name=".ui.auth.LoginActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- Login Activity -->
-        <activity android:name=".ui.auth.LoginActivity" android:exported="false" />
+        <!-- Main activity tidak lagi jadi launcher -->
+        <activity android:name="com.example.handscanattendance.view.MainActivity" android:exported="false" />
+
+        <!-- Register Activity -->
+        <activity android:name="com.example.handscanattendance.ui.auth.RegisterActivity" android:exported="true" />
 
         <!-- Admin Activities -->
         <activity android:name="com.example.handscanattendance.ui.admin.AdminHomeActivity" android:exported="false" />

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -30,20 +31,20 @@ public final class DialogTambahMataKuliahBinding implements ViewBinding {
   public final EditText etNamaMk;
 
   @NonNull
-  public final EditText etSemester;
-
-  @NonNull
   public final EditText etTahunAkademik;
 
+  @NonNull
+  public final Spinner spinnerSemester;
+
   private DialogTambahMataKuliahBinding(@NonNull LinearLayout rootView, @NonNull Button btnSimpanMk,
-      @NonNull EditText etIdMk, @NonNull EditText etNamaMk, @NonNull EditText etSemester,
-      @NonNull EditText etTahunAkademik) {
+      @NonNull EditText etIdMk, @NonNull EditText etNamaMk, @NonNull EditText etTahunAkademik,
+      @NonNull Spinner spinnerSemester) {
     this.rootView = rootView;
     this.btnSimpanMk = btnSimpanMk;
     this.etIdMk = etIdMk;
     this.etNamaMk = etNamaMk;
-    this.etSemester = etSemester;
     this.etTahunAkademik = etTahunAkademik;
+    this.spinnerSemester = spinnerSemester;
   }
 
   @Override
@@ -91,20 +92,20 @@ public final class DialogTambahMataKuliahBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.et_semester;
-      EditText etSemester = ViewBindings.findChildViewById(rootView, id);
-      if (etSemester == null) {
-        break missingId;
-      }
-
       id = R.id.et_tahun_akademik;
       EditText etTahunAkademik = ViewBindings.findChildViewById(rootView, id);
       if (etTahunAkademik == null) {
         break missingId;
       }
 
+      id = R.id.spinner_semester;
+      Spinner spinnerSemester = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerSemester == null) {
+        break missingId;
+      }
+
       return new DialogTambahMataKuliahBinding((LinearLayout) rootView, btnSimpanMk, etIdMk,
-          etNamaMk, etSemester, etTahunAkademik);
+          etNamaMk, etTahunAkademik, spinnerSemester);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

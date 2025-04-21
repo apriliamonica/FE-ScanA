@@ -8,6 +8,8 @@ import android.widget.Toast // Untuk Toast
 import android.widget.Spinner // Untuk Spinner
 import android.widget.ArrayAdapter // Untuk Adapter Spinner
 import android.provider.MediaStore    // Untuk Intent untuk mengakses galeri atau kamera
+import com.example.handscanattendance.R
+import com.example.handscanattendance.ui.auth.LoginActivity
 
 
 class RegisterActivity : AppCompatActivity() {

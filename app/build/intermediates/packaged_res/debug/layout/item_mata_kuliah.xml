@@ -2,36 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="12dp"
     android:orientation="vertical"
-    android:background="@android:color/white"
-    android:padding="16dp"
-    android:layout_marginBottom="8dp">
+    android:background="?android:attr/selectableItemBackground">
 
     <TextView
         android:id="@+id/tv_nama_mk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nama MK"
-        android:textStyle="bold"
-        android:textSize="16sp"/>
+        android:text="Pemrograman Mobile"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tv_semester"
+        android:id="@+id/tv_info_mk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Semester" />
-
-    <TextView
-        android:id="@+id/tv_tahun"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tahun Akademik" />
-
-    <Button
-        android:id="@+id/btn_kelola"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kelola"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#FFD700"/>
+        android:text="Ganjil - 2024/2025"
+        android:textSize="14sp"
+        android:textColor="#777777" />
 </LinearLayout>

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -29,12 +30,21 @@ public final class ActivityMataKuliahBinding implements ViewBinding {
   @NonNull
   public final RecyclerView rvMataKuliah;
 
+  @NonNull
+  public final Spinner spinnerSemester;
+
+  @NonNull
+  public final Spinner spinnerTahunAjaran;
+
   private ActivityMataKuliahBinding(@NonNull LinearLayout rootView, @NonNull Button btnKembali,
-      @NonNull Button btnTambahMk, @NonNull RecyclerView rvMataKuliah) {
+      @NonNull Button btnTambahMk, @NonNull RecyclerView rvMataKuliah,
+      @NonNull Spinner spinnerSemester, @NonNull Spinner spinnerTahunAjaran) {
     this.rootView = rootView;
     this.btnKembali = btnKembali;
     this.btnTambahMk = btnTambahMk;
     this.rvMataKuliah = rvMataKuliah;
+    this.spinnerSemester = spinnerSemester;
+    this.spinnerTahunAjaran = spinnerTahunAjaran;
   }
 
   @Override
@@ -82,8 +92,20 @@ public final class ActivityMataKuliahBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.spinner_semester;
+      Spinner spinnerSemester = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerSemester == null) {
+        break missingId;
+      }
+
+      id = R.id.spinner_tahun_ajaran;
+      Spinner spinnerTahunAjaran = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerTahunAjaran == null) {
+        break missingId;
+      }
+
       return new ActivityMataKuliahBinding((LinearLayout) rootView, btnKembali, btnTambahMk,
-          rvMataKuliah);
+          rvMataKuliah, spinnerSemester, spinnerTahunAjaran);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

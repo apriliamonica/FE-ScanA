@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/et_semester"
+    <!-- Spinner untuk semester -->
+    <Spinner
+        android:id="@+id/spinner_semester"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Semester"
-        android:inputType="number" />
+        android:layout_marginBottom="8dp" />
 
     <EditText
         android:id="@+id/et_id_mk"

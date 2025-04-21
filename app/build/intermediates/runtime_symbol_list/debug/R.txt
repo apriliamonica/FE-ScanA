@@ -3135,7 +3135,6 @@ int id btnUploadRightPalm 0x7f080067
 int id btn_cari 0x7f080068
 int id btn_delete 0x7f080069
 int id btn_hapus 0x7f08006a
-int id btn_kelola 0x7f08006b
 int id btn_kembali 0x7f08006c
 int id btn_simpan_mahasiswa 0x7f08006d
 int id btn_simpan_mk 0x7f08006e
@@ -3237,7 +3236,6 @@ int id etUsername 0x7f0800cd
 int id et_id_mk 0x7f0800ce
 int id et_nama 0x7f0800cf
 int id et_nama_mk 0x7f0800d0
-int id et_semester 0x7f0800d1
 int id et_tahun_akademik 0x7f0800d2
 int id exitUntilCollapsed 0x7f0800d3
 int id expand_activities_button 0x7f0800d4
@@ -3486,6 +3484,7 @@ int id spinner_mahasiswa 0x7f0801c6
 int id spinner_mk 0x7f0801c7
 int id spinner_semester 0x7f0801c8
 int id spinner_tahun 0x7f0801c9
+int id spinner_tahun_ajaran 0x7f080231
 int id spline 0x7f0801ca
 int id split_action_bar 0x7f0801cb
 int id spread 0x7f0801cc
@@ -3558,14 +3557,13 @@ int id triangle 0x7f08020e
 int id tvLoginRedirect 0x7f08020f
 int id tvRegister 0x7f080210
 int id tvTitle 0x7f080211
+int id tv_info_mk 0x7f080232
 int id tv_judul_mk 0x7f080212
 int id tv_kelas 0x7f080213
 int id tv_nama 0x7f080214
 int id tv_nama_mk 0x7f080215
 int id tv_nim 0x7f080216
 int id tv_no 0x7f080217
-int id tv_semester 0x7f080218
-int id tv_tahun 0x7f080219
 int id unchecked 0x7f08021a
 int id uniform 0x7f08021b
 int id unlabeled 0x7f08021c

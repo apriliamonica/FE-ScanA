@@ -29,7 +29,6 @@ id btnUploadRightPalm
 id btn_cari
 id btn_delete
 id btn_hapus
-id btn_kelola
 id btn_kembali
 id btn_simpan_mahasiswa
 id btn_simpan_mk
@@ -49,7 +48,6 @@ id etUsername
 id et_id_mk
 id et_nama
 id et_nama_mk
-id et_semester
 id et_tahun_akademik
 id frame_overlay
 id logo
@@ -67,19 +65,19 @@ id spinner_mahasiswa
 id spinner_mk
 id spinner_semester
 id spinner_tahun
+id spinner_tahun_ajaran
 id student_list_button
 id tableLayout
 id tvLoginRedirect
 id tvRegister
 id tvTitle
+id tv_info_mk
 id tv_judul_mk
 id tv_kelas
 id tv_nama
 id tv_nama_mk
 id tv_nim
 id tv_no
-id tv_semester
-id tv_tahun
 layout activity_daftar_mahasiswa
 layout activity_home_admin
 layout activity_home_mahasiswa

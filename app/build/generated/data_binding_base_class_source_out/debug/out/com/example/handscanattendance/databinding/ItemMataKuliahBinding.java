@@ -4,7 +4,6 @@ package com.example.handscanattendance.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -21,24 +20,16 @@ public final class ItemMataKuliahBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final Button btnKelola;
+  public final TextView tvInfoMk;
 
   @NonNull
   public final TextView tvNamaMk;
 
-  @NonNull
-  public final TextView tvSemester;
-
-  @NonNull
-  public final TextView tvTahun;
-
-  private ItemMataKuliahBinding(@NonNull LinearLayout rootView, @NonNull Button btnKelola,
-      @NonNull TextView tvNamaMk, @NonNull TextView tvSemester, @NonNull TextView tvTahun) {
+  private ItemMataKuliahBinding(@NonNull LinearLayout rootView, @NonNull TextView tvInfoMk,
+      @NonNull TextView tvNamaMk) {
     this.rootView = rootView;
-    this.btnKelola = btnKelola;
+    this.tvInfoMk = tvInfoMk;
     this.tvNamaMk = tvNamaMk;
-    this.tvSemester = tvSemester;
-    this.tvTahun = tvTahun;
   }
 
   @Override
@@ -68,9 +59,9 @@ public final class ItemMataKuliahBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btn_kelola;
-      Button btnKelola = ViewBindings.findChildViewById(rootView, id);
-      if (btnKelola == null) {
+      id = R.id.tv_info_mk;
+      TextView tvInfoMk = ViewBindings.findChildViewById(rootView, id);
+      if (tvInfoMk == null) {
         break missingId;
       }
 
@@ -80,20 +71,7 @@ public final class ItemMataKuliahBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tv_semester;
-      TextView tvSemester = ViewBindings.findChildViewById(rootView, id);
-      if (tvSemester == null) {
-        break missingId;
-      }
-
-      id = R.id.tv_tahun;
-      TextView tvTahun = ViewBindings.findChildViewById(rootView, id);
-      if (tvTahun == null) {
-        break missingId;
-      }
-
-      return new ItemMataKuliahBinding((LinearLayout) rootView, btnKelola, tvNamaMk, tvSemester,
-          tvTahun);
+      return new ItemMataKuliahBinding((LinearLayout) rootView, tvInfoMk, tvNamaMk);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -8,13 +8,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.handscanattendance.R
 
 class MataKuliahAdapter(
-    private val list: List<MataKuliah>,
+    private var list: List<MataKuliah>, // <- ubah jadi var
     private val onClick: (MataKuliah) -> Unit
 ) : RecyclerView.Adapter<MataKuliahAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val namaText: TextView = view.findViewById(R.id.tv_nama_mk)
         val infoText: TextView = view.findViewById(R.id.tv_info_mk)
+
         init {
             view.setOnClickListener {
                 onClick(list[adapterPosition])
@@ -35,4 +36,9 @@ class MataKuliahAdapter(
     }
 
     override fun getItemCount(): Int = list.size
+
+    fun updateData(newList: List<MataKuliah>) {
+        list = newList
+        notifyDataSetChanged()
+    }
 }

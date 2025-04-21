@@ -1,8 +1,12 @@
 package com.example.handscanattendance.ui.auth
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.provider.MediaStore
-import com.example.handscanattendance.R  // Untuk akses ke ID sumber daya seperti layout, string, dll.
 
-class RegisterActivity {
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.handscanattendance.R
+
+class RegisterActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_register) // pastikan XML-nya ada juga
+    }
 }
