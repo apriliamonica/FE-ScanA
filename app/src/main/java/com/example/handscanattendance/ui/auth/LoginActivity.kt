@@ -34,6 +34,13 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Harap isi semua kolom", Toast.LENGTH_SHORT).show()
             }
         }
+
+        // Menambahkan listener pada teks "Belum punya akun? Daftar"
+        binding.tvRegister.setOnClickListener {
+            // Menavigasi ke halaman registrasi
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun loginUser(credentials: LoginCredentials) {
