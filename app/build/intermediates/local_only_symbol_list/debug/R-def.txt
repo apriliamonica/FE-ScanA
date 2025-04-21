@@ -50,6 +50,8 @@ id et_nama
 id et_nama_mk
 id et_tahun_akademik
 id frame_overlay
+id ivLeftPalmPreview
+id ivRightPalmPreview
 id logo
 id logoScanA
 id logout_button

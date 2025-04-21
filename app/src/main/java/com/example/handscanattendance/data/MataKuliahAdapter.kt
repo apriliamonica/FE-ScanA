@@ -8,18 +8,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.handscanattendance.R
 
 class MataKuliahAdapter(
-    private var list: List<MataKuliah>, // <- ubah jadi var
+    private var list: List<MataKuliah>,
     private val onClick: (MataKuliah) -> Unit
 ) : RecyclerView.Adapter<MataKuliahAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val namaText: TextView = view.findViewById(R.id.tv_nama_mk)
-        val infoText: TextView = view.findViewById(R.id.tv_info_mk)
+        private val namaText: TextView = view.findViewById(R.id.tv_nama_mk)
+        private val infoText: TextView = view.findViewById(R.id.tv_info_mk)
 
-        init {
-            view.setOnClickListener {
-                onClick(list[adapterPosition])
-            }
+        fun bind(mk: MataKuliah) {
+            namaText.text = mk.nama
+            infoText.text = "${mk.semester} - ${mk.tahunAkademik}"
+            itemView.setOnClickListener { onClick(mk) }
         }
     }
 
@@ -30,9 +30,7 @@ class MataKuliahAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val mk = list[position]
-        holder.namaText.text = mk.nama
-        holder.infoText.text = "${mk.semester} - ${mk.tahunAkademik}"
+        holder.bind(list[position])
     }
 
     override fun getItemCount(): Int = list.size

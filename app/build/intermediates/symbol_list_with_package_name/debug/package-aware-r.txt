@@ -3292,6 +3292,8 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id ivLeftPalmPreview
+id ivRightPalmPreview
 id jumpToEnd
 id jumpToStart
 id labeled
