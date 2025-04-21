@@ -44,6 +44,11 @@
             android:name="com.example.handscanattendance.view.MainActivity"
             android:exported="false" />
 
+        <!-- Register Activity -->
+        <activity
+            android:name="com.example.handscanattendance.ui.auth.RegisterActivity"
+            android:exported="true" />
+
         <!-- Admin Activities -->
         <activity
             android:name="com.example.handscanattendance.ui.admin.AdminHomeActivity"
