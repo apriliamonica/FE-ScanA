@@ -4,9 +4,14 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.0'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0'
-        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.50'
+        // Update to the latest compatible version of Android Gradle Plugin (AGP)
+        classpath "com.android.tools.build:gradle:8.1.0"  // Versi terbaru AGP
+
+        // Kotlin plugin yang sesuai dengan JDK 11
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0"  // Versi terbaru Kotlin
+
+        // Hilt Gradle plugin
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.50'  // Pastikan Hilt sesuai versi yang digunakan
     }
 }
 
@@ -15,4 +20,8 @@ allprojects {
         google()
         mavenCentral()
     }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }

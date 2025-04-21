@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1A2345"
+    android:padding="16dp"
+    tools:context=".ui.admin.DaftarMahasiswaActivity">
+
+    <!-- Tombol Kembali -->
+    <Button
+        android:id="@+id/btn_kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\u2B05 Kembali"
+        android:textColor="@android:color/white"
+        android:background="@android:color/transparent"
+        android:textSize="14sp"/>
+
+    <!-- Judul -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DAFTAR MAHASISWA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFD700"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Form Pencarian: Nama -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/et_nama"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@android:color/white"
+            android:hint="Masukkan nama"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btn_cari"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@android:color/white"
+            android:text="Cari"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+
+    <!-- Filter Tahun Akademik dan MK -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tahun"
+            android:textColor="@android:color/white"/>
+
+        <Spinner
+            android:id="@+id/spinner_tahun"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MK"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_mk"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:background="@android:color/white"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+
+    <!-- Tombol Tambah dan Hapus -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btn_tambah"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Tambah Data"
+            android:backgroundTint="#FFD700"
+            android:textColor="#000000"/>
+
+        <Button
+            android:id="@+id/btn_hapus"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Hapus Data"
+            android:backgroundTint="@android:color/white"
+            android:textColor="#000000"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Tabel Daftar Mahasiswa -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="8dp">
+
+            <!-- Header -->
+            <TableRow android:background="#CCCCCC">
+                <TextView android:text="No" android:padding="8dp" android:textStyle="bold"/>
+                <TextView android:text="NIM" android:padding="8dp" android:textStyle="bold"/>
+                <TextView android:text="Nama" android:padding="8dp" android:textStyle="bold"/>
+                <TextView android:text="Kelas" android:padding="8dp" android:textStyle="bold"/>
+                <TextView android:text="Email" android:padding="8dp" android:textStyle="bold"/>
+                <TextView android:text="No. Telp" android:padding="8dp" android:textStyle="bold"/>
+                <TextView android:text="Status" android:padding="8dp" android:textStyle="bold"/>
+            </TableRow>
+
+            <!-- Contoh Data -->
+            <TableRow>
+                <TextView android:text="1" android:padding="8dp" android:textColor="@color/white"/>
+                <TextView android:text="22013022" android:padding="8dp" android:textColor="@color/white"/>
+                <TextView android:text="Monica Pandeiroth" android:padding="8dp" android:textColor="@color/white"/>
+                <TextView android:text="B" android:padding="8dp" android:textColor="@color/white"/>
+                <TextView android:text="monica@email.com" android:padding="8dp" android:textColor="@color/white"/>
+                <TextView android:text="08123456789" android:padding="8dp" android:textColor="@color/white"/>
+                <TextView android:text="Aktif" android:padding="8dp" android:textColor="@color/white"/>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
