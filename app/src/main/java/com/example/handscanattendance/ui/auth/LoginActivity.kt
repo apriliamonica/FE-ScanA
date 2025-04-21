@@ -5,12 +5,11 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.handscanattendance.databinding.ActivityLoginBinding
+import com.example.handscanattendance.network.ApiService
 import com.example.handscanattendance.model.LoginCredentials
 import com.example.handscanattendance.model.LoginResponse
-import com.example.handscanattendance.network.ApiService
 import com.example.handscanattendance.network.RetrofitClient
 import com.example.handscanattendance.ui.admin.AdminHomeActivity
-import com.example.handscanattendance.ui.mahasiswa.MahasiswaHomeActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -23,23 +22,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // Cek jika sudah login sebelumnya
-        val sharedPref = getSharedPreferences("user_prefs", MODE_PRIVATE)
-        val isLoggedIn = sharedPref.getBoolean("is_logged_in", false)
-        val role = sharedPref.getString("role", null)
-
-        if (isLoggedIn && role != null) {
-            // Skip langsung ke home sesuai role
-            val intent = if (role == "admin") {
-                Intent(this, AdminHomeActivity::class.java)
-            } else {
-                Intent(this, MahasiswaHomeActivity::class.java)
-            }
-            startActivity(intent)
-            finish()
-            return
-        }
 
         binding.btnLogin.setOnClickListener {
             val username = binding.etUsername.text.toString()
@@ -63,36 +45,47 @@ class LoginActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val loginResponse = response.body()
                     if (loginResponse != null && loginResponse.success) {
-                        val role = loginResponse.data?.role ?: "mahasiswa"
-                        val userName = loginResponse.data?.nama ?: "Pengguna"
+                        val role = loginResponse.data?.role ?: "mahasiswa"  // Mengambil role
+                        val userName = loginResponse.data?.nama ?: "Pengguna"  // Mengambil nama
 
-                        // Simpan status login dan role
-                        val sharedPref = getSharedPreferences("user_prefs", MODE_PRIVATE)
-                        with(sharedPref.edit()) {
-                            putBoolean("is_logged_in", true)
-                            putString("role", role)
-                            putString("user_name", userName)
-                            apply()
-                        }
+                        // Tampilkan nama pengguna dan role untuk testing (opsional)
+                        Toast.makeText(
+                            applicationContext,
+                            "Welcome $userName, Role: $role",
+                            Toast.LENGTH_SHORT
+                        ).show()
 
                         // Navigasi sesuai role
-                        val intent = if (role == "admin") {
-                            Intent(this@LoginActivity, AdminHomeActivity::class.java)
+                        if (role == "admin") {
+                            startActivity(Intent(this@LoginActivity, AdminHomeActivity::class.java))
                         } else {
-                            Intent(this@LoginActivity, MahasiswaHomeActivity::class.java)
+                            // Navigasi ke halaman mahasiswa (Jika ada)
+                            // startActivity(Intent(this@LoginActivity, MahasiswaActivity::class.java))
                         }
-                        startActivity(intent)
+
                         finish()
                     } else {
-                        Toast.makeText(applicationContext, "Username atau Password salah", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            applicationContext,
+                            "Username atau Password salah",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 } else {
-                    Toast.makeText(applicationContext, "Terjadi kesalahan saat login", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        applicationContext,
+                        "Terjadi kesalahan saat login",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
 
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                Toast.makeText(applicationContext, "Gagal terkoneksi dengan server", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    applicationContext,
+                    "Gagal terkoneksi dengan server",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         })
     }

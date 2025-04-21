@@ -7,6 +7,6 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface ApiService {
-    @POST("login")
+    @POST("login")  // Pastikan path ini sesuai dengan endpoint backend-mu
     fun login(@Body credentials: LoginCredentials): Call<LoginResponse>
 }

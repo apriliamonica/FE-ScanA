@@ -37,10 +37,6 @@ android {
     kotlinOptions {
         jvmTarget = '17'
     }
-
-    buildFeatures {
-        viewBinding true
-    }
 }
 
 dependencies {
@@ -57,6 +53,7 @@ dependencies {
     // Networking (Retrofit)
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.google.code.gson:gson:2.8.8'  // Dependensi Gson untuk Retrofit
 
     // Dependency Injection (Dagger/Hilt)
     implementation 'com.google.dagger:hilt-android:2.50'

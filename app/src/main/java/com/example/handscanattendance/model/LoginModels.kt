@@ -7,5 +7,11 @@ data class LoginCredentials(
 
 data class LoginResponse(
     val success: Boolean,
-    val message: String
+    val message: String,
+    val data: LoginData?  // Tambahkan field 'data' yang berisi LoginData
+)
+
+data class LoginData(
+    val role: String?,
+    val nama: String?
 )
