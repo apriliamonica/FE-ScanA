@@ -1,4 +1,4 @@
-package com.example.handscanattendance.data.network
+package com.example.handscanattendance.network
 
 class ApiClient {
 }

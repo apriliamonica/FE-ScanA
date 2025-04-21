@@ -1,3 +1,15 @@
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity // Untuk kelas Activity
+import android.widget.EditText
+import android.widget.Button
+import android.widget.TextView
+import android.content.Intent
+import android.widget.Toast // Untuk Toast
+import android.widget.Spinner // Untuk Spinner
+import android.widget.ArrayAdapter // Untuk Adapter Spinner
+import android.provider.MediaStore    // Untuk Intent untuk mengakses galeri atau kamera
+
+
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var etNIM: EditText
@@ -92,3 +104,4 @@ class RegisterActivity : AppCompatActivity() {
         const val REQUEST_CODE_LEFT_PALM = 2
     }
 }
+

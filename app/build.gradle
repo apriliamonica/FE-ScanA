@@ -9,6 +9,9 @@ android {
     namespace "com.example.handscanattendance" // Sesuaikan dengan package aplikasi kamu
     compileSdk 34
 
+    buildFeatures {
+        viewBinding true
+    }
     defaultConfig {
         applicationId "com.example.handscanattendance"
         minSdk 21
