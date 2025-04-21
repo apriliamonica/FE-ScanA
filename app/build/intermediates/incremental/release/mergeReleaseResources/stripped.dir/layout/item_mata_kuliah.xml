@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/tv_nama_mk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama MK"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_semester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Semester" />
+
+    <TextView
+        android:id="@+id/tv_tahun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tahun Akademik" />
+
+    <Button
+        android:id="@+id/btn_kelola"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kelola"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FFD700"/>
+</LinearLayout>

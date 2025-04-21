@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="dark_blue">#1C274C</color>
-    <color name="yellow">#FFD700</color>
+    <!-- Custom colors -->
+    <color name="dark_blue">#001F3F</color>
+    <color name="yellow">#FFEB3B</color>
     <color name="white_yellow">#FAFFA2</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="gray">#262525</color>
+
+    <!-- Required colors for theme -->
+    <color name="colorPrimary">#6200EE</color> <!-- Ganti dengan warna yang kamu inginkan -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Ganti dengan warna yang kamu inginkan -->
+    <color name="colorAccent">#03DAC5</color> <!-- Ganti dengan warna yang kamu inginkan -->
 </resources>

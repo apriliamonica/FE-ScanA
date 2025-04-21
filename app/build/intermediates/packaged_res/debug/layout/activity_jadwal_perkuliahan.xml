@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/dark_blue">
+
+    <!-- Tombol Kembali -->
+    <Button
+        android:id="@+id/btn_kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\u2B05 Kembali"
+        android:textColor="@android:color/white"
+        android:background="@android:color/transparent"
+        android:textSize="14sp"/>
+
+
+    <!--    JUDUL    -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="JADWAL PERKULIAHAN"
+        android:textColor="#FFD700"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--PENCARIAN-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semester"
+            android:textColor="@android:color/white"/>
+
+        <Spinner
+            android:id="@+id/spinner_semester"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tahun Akademik"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_tahun"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Filter MK -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MK"
+            android:textColor="@android:color/white"/>
+
+        <Spinner
+            android:id="@+id/spinner_mk"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!--BuatJadwal-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btn_tambah"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Buat Jadwal Baru"
+            android:backgroundTint="#FFD700"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <!-- Tabel Jadwal-->
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TableRow android:background="#CCCCCC">
+            <TextView
+                android:text="No"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Hari/Tanggal"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Jam Mulai"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="Jam Keluar"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="1" android:padding="8dp" android:textColor="@color/white"/>
+            <TextView android:text="Senin, 01 Apr" android:padding="8dp" android:textColor="@color/white"/>
+            <TextView android:text="08:00" android:padding="8dp" android:textColor="@color/white"/>
+            <TextView android:text="10:00" android:padding="8dp" android:textColor="@color/white"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

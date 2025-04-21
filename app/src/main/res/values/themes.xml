@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.HandScanAttendance" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Warna utama -->
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="colorPrimaryDark">@color/gray</item>
+        <item name="colorAccent">@color/yellow</item>
+
+        <!-- Warna status dan navigasi bar -->
+        <item name="android:statusBarColor">@color/dark_blue</item>
+        <item name="android:navigationBarColor">@color/gray</item>
+
+        <!-- Background, teks, dsb -->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+
+        <!-- Gunakan Material Components -->
+        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
+    </style>
+</resources>
