@@ -3132,6 +3132,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btnLogin
+id btnMulaiScan
 id btnRegister
 id btnUploadLeftPalm
 id btnUploadRightPalm
@@ -3147,9 +3148,8 @@ id btn_tambah_mk
 id buttonPanel
 id cache_measures
 id callMeasure
+id cameraPreview
 id cancel_button
-id capture_button
-id capture_button_container
 id carryVelocity
 id center
 id centerCrop
@@ -3261,7 +3261,6 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
-id frame_overlay
 id frost
 id fullscreen_header
 id ghost_view
@@ -3300,6 +3299,7 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutScanKehadiran
 id left
 id leftToRight
 id legacy
@@ -3412,7 +3412,6 @@ id pin
 id position
 id postLayout
 id pressed
-id previewView
 id progress_circular
 id progress_horizontal
 id radio
@@ -3431,8 +3430,8 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scanButton
 id scan_button
-id scanning_text
 id schedule_button
 id screen
 id scroll
@@ -3485,6 +3484,7 @@ id south
 id spacer
 id special_effects_controller_view_tag
 id spinnerKelas
+id spinnerMataKuliah
 id spinner_mahasiswa
 id spinner_mk
 id spinner_semester
@@ -4322,7 +4322,6 @@ style RtlOverlay_Widget_AppCompat_Search_DropDown_Text
 style RtlOverlay_Widget_AppCompat_SearchView_MagIcon
 style RtlUnderlay_Widget_AppCompat_ActionButton
 style RtlUnderlay_Widget_AppCompat_ActionButton_Overflow
-style ScanA
 style ShapeAppearance_M3_Comp_Badge_Large_Shape
 style ShapeAppearance_M3_Comp_Badge_Shape
 style ShapeAppearance_M3_Comp_BottomAppBar_Container_Shape
@@ -4605,6 +4604,7 @@ style Theme_MaterialComponents_Light_NoActionBar
 style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
+style Theme_PresensiTelapakTangan
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark

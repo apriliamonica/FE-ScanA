@@ -4,13 +4,11 @@ package com.example.handscanattendance.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.camera.view.PreviewView;
-import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -24,30 +22,29 @@ public final class ActivityScanBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageButton captureButton;
+  public final Button btnMulaiScan;
 
   @NonNull
-  public final CardView captureButtonContainer;
+  public final PreviewView cameraPreview;
 
   @NonNull
-  public final ImageView frameOverlay;
+  public final ConstraintLayout layoutScanKehadiran;
 
   @NonNull
-  public final PreviewView previewView;
+  public final Button scanButton;
 
   @NonNull
-  public final TextView scanningText;
+  public final Spinner spinnerMataKuliah;
 
-  private ActivityScanBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageButton captureButton, @NonNull CardView captureButtonContainer,
-      @NonNull ImageView frameOverlay, @NonNull PreviewView previewView,
-      @NonNull TextView scanningText) {
+  private ActivityScanBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnMulaiScan,
+      @NonNull PreviewView cameraPreview, @NonNull ConstraintLayout layoutScanKehadiran,
+      @NonNull Button scanButton, @NonNull Spinner spinnerMataKuliah) {
     this.rootView = rootView;
-    this.captureButton = captureButton;
-    this.captureButtonContainer = captureButtonContainer;
-    this.frameOverlay = frameOverlay;
-    this.previewView = previewView;
-    this.scanningText = scanningText;
+    this.btnMulaiScan = btnMulaiScan;
+    this.cameraPreview = cameraPreview;
+    this.layoutScanKehadiran = layoutScanKehadiran;
+    this.scanButton = scanButton;
+    this.spinnerMataKuliah = spinnerMataKuliah;
   }
 
   @Override
@@ -77,38 +74,34 @@ public final class ActivityScanBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.capture_button;
-      ImageButton captureButton = ViewBindings.findChildViewById(rootView, id);
-      if (captureButton == null) {
+      id = R.id.btnMulaiScan;
+      Button btnMulaiScan = ViewBindings.findChildViewById(rootView, id);
+      if (btnMulaiScan == null) {
         break missingId;
       }
 
-      id = R.id.capture_button_container;
-      CardView captureButtonContainer = ViewBindings.findChildViewById(rootView, id);
-      if (captureButtonContainer == null) {
+      id = R.id.cameraPreview;
+      PreviewView cameraPreview = ViewBindings.findChildViewById(rootView, id);
+      if (cameraPreview == null) {
         break missingId;
       }
 
-      id = R.id.frame_overlay;
-      ImageView frameOverlay = ViewBindings.findChildViewById(rootView, id);
-      if (frameOverlay == null) {
+      ConstraintLayout layoutScanKehadiran = (ConstraintLayout) rootView;
+
+      id = R.id.scanButton;
+      Button scanButton = ViewBindings.findChildViewById(rootView, id);
+      if (scanButton == null) {
         break missingId;
       }
 
-      id = R.id.previewView;
-      PreviewView previewView = ViewBindings.findChildViewById(rootView, id);
-      if (previewView == null) {
+      id = R.id.spinnerMataKuliah;
+      Spinner spinnerMataKuliah = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerMataKuliah == null) {
         break missingId;
       }
 
-      id = R.id.scanning_text;
-      TextView scanningText = ViewBindings.findChildViewById(rootView, id);
-      if (scanningText == null) {
-        break missingId;
-      }
-
-      return new ActivityScanBinding((ConstraintLayout) rootView, captureButton,
-          captureButtonContainer, frameOverlay, previewView, scanningText);
+      return new ActivityScanBinding((ConstraintLayout) rootView, btnMulaiScan, cameraPreview,
+          layoutScanKehadiran, scanButton, spinnerMataKuliah);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
