@@ -1,6 +1,6 @@
 <resources>
     <!-- Aplikasi name -->
-    <string name="app_name">Presensi Telapak Tangan</string>
+    <string name="app_name">scanA</string>
 
     <!-- Login -->
     <string name="login">Login</string>

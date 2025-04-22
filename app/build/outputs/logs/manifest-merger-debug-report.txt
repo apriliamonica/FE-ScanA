@@ -106,11 +106,11 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\AC
 	android:supportsRtl
 		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:11:9-35
 	android:label
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:9:9-41
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:10:9-54
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:8:9-43
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:8:9-49
 	android:allowBackup
 		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:7:9-35
 	android:theme

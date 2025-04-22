@@ -8,6 +8,10 @@
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\item_mata_kuliah.xml"
     },
     {
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\drawable_password_rounded.xml.flat",
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\drawable\\password_rounded.xml"
     },
@@ -44,6 +48,10 @@
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-pngs-36:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
@@ -60,8 +68,8 @@
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\activity_mata_kuliah.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-merged_res-40:/layout_activity_home_admin.xml.flat",
-        "source": "com.example.handscanattendance.app-main-42:/layout/activity_home_admin.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\drawable_ic_camera.xml.flat",
@@ -100,6 +108,10 @@
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\activity_home_mahasiswa.xml"
     },
     {
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
@@ -122,6 +134,10 @@
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\drawable_input_rounded.xml.flat",
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\drawable\\input_rounded.xml"
+    },
+    {
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\drawable_logout_icon.xml.flat",
@@ -154,6 +170,10 @@
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\drawable-v24_ic_launcher_foregound.png.flat",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\drawable-v24\\ic_launcher_foregound.png"
     },
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\layout_item_mahasiswa_per_mk.xml.flat",

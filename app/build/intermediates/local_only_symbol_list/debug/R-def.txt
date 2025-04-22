@@ -15,10 +15,12 @@ drawable button_rounded
 drawable ic_camera
 drawable ic_delete
 drawable ic_launcher_background
+drawable ic_launcher_foregound
 drawable ic_launcher_foreground
 drawable ic_scan_frame
 drawable input_rounded
 drawable logo_scana
+drawable logout_icon
 drawable password_rounded
 id app_name
 id attendance_history_button
@@ -95,7 +97,6 @@ layout dialog_tambah_mata_kuliah
 layout item_mahasiswa
 layout item_mahasiswa_per_mk
 layout item_mata_kuliah
-mipmap ic_launcher
 mipmap ic_launcher_round
 string admin
 string admin_scan_hand
@@ -118,6 +119,6 @@ style ButtonStyle
 style EditTextStyle
 style ImageStyle
 style LabelStyle
+style ScanA
 style Theme.AppCompat.Light.NoActionBar
 style Theme.HandScanAttendance
-style Theme.PresensiTelapakTangan
