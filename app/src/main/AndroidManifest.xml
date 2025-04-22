@@ -11,22 +11,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HandScanAttendance">
 
-        <!-- Login Activity sebagai entry point -->
-        <activity android:name=".ui.auth.LoginActivity" android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <!-- Login Activity (TIDAK LAGI jadi launcher) -->
+        <activity android:name=".ui.auth.LoginActivity" android:exported="true" />
 
-        <!-- Main activity tidak lagi jadi launcher -->
+        <!-- Main activity -->
         <activity android:name="com.example.handscanattendance.view.MainActivity" android:exported="false" />
 
         <!-- Register Activity -->
         <activity android:name="com.example.handscanattendance.ui.auth.RegisterActivity" android:exported="true" />
 
         <!-- Admin Activities -->
-        <activity android:name="com.example.handscanattendance.ui.admin.AdminHomeActivity" android:exported="false" />
+
+        <!-- AdminHomeActivity SEKARANG jadi launcher -->
+        <activity android:name="com.example.handscanattendance.ui.admin.AdminHomeActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name="com.example.handscanattendance.ui.admin.ScanActivity" android:exported="false" />
         <activity android:name="com.example.handscanattendance.ui.admin.JadwalActivity" android:exported="false" />
         <activity android:name="com.example.handscanattendance.ui.admin.MataKuliahActivity" android:exported="false" />

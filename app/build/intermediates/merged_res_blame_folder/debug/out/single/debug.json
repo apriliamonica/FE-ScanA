@@ -56,12 +56,12 @@
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-merged_res-40:/layout_activity_register.xml.flat",
-        "source": "com.example.handscanattendance.app-main-42:/layout/activity_register.xml"
-    },
-    {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\layout_activity_mata_kuliah.xml.flat",
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\layout\\activity_mata_kuliah.xml"
+    },
+    {
+        "merged": "com.example.handscanattendance.app-merged_res-40:/layout_activity_home_admin.xml.flat",
+        "source": "com.example.handscanattendance.app-main-42:/layout/activity_home_admin.xml"
     },
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\drawable_ic_camera.xml.flat",
@@ -122,6 +122,10 @@
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\drawable_input_rounded.xml.flat",
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\drawable\\input_rounded.xml"
+    },
+    {
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\drawable_logout_icon.xml.flat",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-42:\\drawable\\logout_icon.xml"
     },
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-40:\\layout_activity_jadwal_perkuliahan.xml.flat",

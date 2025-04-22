@@ -28,18 +28,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.HandScanAttendance" >
 
-        <!-- Login Activity sebagai entry point -->
+        <!-- Login Activity (TIDAK LAGI jadi launcher) -->
         <activity
             android:name="com.example.handscanattendance.ui.auth.LoginActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <!-- Main activity tidak lagi jadi launcher -->
+        <!-- Main activity -->
         <activity
             android:name="com.example.handscanattendance.view.MainActivity"
             android:exported="false" />
@@ -50,9 +44,18 @@
             android:exported="true" />
 
         <!-- Admin Activities -->
+
+
+        <!-- AdminHomeActivity SEKARANG jadi launcher -->
         <activity
             android:name="com.example.handscanattendance.ui.admin.AdminHomeActivity"
-            android:exported="false" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.example.handscanattendance.ui.admin.ScanActivity"
             android:exported="false" />
