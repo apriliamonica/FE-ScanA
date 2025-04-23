@@ -24,6 +24,7 @@ drawable logout_icon
 drawable password_rounded
 id app_name
 id attendance_history_button
+id btnKembali
 id btnLogin
 id btnMulaiScan
 id btnRegister

@@ -22,6 +22,9 @@ public final class ActivityScanBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button btnKembali;
+
+  @NonNull
   public final Button btnMulaiScan;
 
   @NonNull
@@ -36,10 +39,12 @@ public final class ActivityScanBinding implements ViewBinding {
   @NonNull
   public final Spinner spinnerMataKuliah;
 
-  private ActivityScanBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnMulaiScan,
-      @NonNull PreviewView cameraPreview, @NonNull ConstraintLayout layoutScanKehadiran,
-      @NonNull Button scanButton, @NonNull Spinner spinnerMataKuliah) {
+  private ActivityScanBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnKembali,
+      @NonNull Button btnMulaiScan, @NonNull PreviewView cameraPreview,
+      @NonNull ConstraintLayout layoutScanKehadiran, @NonNull Button scanButton,
+      @NonNull Spinner spinnerMataKuliah) {
     this.rootView = rootView;
+    this.btnKembali = btnKembali;
     this.btnMulaiScan = btnMulaiScan;
     this.cameraPreview = cameraPreview;
     this.layoutScanKehadiran = layoutScanKehadiran;
@@ -74,6 +79,12 @@ public final class ActivityScanBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnKembali;
+      Button btnKembali = ViewBindings.findChildViewById(rootView, id);
+      if (btnKembali == null) {
+        break missingId;
+      }
+
       id = R.id.btnMulaiScan;
       Button btnMulaiScan = ViewBindings.findChildViewById(rootView, id);
       if (btnMulaiScan == null) {
@@ -100,8 +111,8 @@ public final class ActivityScanBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityScanBinding((ConstraintLayout) rootView, btnMulaiScan, cameraPreview,
-          layoutScanKehadiran, scanButton, spinnerMataKuliah);
+      return new ActivityScanBinding((ConstraintLayout) rootView, btnKembali, btnMulaiScan,
+          cameraPreview, layoutScanKehadiran, scanButton, spinnerMataKuliah);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

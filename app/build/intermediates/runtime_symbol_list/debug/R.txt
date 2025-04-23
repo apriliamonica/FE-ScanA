@@ -3130,6 +3130,7 @@ int id bounce 0x7f080060
 int id bounceBoth 0x7f080061
 int id bounceEnd 0x7f080062
 int id bounceStart 0x7f080063
+int id btnKembali 0x7f080236
 int id btnLogin 0x7f080064
 int id btnMulaiScan 0x7f080231
 int id btnRegister 0x7f080065
