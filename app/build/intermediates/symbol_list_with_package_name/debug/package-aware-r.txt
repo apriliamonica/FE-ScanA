@@ -3028,6 +3028,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable password_rounded
+drawable scan_box
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3131,9 +3132,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id btnKembali
 id btnLogin
-id btnMulaiScan
 id btnRegister
 id btnUploadLeftPalm
 id btnUploadRightPalm
@@ -3141,7 +3140,6 @@ id btn_cari
 id btn_delete
 id btn_hapus
 id btn_kembali
-id btn_simpan_mahasiswa
 id btn_simpan_mk
 id btn_tambah
 id btn_tambah_mahasiswa
@@ -3149,8 +3147,9 @@ id btn_tambah_mk
 id buttonPanel
 id cache_measures
 id callMeasure
-id cameraPreview
 id cancel_button
+id captureButton
+id captureButtonLayout
 id carryVelocity
 id center
 id centerCrop
@@ -3300,7 +3299,6 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
-id layoutScanKehadiran
 id left
 id leftToRight
 id legacy
@@ -3396,6 +3394,7 @@ id on
 id onInterceptTouchReturnSwipe
 id outline
 id outward
+id overlay
 id overshoot
 id packed
 id parallax
@@ -3431,7 +3430,7 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
-id scanButton
+id scanText
 id scan_button
 id schedule_button
 id screen
@@ -3485,8 +3484,6 @@ id south
 id spacer
 id special_effects_controller_view_tag
 id spinnerKelas
-id spinnerMataKuliah
-id spinner_mahasiswa
 id spinner_mk
 id spinner_semester
 id spinner_tahun
@@ -3544,6 +3541,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id textureView
 id time
 id title
 id titleDividerNoCustom
@@ -3563,11 +3561,9 @@ id triangle
 id tvLoginRedirect
 id tvRegister
 id tvTitle
-id tv_info_mk
 id tv_judul_mk
 id tv_kelas
 id tv_nama
-id tv_nama_mk
 id tv_nim
 id tv_no
 id unchecked
@@ -3732,13 +3728,10 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout dialog_tambah_mahasiswa
 layout dialog_tambah_mata_kuliah
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_mahasiswa
-layout item_mahasiswa_per_mk
-layout item_mata_kuliah
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

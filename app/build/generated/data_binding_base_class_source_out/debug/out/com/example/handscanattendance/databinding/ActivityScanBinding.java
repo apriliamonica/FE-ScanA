@@ -2,13 +2,14 @@
 package com.example.handscanattendance.databinding;
 
 import android.view.LayoutInflater;
+import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.Spinner;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.camera.view.PreviewView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -22,34 +23,29 @@ public final class ActivityScanBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button btnKembali;
+  public final ImageButton captureButton;
 
   @NonNull
-  public final Button btnMulaiScan;
+  public final LinearLayout captureButtonLayout;
 
   @NonNull
-  public final PreviewView cameraPreview;
+  public final View overlay;
 
   @NonNull
-  public final ConstraintLayout layoutScanKehadiran;
+  public final TextView scanText;
 
   @NonNull
-  public final Button scanButton;
+  public final TextureView textureView;
 
-  @NonNull
-  public final Spinner spinnerMataKuliah;
-
-  private ActivityScanBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnKembali,
-      @NonNull Button btnMulaiScan, @NonNull PreviewView cameraPreview,
-      @NonNull ConstraintLayout layoutScanKehadiran, @NonNull Button scanButton,
-      @NonNull Spinner spinnerMataKuliah) {
+  private ActivityScanBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ImageButton captureButton, @NonNull LinearLayout captureButtonLayout,
+      @NonNull View overlay, @NonNull TextView scanText, @NonNull TextureView textureView) {
     this.rootView = rootView;
-    this.btnKembali = btnKembali;
-    this.btnMulaiScan = btnMulaiScan;
-    this.cameraPreview = cameraPreview;
-    this.layoutScanKehadiran = layoutScanKehadiran;
-    this.scanButton = scanButton;
-    this.spinnerMataKuliah = spinnerMataKuliah;
+    this.captureButton = captureButton;
+    this.captureButtonLayout = captureButtonLayout;
+    this.overlay = overlay;
+    this.scanText = scanText;
+    this.textureView = textureView;
   }
 
   @Override
@@ -79,40 +75,38 @@ public final class ActivityScanBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnKembali;
-      Button btnKembali = ViewBindings.findChildViewById(rootView, id);
-      if (btnKembali == null) {
+      id = R.id.captureButton;
+      ImageButton captureButton = ViewBindings.findChildViewById(rootView, id);
+      if (captureButton == null) {
         break missingId;
       }
 
-      id = R.id.btnMulaiScan;
-      Button btnMulaiScan = ViewBindings.findChildViewById(rootView, id);
-      if (btnMulaiScan == null) {
+      id = R.id.captureButtonLayout;
+      LinearLayout captureButtonLayout = ViewBindings.findChildViewById(rootView, id);
+      if (captureButtonLayout == null) {
         break missingId;
       }
 
-      id = R.id.cameraPreview;
-      PreviewView cameraPreview = ViewBindings.findChildViewById(rootView, id);
-      if (cameraPreview == null) {
+      id = R.id.overlay;
+      View overlay = ViewBindings.findChildViewById(rootView, id);
+      if (overlay == null) {
         break missingId;
       }
 
-      ConstraintLayout layoutScanKehadiran = (ConstraintLayout) rootView;
-
-      id = R.id.scanButton;
-      Button scanButton = ViewBindings.findChildViewById(rootView, id);
-      if (scanButton == null) {
+      id = R.id.scanText;
+      TextView scanText = ViewBindings.findChildViewById(rootView, id);
+      if (scanText == null) {
         break missingId;
       }
 
-      id = R.id.spinnerMataKuliah;
-      Spinner spinnerMataKuliah = ViewBindings.findChildViewById(rootView, id);
-      if (spinnerMataKuliah == null) {
+      id = R.id.textureView;
+      TextureView textureView = ViewBindings.findChildViewById(rootView, id);
+      if (textureView == null) {
         break missingId;
       }
 
-      return new ActivityScanBinding((ConstraintLayout) rootView, btnKembali, btnMulaiScan,
-          cameraPreview, layoutScanKehadiran, scanButton, spinnerMataKuliah);
+      return new ActivityScanBinding((ConstraintLayout) rootView, captureButton,
+          captureButtonLayout, overlay, scanText, textureView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

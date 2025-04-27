@@ -11,183 +11,189 @@
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:4:5-67
 11-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:4:22-64
-12
-13    <permission
-13-->[androidx.core:core:1.12.0] C:\Users\ACER\.gradle\caches\8.10\transforms\517c9e6ed70ce98b1c3d0491bfb8e689\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
-14        android:name="com.example.handscanattendance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-14-->[androidx.core:core:1.12.0] C:\Users\ACER\.gradle\caches\8.10\transforms\517c9e6ed70ce98b1c3d0491bfb8e689\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
-15        android:protectionLevel="signature" />
-15-->[androidx.core:core:1.12.0] C:\Users\ACER\.gradle\caches\8.10\transforms\517c9e6ed70ce98b1c3d0491bfb8e689\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
-16
-17    <uses-permission android:name="com.example.handscanattendance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-17-->[androidx.core:core:1.12.0] C:\Users\ACER\.gradle\caches\8.10\transforms\517c9e6ed70ce98b1c3d0491bfb8e689\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
-17-->[androidx.core:core:1.12.0] C:\Users\ACER\.gradle\caches\8.10\transforms\517c9e6ed70ce98b1c3d0491bfb8e689\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
-18
-19    <application
-19-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:6:5-37:19
-20        android:allowBackup="true"
-20-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:7:9-35
-21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.12.0] C:\Users\ACER\.gradle\caches\8.10\transforms\517c9e6ed70ce98b1c3d0491bfb8e689\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
-22        android:debuggable="true"
-23        android:extractNativeLibs="true"
-24        android:icon="@mipmap/ic_launcher_round"
-24-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:8:9-49
-25        android:label="@string/app_name"
-25-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:10:9-41
-26        android:roundIcon="@mipmap/ic_launcher_round"
-26-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:9:9-54
-27        android:supportsRtl="true"
-27-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:11:9-35
-28        android:testOnly="true"
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:5:5-65
+12-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:5:22-62
+13
+14    <permission
+14-->[androidx.core:core:1.12.0] C:\Users\ACER\.gradle\caches\8.10\transforms\517c9e6ed70ce98b1c3d0491bfb8e689\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+15        android:name="com.example.handscanattendance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.12.0] C:\Users\ACER\.gradle\caches\8.10\transforms\517c9e6ed70ce98b1c3d0491bfb8e689\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.12.0] C:\Users\ACER\.gradle\caches\8.10\transforms\517c9e6ed70ce98b1c3d0491bfb8e689\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.example.handscanattendance.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.12.0] C:\Users\ACER\.gradle\caches\8.10\transforms\517c9e6ed70ce98b1c3d0491bfb8e689\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.12.0] C:\Users\ACER\.gradle\caches\8.10\transforms\517c9e6ed70ce98b1c3d0491bfb8e689\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:7:5-41:19
+21        android:allowBackup="true"
+21-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:8:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.12.0] C:\Users\ACER\.gradle\caches\8.10\transforms\517c9e6ed70ce98b1c3d0491bfb8e689\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+23        android:debuggable="true"
+24        android:extractNativeLibs="true"
+25        android:icon="@mipmap/ic_launcher_round"
+25-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:9:9-49
+26        android:label="@string/app_name"
+26-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:11:9-41
+27        android:roundIcon="@mipmap/ic_launcher_round"
+27-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:10:9-54
+28        android:supportsRtl="true"
+28-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:12:9-35
 29        android:theme="@style/Theme.HandScanAttendance" >
-29-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:12:9-56
+29-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:13:9-56
 30
 31        <!-- Login Activity (TIDAK LAGI jadi launcher) -->
 32        <activity
-32-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:15:9-83
+32-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:16:9-83
 33            android:name="com.example.handscanattendance.ui.auth.LoginActivity"
-33-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:15:19-56
+33-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:16:19-56
 34            android:exported="true" />
-34-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:15:57-80
+34-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:16:57-80
 35
 36        <!-- Main activity -->
 37        <activity
-37-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:18:9-110
+37-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:19:9-110
 38            android:name="com.example.handscanattendance.view.MainActivity"
-38-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:18:19-82
+38-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:19:19-82
 39            android:exported="false" />
-39-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:18:83-107
+39-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:19:83-107
 40
 41        <!-- Register Activity -->
 42        <activity
-42-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:21:9-116
+42-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:22:9-116
 43            android:name="com.example.handscanattendance.ui.auth.RegisterActivity"
-43-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:21:19-89
+43-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:22:19-89
 44            android:exported="true" />
-44-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:21:90-113
+44-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:22:90-113
 45
 46        <!-- Admin Activities -->
 47
 48
 49        <!-- AdminHomeActivity SEKARANG jadi launcher -->
 50        <activity
-50-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:26:9-31:20
+50-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:27:9-32:20
 51            android:name="com.example.handscanattendance.ui.admin.AdminHomeActivity"
-51-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:26:19-91
+51-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:27:19-91
 52            android:exported="true" >
-52-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:26:92-115
+52-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:27:92-115
 53            <intent-filter>
-53-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:27:13-30:29
+53-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:28:13-31:29
 54                <action android:name="android.intent.action.MAIN" />
-54-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:28:17-69
-54-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:28:25-66
+54-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:29:17-69
+54-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:29:25-66
 55
 56                <category android:name="android.intent.category.LAUNCHER" />
-56-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:29:17-77
-56-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:29:27-74
+56-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:30:17-77
+56-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:30:27-74
 57            </intent-filter>
 58        </activity>
-59        <activity
-59-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:33:9-114
-60            android:name="com.example.handscanattendance.ui.admin.ScanActivity"
-60-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:33:19-86
-61            android:exported="false" />
-61-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:33:87-111
-62        <activity
-62-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:34:9-116
-63            android:name="com.example.handscanattendance.ui.admin.JadwalActivity"
-63-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:34:19-88
-64            android:exported="false" />
-64-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:34:89-113
+59
+60        <!-- ScanActivity dengan orientasi portrait -->
+61        <activity
+61-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:35:9-37:52
+62            android:name="com.example.handscanattendance.ui.admin.ScanActivity"
+62-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:35:19-86
+63            android:exported="false"
+63-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:36:13-37
+64            android:screenOrientation="portrait" />
+64-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:37:13-49
 65        <activity
-65-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:35:9-120
-66            android:name="com.example.handscanattendance.ui.admin.MataKuliahActivity"
-66-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:35:19-92
+65-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:38:9-116
+66            android:name="com.example.handscanattendance.ui.admin.JadwalActivity"
+66-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:38:19-88
 67            android:exported="false" />
-67-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:35:93-117
-68
-69        <service
-69-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:24:9-33:19
-70            android:name="androidx.camera.core.impl.MetadataHolderService"
-70-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:25:13-75
-71            android:enabled="false"
-71-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:26:13-36
-72            android:exported="false" >
-72-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:27:13-37
-73            <meta-data
-73-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:30:13-32:89
-74                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
-74-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:31:17-103
-75                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
-75-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:32:17-86
-76        </service>
-77
-78        <provider
-78-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-79            android:name="androidx.startup.InitializationProvider"
-79-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-80            android:authorities="com.example.handscanattendance.androidx-startup"
-80-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-81            android:exported="false" >
-81-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-82            <meta-data
-82-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-83                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-83-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-84                android:value="androidx.startup" />
-84-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+67-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:38:89-113
+68        <activity
+68-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:39:9-120
+69            android:name="com.example.handscanattendance.ui.admin.MataKuliahActivity"
+69-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:39:19-92
+70            android:exported="false" />
+70-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:39:93-117
+71
+72        <service
+72-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:24:9-33:19
+73            android:name="androidx.camera.core.impl.MetadataHolderService"
+73-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:25:13-75
+74            android:enabled="false"
+74-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:26:13-36
+75            android:exported="false" >
+75-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:27:13-37
+76            <meta-data
+76-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:30:13-32:89
+77                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+77-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:31:17-103
+78                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+78-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:32:17-86
+79        </service>
+80
+81        <provider
+81-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+82            android:name="androidx.startup.InitializationProvider"
+82-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+83            android:authorities="com.example.handscanattendance.androidx-startup"
+83-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+84            android:exported="false" >
+84-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
 85            <meta-data
-85-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\a733f3cec3381a1d25b7996aa9fad013\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-86                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-86-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\a733f3cec3381a1d25b7996aa9fad013\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+85-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+86                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+86-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
 87                android:value="androidx.startup" />
-87-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\a733f3cec3381a1d25b7996aa9fad013\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+87-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
 88            <meta-data
-88-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-89                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-89-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+88-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\a733f3cec3381a1d25b7996aa9fad013\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+89                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+89-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\a733f3cec3381a1d25b7996aa9fad013\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
 90                android:value="androidx.startup" />
-90-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-91        </provider>
-92
-93        <receiver
-93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-94            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-94-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-95            android:directBootAware="false"
-95-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-96            android:enabled="true"
-96-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-97            android:exported="true"
-97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-98            android:permission="android.permission.DUMP" >
-98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-99            <intent-filter>
-99-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-100                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-101            </intent-filter>
+90-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\a733f3cec3381a1d25b7996aa9fad013\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+91            <meta-data
+91-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+92                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+93                android:value="androidx.startup" />
+93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+94        </provider>
+95
+96        <receiver
+96-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+97            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+98            android:directBootAware="false"
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+99            android:enabled="true"
+99-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+100            android:exported="true"
+100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+101            android:permission="android.permission.DUMP" >
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
 102            <intent-filter>
-102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-103                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+103                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
 104            </intent-filter>
 105            <intent-filter>
-105-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-106                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+105-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+106                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
 107            </intent-filter>
 108            <intent-filter>
-108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-109                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+109                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
 110            </intent-filter>
-111        </receiver>
-112    </application>
-113
-114</manifest>
+111            <intent-filter>
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+112                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+113            </intent-filter>
+114        </receiver>
+115    </application>
+116
+117</manifest>

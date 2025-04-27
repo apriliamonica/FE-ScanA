@@ -6,7 +6,6 @@ import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.handscanattendance.R
-import com.example.handscanattendance.ui.mahasiswa.MahasiswaActivity
 import com.example.handscanattendance.ui.admin.AdminHomeActivity
 import com.example.handscanattendance.ui.auth.LoginActivity
 
