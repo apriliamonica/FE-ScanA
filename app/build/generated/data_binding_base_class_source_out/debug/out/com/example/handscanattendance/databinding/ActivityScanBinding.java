@@ -2,15 +2,14 @@
 package com.example.handscanattendance.databinding;
 
 import android.view.LayoutInflater;
+import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.camera.view.PreviewView;
-import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -27,27 +26,26 @@ public final class ActivityScanBinding implements ViewBinding {
   public final ImageButton captureButton;
 
   @NonNull
-  public final CardView captureButtonContainer;
+  public final LinearLayout captureButtonLayout;
 
   @NonNull
-  public final ImageView frameOverlay;
+  public final View overlay;
 
   @NonNull
-  public final PreviewView previewView;
+  public final TextView scanText;
 
   @NonNull
-  public final TextView scanningText;
+  public final TextureView textureView;
 
   private ActivityScanBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageButton captureButton, @NonNull CardView captureButtonContainer,
-      @NonNull ImageView frameOverlay, @NonNull PreviewView previewView,
-      @NonNull TextView scanningText) {
+      @NonNull ImageButton captureButton, @NonNull LinearLayout captureButtonLayout,
+      @NonNull View overlay, @NonNull TextView scanText, @NonNull TextureView textureView) {
     this.rootView = rootView;
     this.captureButton = captureButton;
-    this.captureButtonContainer = captureButtonContainer;
-    this.frameOverlay = frameOverlay;
-    this.previewView = previewView;
-    this.scanningText = scanningText;
+    this.captureButtonLayout = captureButtonLayout;
+    this.overlay = overlay;
+    this.scanText = scanText;
+    this.textureView = textureView;
   }
 
   @Override
@@ -77,38 +75,38 @@ public final class ActivityScanBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.capture_button;
+      id = R.id.captureButton;
       ImageButton captureButton = ViewBindings.findChildViewById(rootView, id);
       if (captureButton == null) {
         break missingId;
       }
 
-      id = R.id.capture_button_container;
-      CardView captureButtonContainer = ViewBindings.findChildViewById(rootView, id);
-      if (captureButtonContainer == null) {
+      id = R.id.captureButtonLayout;
+      LinearLayout captureButtonLayout = ViewBindings.findChildViewById(rootView, id);
+      if (captureButtonLayout == null) {
         break missingId;
       }
 
-      id = R.id.frame_overlay;
-      ImageView frameOverlay = ViewBindings.findChildViewById(rootView, id);
-      if (frameOverlay == null) {
+      id = R.id.overlay;
+      View overlay = ViewBindings.findChildViewById(rootView, id);
+      if (overlay == null) {
         break missingId;
       }
 
-      id = R.id.previewView;
-      PreviewView previewView = ViewBindings.findChildViewById(rootView, id);
-      if (previewView == null) {
+      id = R.id.scanText;
+      TextView scanText = ViewBindings.findChildViewById(rootView, id);
+      if (scanText == null) {
         break missingId;
       }
 
-      id = R.id.scanning_text;
-      TextView scanningText = ViewBindings.findChildViewById(rootView, id);
-      if (scanningText == null) {
+      id = R.id.textureView;
+      TextureView textureView = ViewBindings.findChildViewById(rootView, id);
+      if (textureView == null) {
         break missingId;
       }
 
       return new ActivityScanBinding((ConstraintLayout) rootView, captureButton,
-          captureButtonContainer, frameOverlay, previewView, scanningText);
+          captureButtonLayout, overlay, scanText, textureView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

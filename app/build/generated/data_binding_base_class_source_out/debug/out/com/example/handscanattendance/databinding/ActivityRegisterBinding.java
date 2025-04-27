@@ -51,6 +51,12 @@ public final class ActivityRegisterBinding implements ViewBinding {
   public final EditText etPhone;
 
   @NonNull
+  public final ImageView ivLeftPalmPreview;
+
+  @NonNull
+  public final ImageView ivRightPalmPreview;
+
+  @NonNull
   public final ImageView logoScanA;
 
   @NonNull
@@ -66,6 +72,7 @@ public final class ActivityRegisterBinding implements ViewBinding {
       @NonNull Button btnUploadLeftPalm, @NonNull Button btnUploadRightPalm,
       @NonNull EditText etConfirmPassword, @NonNull EditText etEmail, @NonNull EditText etNIM,
       @NonNull EditText etNama, @NonNull EditText etPassword, @NonNull EditText etPhone,
+      @NonNull ImageView ivLeftPalmPreview, @NonNull ImageView ivRightPalmPreview,
       @NonNull ImageView logoScanA, @NonNull Spinner spinnerKelas,
       @NonNull TextView tvLoginRedirect, @NonNull TextView tvTitle) {
     this.rootView = rootView;
@@ -78,6 +85,8 @@ public final class ActivityRegisterBinding implements ViewBinding {
     this.etNama = etNama;
     this.etPassword = etPassword;
     this.etPhone = etPhone;
+    this.ivLeftPalmPreview = ivLeftPalmPreview;
+    this.ivRightPalmPreview = ivRightPalmPreview;
     this.logoScanA = logoScanA;
     this.spinnerKelas = spinnerKelas;
     this.tvLoginRedirect = tvLoginRedirect;
@@ -165,6 +174,18 @@ public final class ActivityRegisterBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.ivLeftPalmPreview;
+      ImageView ivLeftPalmPreview = ViewBindings.findChildViewById(rootView, id);
+      if (ivLeftPalmPreview == null) {
+        break missingId;
+      }
+
+      id = R.id.ivRightPalmPreview;
+      ImageView ivRightPalmPreview = ViewBindings.findChildViewById(rootView, id);
+      if (ivRightPalmPreview == null) {
+        break missingId;
+      }
+
       id = R.id.logoScanA;
       ImageView logoScanA = ViewBindings.findChildViewById(rootView, id);
       if (logoScanA == null) {
@@ -191,7 +212,7 @@ public final class ActivityRegisterBinding implements ViewBinding {
 
       return new ActivityRegisterBinding((ScrollView) rootView, btnRegister, btnUploadLeftPalm,
           btnUploadRightPalm, etConfirmPassword, etEmail, etNIM, etNama, etPassword, etPhone,
-          logoScanA, spinnerKelas, tvLoginRedirect, tvTitle);
+          ivLeftPalmPreview, ivRightPalmPreview, logoScanA, spinnerKelas, tvLoginRedirect, tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

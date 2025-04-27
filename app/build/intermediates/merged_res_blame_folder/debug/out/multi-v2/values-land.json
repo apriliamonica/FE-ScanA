@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.handscanattendance.app-mergeDebugResources-38:/values-land/values-land.xml",
+            "outputFile": "com.example.handscanattendance.app-mergeDebugResources-39:/values-land/values-land.xml",
             "map": [
                 {
                     "source": "C:\\Users\\ACER\\.gradle\\caches\\8.10\\transforms\\e90fe014590c9100bbf0e70f82d89ab0\\transformed\\appcompat-1.6.1\\res\\values-land\\values-land.xml",
