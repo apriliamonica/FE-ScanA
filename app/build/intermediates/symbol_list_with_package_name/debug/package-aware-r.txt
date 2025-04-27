@@ -3731,6 +3731,7 @@ layout dialog_tambah_mata_kuliah
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_mahasiswa
+layout item_mata_kuliah
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

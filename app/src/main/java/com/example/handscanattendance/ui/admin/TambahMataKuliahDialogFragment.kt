@@ -11,7 +11,7 @@ class TambahMataKuliahDialogFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog = super.onCreateDialog(savedInstanceState)
-        val view = requireActivity().layoutInflater.inflate(R.layout.dialog_tambah_mata_kuliah, null)
+        val view = requireActivity().layoutInflater.inflate(R.layout.dialog_tambah_mk, null)
 
         val namaMataKuliahEditText: EditText = view.findViewById(R.id.et_nama_mk)
         val semesterEditText: EditText = view.findViewById(R.id.et_semester)

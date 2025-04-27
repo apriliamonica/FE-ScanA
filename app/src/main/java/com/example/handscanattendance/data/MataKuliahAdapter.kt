@@ -3,39 +3,48 @@ package com.example.handscanattendance.data
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.handscanattendance.R
+import com.example.handscanattendance.ui.admin.MataKuliah
 
+class MataKuliahAdapter(private var listMK: List<MataKuliah>) :
+    RecyclerView.Adapter<MataKuliahAdapter.MKViewHolder>() {
 
-class MataKuliahAdapter(
-    private val mataKuliahList: List<MataKuliah>,
-    private val onItemClick: (MataKuliah) -> Unit
-) : RecyclerView.Adapter<MataKuliahAdapter.ViewHolder>() {
+    inner class MKViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val txtIdMK: TextView = view.findViewById(R.id.txt_id_mk)
+        val txtNamaMK: TextView = view.findViewById(R.id.txt_nama_mk)
+        val txtSemester: TextView = view.findViewById(R.id.txt_semester)
+        val btnEdit: Button = view.findViewById(R.id.btn_edit)
+        val btnDelete: Button = view.findViewById(R.id.btn_delete)
+    }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val namaMkTextView: TextView = itemView.findViewById(R.id.tv_nama_mk)
-        private val infoMkTextView: TextView = itemView.findViewById(R.id.tv_info_mk)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MKViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_mata_kuliah, parent, false)
+        return MKViewHolder(view)
+    }
 
-        fun bind(mataKuliah: MataKuliah) {
-            namaMkTextView.text = mataKuliah.nama
-            infoMkTextView.text = "Semester ${mataKuliah.semester} - ${mataKuliah.tahunAkademik}"
+    override fun onBindViewHolder(holder: MKViewHolder, position: Int) {
+        val mk = listMK[position]
+        holder.txtIdMK.text = mk.idMK
+        holder.txtNamaMK.text = mk.namaMK
+        holder.txtSemester.text = mk.semester
 
-            itemView.setOnClickListener {
-                onItemClick(mataKuliah)
-            }
+        holder.btnEdit.setOnClickListener {
+            // TODO: implementasi edit mata kuliah
+        }
+
+        holder.btnDelete.setOnClickListener {
+            // TODO: implementasi hapus mata kuliah
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_mata_kuliah, parent, false)
-        return ViewHolder(view)
-    }
+    override fun getItemCount(): Int = listMK.size
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(mataKuliahList[position])
+    fun updateList(newList: List<MataKuliah>) {
+        listMK = newList
+        notifyDataSetChanged()
     }
-
-    override fun getItemCount(): Int = mataKuliahList.size
 }

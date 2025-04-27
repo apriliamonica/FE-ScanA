@@ -90,6 +90,7 @@ layout activity_register
 layout activity_scan
 layout dialog_tambah_mata_kuliah
 layout item_mahasiswa
+layout item_mata_kuliah
 mipmap ic_launcher_round
 string admin
 string admin_scan_hand

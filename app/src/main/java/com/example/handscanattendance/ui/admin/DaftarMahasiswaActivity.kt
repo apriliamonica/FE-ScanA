@@ -10,6 +10,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.handscanattendance.R
 import com.example.handscanattendance.data.model.MahasiswaModel
 import com.example.handscanattendance.ui.adapter.MahasiswaAdapter
+import com.example.handscanattendance.network.RetrofitClient
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class DaftarMahasiswaActivity : AppCompatActivity() {
 
@@ -32,8 +36,8 @@ class DaftarMahasiswaActivity : AppCompatActivity() {
         setupRecyclerView()
         setupListeners()
 
-        // Dummy data untuk testing
-        loadDummyMahasiswa()
+        // Ambil data mahasiswa dari backend
+        loadMahasiswa()
     }
 
     private fun initViews() {
@@ -45,7 +49,6 @@ class DaftarMahasiswaActivity : AppCompatActivity() {
     }
 
     private fun setupSpinner() {
-        // Dummy list mata kuliah
         val listMk = listOf("Pilih Mata Kuliah", "Pemrograman Android", "Kecerdasan Buatan", "Basis Data Lanjut")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, listMk)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -53,49 +56,41 @@ class DaftarMahasiswaActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        mahasiswaAdapter = MahasiswaAdapter(filteredMahasiswa) { mahasiswa ->
-            showDeleteDialog(mahasiswa)
-        }
-        rvMahasiswa.apply {
-            layoutManager = LinearLayoutManager(this@DaftarMahasiswaActivity)
-            adapter = mahasiswaAdapter
-        }
+        mahasiswaAdapter = MahasiswaAdapter(filteredMahasiswa) { mahasiswa -> showDeleteDialog(mahasiswa) }
+        rvMahasiswa.layoutManager = LinearLayoutManager(this)
+        rvMahasiswa.adapter = mahasiswaAdapter
     }
 
     private fun setupListeners() {
-        btnCari.setOnClickListener {
-            filterMahasiswa()
-        }
-
-        btnTambahData.setOnClickListener {
-            showTambahMahasiswaDialog()
-        }
+        btnCari.setOnClickListener { filterMahasiswa() }
+        btnTambahData.setOnClickListener { showTambahMahasiswaDialog() }
     }
 
-    private fun loadDummyMahasiswa() {
-        // Dummy data
-        listMahasiswa.add(MahasiswaModel("22001", "Anpril"))
-        listMahasiswa.add(MahasiswaModel("22002", "Budi"))
-        listMahasiswa.add(MahasiswaModel("22003", "Citra"))
+    private fun loadMahasiswa() {
+        RetrofitClient.apiService.getMahasiswa().enqueue(object : Callback<List<MahasiswaModel>> {
+            override fun onResponse(call: Call<List<MahasiswaModel>>, response: Response<List<MahasiswaModel>>) {
+                if (response.isSuccessful) {
+                    listMahasiswa.clear()
+                    listMahasiswa.addAll(response.body() ?: emptyList())
+                    filterMahasiswa()
+                } else {
+                    Toast.makeText(this@DaftarMahasiswaActivity, "Gagal mengambil data", Toast.LENGTH_SHORT).show()
+                }
+            }
 
-        // Awalnya tampilkan semua
-        filteredMahasiswa.clear()
-        filteredMahasiswa.addAll(listMahasiswa)
-        mahasiswaAdapter.notifyDataSetChanged()
+            override fun onFailure(call: Call<List<MahasiswaModel>>, t: Throwable) {
+                Toast.makeText(this@DaftarMahasiswaActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     private fun filterMahasiswa() {
         val namaInput = etSearchNama.text.toString().trim()
-
         filteredMahasiswa.clear()
         if (namaInput.isEmpty()) {
             filteredMahasiswa.addAll(listMahasiswa)
         } else {
-            filteredMahasiswa.addAll(
-                listMahasiswa.filter {
-                    it.nama.contains(namaInput, ignoreCase = true)
-                }
-            )
+            filteredMahasiswa.addAll(listMahasiswa.filter { it.nama.contains(namaInput, ignoreCase = true) })
         }
         mahasiswaAdapter.notifyDataSetChanged()
     }
@@ -114,21 +109,16 @@ class DaftarMahasiswaActivity : AppCompatActivity() {
     }
 
     private fun showTambahMahasiswaDialog() {
-        // Menggunakan layout yang sudah ada (misalnya activity_register.xml)
-        val dialogView = LayoutInflater.from(this).inflate(R.layout.activity_register, null)
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_tambah_mahasiswa, null)
         val dialog = Dialog(this)
         dialog.setContentView(dialogView)
 
-        // Bind elemen UI dari layout yang sudah ada
         val etNim = dialogView.findViewById<EditText>(R.id.etNIM)
         val etNama = dialogView.findViewById<EditText>(R.id.etNama)
         val etPassword = dialogView.findViewById<EditText>(R.id.etPassword)
         val etConfirmPassword = dialogView.findViewById<EditText>(R.id.etConfirmPassword)
         val etEmail = dialogView.findViewById<EditText>(R.id.etEmail)
         val etPhone = dialogView.findViewById<EditText>(R.id.etPhone)
-
-        val btnUploadTelapakKanan = dialogView.findViewById<Button>(R.id.btnUploadRightPalm)
-        val btnUploadTelapakKiri = dialogView.findViewById<Button>(R.id.btnUploadLeftPalm)
 
         val btnTambah = dialogView.findViewById<Button>(R.id.btnRegister)
 
@@ -140,26 +130,27 @@ class DaftarMahasiswaActivity : AppCompatActivity() {
             val email = etEmail.text.toString()
             val phone = etPhone.text.toString()
 
-            // Validasi input
-            if (nim.isEmpty() || nama.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()
-                || email.isEmpty() || phone.isEmpty()
-            ) {
-                Toast.makeText(this, "Harap isi semua data", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
+            if (nim.isEmpty() || nama.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+                Toast.makeText(this, "Semua field harus diisi!", Toast.LENGTH_SHORT).show()
+            } else if (password != confirmPassword) {
+                Toast.makeText(this, "Password tidak cocok!", Toast.LENGTH_SHORT).show()
+            } else {
+                val mahasiswa = MahasiswaModel(nim, nama, password, email, phone)
+                RetrofitClient.apiService.addMahasiswa(mahasiswa).enqueue(object : Callback<MahasiswaModel> {
+                    override fun onResponse(call: Call<MahasiswaModel>, response: Response<MahasiswaModel>) {
+                        if (response.isSuccessful) {
+                            loadMahasiswa()
+                            dialog.dismiss()
+                        } else {
+                            Toast.makeText(this@DaftarMahasiswaActivity, "Gagal menambahkan mahasiswa", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+
+                    override fun onFailure(call: Call<MahasiswaModel>, t: Throwable) {
+                        Toast.makeText(this@DaftarMahasiswaActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                    }
+                })
             }
-
-            if (password != confirmPassword) {
-                Toast.makeText(this, "Password tidak cocok", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
-
-            // Tambahkan data mahasiswa
-            listMahasiswa.add(MahasiswaModel(nim, nama))
-            filterMahasiswa()
-            Toast.makeText(this, "Data mahasiswa berhasil ditambahkan", Toast.LENGTH_SHORT).show()
-
-            // Tutup dialog
-            dialog.dismiss()
         }
 
         dialog.show()

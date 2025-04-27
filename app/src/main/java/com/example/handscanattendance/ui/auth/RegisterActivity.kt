@@ -38,7 +38,11 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        // Inisialisasi komponen
+        initViews()
+        setupListeners()
+    }
+
+    private fun initViews() {
         etNIM = findViewById(R.id.etNIM)
         etNama = findViewById(R.id.etNama)
         etPhone = findViewById(R.id.etPhone)
@@ -50,76 +54,63 @@ class RegisterActivity : AppCompatActivity() {
         tvLoginRedirect = findViewById(R.id.tvLoginRedirect)
         btnUploadRightPalm = findViewById(R.id.btnUploadRightPalm)
         btnUploadLeftPalm = findViewById(R.id.btnUploadLeftPalm)
+    }
 
-        // Dummy data untuk spinner kelas
-        val kelasList = listOf("A", "B", "C")
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, kelasList)
-        spinnerKelas.adapter = adapter
+    private fun setupListeners() {
+        btnUploadRightPalm.setOnClickListener { openCamera(CAMERA_REQUEST_CODE_RIGHT) }
+        btnUploadLeftPalm.setOnClickListener { openCamera(CAMERA_REQUEST_CODE_LEFT) }
 
-        // Event tombol daftar
         btnRegister.setOnClickListener {
             val nim = etNIM.text.toString()
             val nama = etNama.text.toString()
             val phone = etPhone.text.toString()
             val email = etEmail.text.toString()
-            val kelas = spinnerKelas.selectedItem.toString()
             val password = etPassword.text.toString()
             val confirmPassword = etConfirmPassword.text.toString()
 
-            if (nim.isEmpty() || nama.isEmpty() || phone.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-                Toast.makeText(this, "Harap isi semua kolom", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
+            if (nim.isEmpty() || nama.isEmpty() || phone.isEmpty() || email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Semua field harus diisi!", Toast.LENGTH_SHORT).show()
+            } else if (password != confirmPassword) {
+                Toast.makeText(this, "Password tidak cocok!", Toast.LENGTH_SHORT).show()
+            } else {
+                val palmLeftBase64 = convertBitmapToBase64(leftPalmBitmap)
+                val palmRightBase64 = convertBitmapToBase64(rightPalmBitmap)
+
+                val registerRequest = RegisterRequest(nim, nama, email, phone, password, palmLeftBase64, palmRightBase64)
+
+                RetrofitClient.apiService.register(registerRequest).enqueue(object : Callback<RegisterResponse> {
+                    override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>) {
+                        if (response.isSuccessful) {
+                            Toast.makeText(this@RegisterActivity, "Berhasil Daftar!", Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
+                            finish()
+                        } else {
+                            Toast.makeText(this@RegisterActivity, "Registrasi Gagal!", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+
+                    override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
+                        Toast.makeText(this@RegisterActivity, "Terjadi Kesalahan!", Toast.LENGTH_SHORT).show()
+                    }
+                })
             }
-
-            if (password != confirmPassword) {
-                Toast.makeText(this, "Kata sandi tidak cocok", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
-
-            // Konversi foto telapak tangan ke base64
-            val rightPalmBase64 = rightPalmBitmap?.let { convertToBase64(it) }
-            val leftPalmBase64 = leftPalmBitmap?.let { convertToBase64(it) }
-
-            // Buat objek RegisterRequest
-            val credentials = RegisterRequest(
-                nim = nim,
-                nama = nama,
-                email = email,
-                no_telp = phone,
-                kelas = kelas,
-                password = password,
-                foto_telapak_kanan = rightPalmBase64,  // Kirim base64 foto telapak kanan
-                foto_telapak_kiri = leftPalmBase64    // Kirim base64 foto telapak kiri
-            )
-
-            registerUser(credentials)
         }
 
-        // Navigasi ke LoginActivity
         tvLoginRedirect.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
-            finish()
-        }
-
-        // Tombol upload telapak tangan kanan
-        btnUploadRightPalm.setOnClickListener {
-            openCameraForRightPalm()
-        }
-
-        // Tombol upload telapak tangan kiri
-        btnUploadLeftPalm.setOnClickListener {
-            openCameraForLeftPalm()
         }
     }
 
-    private fun openCameraForRightPalm() {
-        val intent = Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE)
-        startActivityForResult(intent, REQUEST_CODE_RIGHT_PALM)
+    private fun convertBitmapToBase64(bitmap: Bitmap?): String {
+        val outputStream = ByteArrayOutputStream()
+        bitmap?.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+        val byteArray = outputStream.toByteArray()
+        return Base64.encodeToString(byteArray, Base64.DEFAULT)
     }
 
-    private fun openCameraForLeftPalm() {
+    private fun openCamera(requestCode: Int) {
         val intent = Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE)
-        startActivityForResult(intent, REQUEST_CODE_LEFT_PALM)
+        startActivityForResult(intent, requestCode)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -127,55 +118,20 @@ class RegisterActivity : AppCompatActivity() {
         if (resultCode == Activity.RESULT_OK && data != null) {
             val photo = data.extras?.get("data") as Bitmap
             when (requestCode) {
-                REQUEST_CODE_RIGHT_PALM -> {
-                    rightPalmBitmap = photo
-                    Toast.makeText(this, "Telapak kanan diambil!", Toast.LENGTH_SHORT).show()
-                }
-                REQUEST_CODE_LEFT_PALM -> {
+                CAMERA_REQUEST_CODE_LEFT -> {
                     leftPalmBitmap = photo
-                    Toast.makeText(this, "Telapak kiri diambil!", Toast.LENGTH_SHORT).show()
+                    btnUploadLeftPalm.text = "Foto Kanan Tangan Terambil"
+                }
+                CAMERA_REQUEST_CODE_RIGHT -> {
+                    rightPalmBitmap = photo
+                    btnUploadRightPalm.text = "Foto Kiri Tangan Terambil"
                 }
             }
         }
     }
 
-    private fun convertToBase64(bitmap: Bitmap): String {
-        val baos = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos)
-        val byteArray = baos.toByteArray()
-        return Base64.encodeToString(byteArray, Base64.NO_WRAP)
-    }
-
-    private fun registerUser(credentials: RegisterRequest) {
-        val apiService = RetrofitClient.instance.create(ApiService::class.java)
-        val call = apiService.register(credentials)
-
-        call.enqueue(object : Callback<RegisterResponse> {
-            override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>) {
-                if (response.isSuccessful) {
-                    val registerResponse = response.body()
-                    if (registerResponse != null && registerResponse.success) {
-                        Toast.makeText(this@RegisterActivity, "Registrasi berhasil!", Toast.LENGTH_SHORT).show()
-
-                        // Pindah ke halaman login setelah registrasi berhasil
-                        startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
-                        finish()
-                    } else {
-                        Toast.makeText(this@RegisterActivity, registerResponse?.message ?: "Registrasi gagal", Toast.LENGTH_SHORT).show()
-                    }
-                } else {
-                    Toast.makeText(this@RegisterActivity, "Terjadi kesalahan saat registrasi", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
-                Toast.makeText(this@RegisterActivity, "Gagal terkoneksi dengan server", Toast.LENGTH_SHORT).show()
-            }
-        })
-    }
-
     companion object {
-        const val REQUEST_CODE_RIGHT_PALM = 101
-        const val REQUEST_CODE_LEFT_PALM = 102
+        private const val CAMERA_REQUEST_CODE_LEFT = 101
+        private const val CAMERA_REQUEST_CODE_RIGHT = 102
     }
 }
