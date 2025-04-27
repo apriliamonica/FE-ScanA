@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.handscanattendance.R
-import com.example.handscanattendance.model.RegisterRequest
+import com.example.handscanattendance.data.model.RegisterRequest
 import com.example.handscanattendance.network.ApiService
 import com.example.handscanattendance.network.RetrofitClient
 import retrofit2.Call
@@ -15,7 +15,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.io.ByteArrayOutputStream
 import android.util.Base64
-import com.example.handscanattendance.model.RegisterResponse
+import com.example.handscanattendance.data.model.RegisterResponse
 
 class RegisterActivity : AppCompatActivity() {
 

@@ -7,19 +7,23 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handscanattendance.R
 
+
 class MataKuliahAdapter(
-    private var list: List<MataKuliah>,
-    private val onClick: (MataKuliah) -> Unit
+    private val mataKuliahList: List<MataKuliah>,
+    private val onItemClick: (MataKuliah) -> Unit
 ) : RecyclerView.Adapter<MataKuliahAdapter.ViewHolder>() {
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val namaText: TextView = view.findViewById(R.id.tv_nama_mk)
-        private val infoText: TextView = view.findViewById(R.id.tv_info_mk)
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val namaMkTextView: TextView = itemView.findViewById(R.id.tv_nama_mk)
+        private val infoMkTextView: TextView = itemView.findViewById(R.id.tv_info_mk)
 
-        fun bind(mk: MataKuliah) {
-            namaText.text = mk.nama
-            infoText.text = "${mk.semester} - ${mk.tahunAkademik}"
-            itemView.setOnClickListener { onClick(mk) }
+        fun bind(mataKuliah: MataKuliah) {
+            namaMkTextView.text = mataKuliah.nama
+            infoMkTextView.text = "Semester ${mataKuliah.semester} - ${mataKuliah.tahunAkademik}"
+
+            itemView.setOnClickListener {
+                onItemClick(mataKuliah)
+            }
         }
     }
 
@@ -30,13 +34,8 @@ class MataKuliahAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(list[position])
+        holder.bind(mataKuliahList[position])
     }
 
-    override fun getItemCount(): Int = list.size
-
-    fun updateData(newList: List<MataKuliah>) {
-        list = newList
-        notifyDataSetChanged()
-    }
+    override fun getItemCount(): Int = mataKuliahList.size
 }

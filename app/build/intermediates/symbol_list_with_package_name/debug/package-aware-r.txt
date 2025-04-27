@@ -3138,6 +3138,7 @@ id btnCari
 id btnDelete
 id btnLogin
 id btnRegister
+id btnSave
 id btnTambahData
 id btnUploadLeftPalm
 id btnUploadRightPalm
@@ -3237,6 +3238,9 @@ id etPassword
 id etPhone
 id etSearchNama
 id etUsername
+id et_nama_mk
+id et_semester
+id et_tahun_akademik
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3723,6 +3727,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_tambah_mata_kuliah
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_mahasiswa

@@ -31,6 +31,7 @@ id btnCari
 id btnDelete
 id btnLogin
 id btnRegister
+id btnSave
 id btnTambahData
 id btnUploadLeftPalm
 id btnUploadRightPalm
@@ -48,6 +49,9 @@ id etPassword
 id etPhone
 id etSearchNama
 id etUsername
+id et_nama_mk
+id et_semester
+id et_tahun_akademik
 id ivLeftPalmPreview
 id ivRightPalmPreview
 id logo
@@ -84,6 +88,7 @@ layout activity_login
 layout activity_mata_kuliah
 layout activity_register
 layout activity_scan
+layout dialog_tambah_mata_kuliah
 layout item_mahasiswa
 mipmap ic_launcher_round
 string admin

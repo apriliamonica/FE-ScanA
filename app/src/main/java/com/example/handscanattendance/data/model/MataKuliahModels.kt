@@ -1,4 +1,4 @@
-package com.example.handscanattendance.model
+package com.example.handscanattendance.data.model
 
 data class MataKuliahResponse(
     val success: Boolean,

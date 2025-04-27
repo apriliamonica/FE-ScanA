@@ -5,10 +5,9 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.handscanattendance.databinding.ActivityLoginBinding
-import com.example.handscanattendance.network.ApiService
-import com.example.handscanattendance.model.LoginCredentials
-import com.example.handscanattendance.model.LoginResponse
-import com.example.handscanattendance.network.RetrofitClient
+import com.example.handscanattendance.network.ApiClient
+import com.example.handscanattendance.data.model.LoginCredentials
+import com.example.handscanattendance.data.model.LoginResponse
 import com.example.handscanattendance.ui.admin.AdminHomeActivity
 import retrofit2.Call
 import retrofit2.Callback
@@ -44,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun loginUser(credentials: LoginCredentials) {
-        val apiService = RetrofitClient.instance.create(ApiService::class.java)
+        val apiService = ApiClient.getClient().create(ApiService::class.java)
         val call = apiService.login(credentials)
 
         call.enqueue(object : Callback<LoginResponse> {

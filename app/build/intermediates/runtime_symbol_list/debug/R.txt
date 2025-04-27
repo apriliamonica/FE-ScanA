@@ -3137,6 +3137,7 @@ int id btnCari 0x7f080065
 int id btnDelete 0x7f080066
 int id btnLogin 0x7f080067
 int id btnRegister 0x7f080068
+int id btnSave 0x7f080229
 int id btnTambahData 0x7f080069
 int id btnUploadLeftPalm 0x7f08006a
 int id btnUploadRightPalm 0x7f08006b
@@ -3236,6 +3237,9 @@ int id etPassword 0x7f0800c8
 int id etPhone 0x7f0800c9
 int id etSearchNama 0x7f0800ca
 int id etUsername 0x7f0800cb
+int id et_nama_mk 0x7f08022a
+int id et_semester 0x7f08022b
+int id et_tahun_akademik 0x7f08022c
 int id exitUntilCollapsed 0x7f0800cc
 int id expand_activities_button 0x7f0800cd
 int id expanded_menu 0x7f0800ce
@@ -3722,6 +3726,7 @@ int layout design_navigation_menu 0x7f0b0030
 int layout design_navigation_menu_item 0x7f0b0031
 int layout design_text_input_end_icon 0x7f0b0032
 int layout design_text_input_start_icon 0x7f0b0033
+int layout dialog_tambah_mata_kuliah 0x7f0b0074
 int layout ime_base_split_test_activity 0x7f0b0034
 int layout ime_secondary_split_test_activity 0x7f0b0035
 int layout item_mahasiswa 0x7f0b0036

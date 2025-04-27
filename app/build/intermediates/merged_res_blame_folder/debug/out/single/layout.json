@@ -12,8 +12,8 @@
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-43:\\layout\\activity_home_admin.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-mergeDebugResources-40:/layout/item_mahasiswa.xml",
-        "source": "com.example.handscanattendance.app-main-43:/layout/item_mahasiswa.xml"
+        "merged": "com.example.handscanattendance.app-mergeDebugResources-40:/layout/dialog_tambah_mata_kuliah.xml",
+        "source": "com.example.handscanattendance.app-main-43:/layout/dialog_tambah_mata_kuliah.xml"
     },
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-40:\\layout\\activity_scan.xml",
@@ -52,10 +52,6 @@
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-43:\\layout\\activity_home_mahasiswa.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-mergeDebugResources-40:/layout/activity_daftar_mahasiswa.xml",
-        "source": "com.example.handscanattendance.app-main-43:/layout/activity_daftar_mahasiswa.xml"
-    },
-    {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-40:\\layout\\activity_mata_kuliah.xml",
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-43:\\layout\\activity_mata_kuliah.xml"
     },
@@ -66,5 +62,9 @@
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-mergeDebugResources-40:\\layout\\activity_main.xml",
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-43:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.example.handscanattendance.app-mergeDebugResources-40:/layout/activity_home_admin.xml",
+        "source": "com.example.handscanattendance.app-main-43:/layout/activity_home_admin.xml"
     }
 ]

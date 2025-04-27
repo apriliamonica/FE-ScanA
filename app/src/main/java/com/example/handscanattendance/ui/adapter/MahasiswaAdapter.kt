@@ -1,24 +1,24 @@
-package com.example.handscanattendance.data
+package com.example.handscanattendance.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handscanattendance.R
+import com.example.handscanattendance.data.model.MahasiswaModel
 
 class MahasiswaAdapter(
-    private var mahasiswaList: List<Mahasiswa>,
-    private val onDeleteClick: (Mahasiswa) -> Unit // Callback untuk delete
+    private var listMahasiswa: List<MahasiswaModel>,
+    private val onDeleteClick: (MahasiswaModel) -> Unit
 ) : RecyclerView.Adapter<MahasiswaAdapter.MahasiswaViewHolder>() {
 
     inner class MahasiswaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvNo: TextView = itemView.findViewById(R.id.tvNo)
         val tvNim: TextView = itemView.findViewById(R.id.tvNim)
         val tvNama: TextView = itemView.findViewById(R.id.tvNama)
-        val tvKelas: TextView = itemView.findViewById(R.id.tvKelas)
-        val btnDelete: ImageButton = itemView.findViewById(R.id.btnDelete)
+        val btnHapus: Button = itemView.findViewById(R.id.btnDelete)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MahasiswaViewHolder {
@@ -28,23 +28,20 @@ class MahasiswaAdapter(
     }
 
     override fun onBindViewHolder(holder: MahasiswaViewHolder, position: Int) {
-        val mahasiswa = mahasiswaList[position]
-        holder.tvNo.text = (position + 1).toString() // Nomor urut otomatis
+        val mahasiswa = listMahasiswa[position]
+        holder.tvNo.text = (position + 1).toString()
         holder.tvNim.text = mahasiswa.nim
         holder.tvNama.text = mahasiswa.nama
-        holder.tvKelas.text = mahasiswa.kelas
 
-        // Mengatur tombol hapus
-        holder.btnDelete.setOnClickListener {
-            onDeleteClick(mahasiswa) // Memanggil callback onDeleteClick saat tombol delete diklik
+        holder.btnHapus.setOnClickListener {
+            onDeleteClick(mahasiswa)
         }
     }
 
-    override fun getItemCount(): Int = mahasiswaList.size
+    override fun getItemCount(): Int = listMahasiswa.size
 
-    // Fungsi untuk memperbarui data pada adapter
-    fun updateData(newList: List<Mahasiswa>) {
-        mahasiswaList = newList
+    fun updateList(newList: List<MahasiswaModel>) {
+        listMahasiswa = newList
         notifyDataSetChanged()
     }
 }
