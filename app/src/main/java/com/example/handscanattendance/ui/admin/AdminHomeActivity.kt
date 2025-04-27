@@ -41,7 +41,7 @@ class AdminHomeActivity : AppCompatActivity() {
         }
 
         studentListButton.setOnClickListener {
-            startActivity(Intent(this, MahasiswaActivity::class.java))
+            startActivity(Intent(this, DaftarMahasiswaActivity::class.java))
         }
 
         courseButton.setOnClickListener {
