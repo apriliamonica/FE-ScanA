@@ -1,19 +1,23 @@
 [
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-41:\\drawable_logout_icon.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-43:\\drawable\\logout_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-41:\\layout_activity_scan.xml.flat",
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-43:\\layout\\activity_scan.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-merged_res-41:/drawable_scan_box.xml.flat",
-        "source": "com.example.handscanattendance.app-main-43:/drawable/scan_box.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-41:\\drawable_logout_icon.xml.flat",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-43:\\drawable\\logout_icon.xml"
     },
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-41:\\drawable_ic_camera.xml.flat",
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-43:\\drawable\\ic_camera.xml"
+    },
+    {
+        "merged": "com.example.handscanattendance.app-merged_res-41:/layout_item_mahasiswa.xml.flat",
+        "source": "com.example.handscanattendance.app-main-43:/layout/item_mahasiswa.xml"
+    },
+    {
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-41:\\drawable_scan_box.xml.flat",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-43:\\drawable\\scan_box.xml"
     },
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-41:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
@@ -56,12 +60,12 @@
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-43:\\layout\\item_mata_kuliah.xml"
     },
     {
-        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-41:\\layout_item_mahasiswa.xml.flat",
-        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-43:\\layout\\item_mahasiswa.xml"
+        "merged": "com.example.handscanattendance.app-merged_res-41:/drawable_ic_back.xml.flat",
+        "source": "com.example.handscanattendance.app-main-43:/drawable/ic_back.xml"
     },
     {
-        "merged": "com.example.handscanattendance.app-merged_res-41:/layout_activity_scan.xml.flat",
-        "source": "com.example.handscanattendance.app-main-43:/layout/activity_scan.xml"
+        "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-41:\\layout_item_mahasiswa.xml.flat",
+        "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-43:\\layout\\item_mahasiswa.xml"
     },
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-41:\\layout_activity_home_admin.xml.flat",
@@ -118,6 +122,14 @@
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-41:\\drawable_button_rounded.xml.flat",
         "source": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-main-43:\\drawable\\button_rounded.xml"
+    },
+    {
+        "merged": "com.example.handscanattendance.app-merged_res-41:/drawable_ic_delete.xml.flat",
+        "source": "com.example.handscanattendance.app-main-43:/drawable/ic_delete.xml"
+    },
+    {
+        "merged": "com.example.handscanattendance.app-merged_res-41:/layout_activity_daftar_mahasiswa.xml.flat",
+        "source": "com.example.handscanattendance.app-main-43:/layout/activity_daftar_mahasiswa.xml"
     },
     {
         "merged": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-41:\\drawable_input_rounded.xml.flat",

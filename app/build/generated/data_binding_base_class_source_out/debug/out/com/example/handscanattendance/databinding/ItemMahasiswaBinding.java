@@ -73,31 +73,31 @@ public final class ItemMahasiswaBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btn_delete;
+      id = R.id.btnDelete;
       ImageButton btnDelete = ViewBindings.findChildViewById(rootView, id);
       if (btnDelete == null) {
         break missingId;
       }
 
-      id = R.id.tv_kelas;
+      id = R.id.tvKelas;
       TextView tvKelas = ViewBindings.findChildViewById(rootView, id);
       if (tvKelas == null) {
         break missingId;
       }
 
-      id = R.id.tv_nama;
+      id = R.id.tvNama;
       TextView tvNama = ViewBindings.findChildViewById(rootView, id);
       if (tvNama == null) {
         break missingId;
       }
 
-      id = R.id.tv_nim;
+      id = R.id.tvNim;
       TextView tvNim = ViewBindings.findChildViewById(rootView, id);
       if (tvNim == null) {
         break missingId;
       }
 
-      id = R.id.tv_no;
+      id = R.id.tvNo;
       TextView tvNo = ViewBindings.findChildViewById(rootView, id);
       if (tvNo == null) {
         break missingId;

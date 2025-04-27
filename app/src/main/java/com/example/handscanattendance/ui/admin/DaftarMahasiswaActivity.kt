@@ -1,4 +1,4 @@
-package com.example.handscanattendance.data
+package com.example.handscanattendance.ui.admin
 
 import android.os.Bundle
 import android.widget.*
@@ -6,12 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.handscanattendance.R
+import com.example.handscanattendance.data.Mahasiswa
+import com.example.handscanattendance.data.MahasiswaAdapter
 import com.example.handscanattendance.databinding.ActivityDaftarMahasiswaBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import retrofit2.Response
 
 class DaftarMahasiswaActivity : AppCompatActivity() {
 
@@ -26,7 +26,7 @@ class DaftarMahasiswaActivity : AppCompatActivity() {
 
         setupRecyclerView()
         setupListeners()
-        loadDataMahasiswa() // Ambil data dari backend saat activity dimulai
+        getMahasiswaData()
     }
 
     private fun setupRecyclerView() {
@@ -46,7 +46,7 @@ class DaftarMahasiswaActivity : AppCompatActivity() {
         }
 
         binding.btnTambahData.setOnClickListener {
-            tambahMahasiswaDummy()  // Ganti ini untuk membuka form input data mahasiswa
+            tambahMahasiswaDummy()
         }
 
         binding.btnCari.setOnClickListener {
@@ -55,74 +55,33 @@ class DaftarMahasiswaActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadDataMahasiswa() {
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val response: Response<List<Mahasiswa>> = ApiClient.apiService.getMahasiswaList()
-                withContext(Dispatchers.Main) {
-                    if (response.isSuccessful) {
-                        listMahasiswa = response.body()?.toMutableList() ?: mutableListOf()
-                        mahasiswaAdapter.updateData(listMahasiswa)
-                    } else {
-                        // Tangani error jika API gagal
-                        Toast.makeText(this@DaftarMahasiswaActivity, "Gagal memuat data", Toast.LENGTH_SHORT).show()
-                    }
-                }
-            } catch (e: Exception) {
-                withContext(Dispatchers.Main) {
-                    Toast.makeText(this@DaftarMahasiswaActivity, "Terjadi kesalahan jaringan", Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
+    private fun getMahasiswaData() {
+        // Menggunakan data dummy untuk testing
+        listMahasiswa.clear()
+        listMahasiswa.addAll(generateDummyData())
+        mahasiswaAdapter.updateData(listMahasiswa)
+    }
+
+    private fun generateDummyData(): List<Mahasiswa> {
+        return listOf(
+            Mahasiswa("22013001", "John Doe", "A"),
+            Mahasiswa("22013002", "Jane Doe", "B"),
+            Mahasiswa("22013003", "Sam Smith", "C"),
+            Mahasiswa("22013004", "Alice Johnson", "D")
+        )
     }
 
     private fun tambahMahasiswaDummy() {
-        // Ganti dengan input form untuk menambah mahasiswa baru
-        val no = listMahasiswa.size + 1
-        val newMahasiswa = Mahasiswa(no, "NIM00$no", "Mahasiswa $no", "A")
-        tambahMahasiswaKeBackend(newMahasiswa)
-    }
-
-    private fun tambahMahasiswaKeBackend(mahasiswa: Mahasiswa) {
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val response = ApiClient.apiService.addMahasiswa(mahasiswa)
-                withContext(Dispatchers.Main) {
-                    if (response.isSuccessful) {
-                        listMahasiswa.add(mahasiswa)
-                        mahasiswaAdapter.updateData(listMahasiswa)
-                    } else {
-                        // Tangani error jika API gagal
-                        Toast.makeText(this@DaftarMahasiswaActivity, "Gagal menambah mahasiswa", Toast.LENGTH_SHORT).show()
-                    }
-                }
-            } catch (e: Exception) {
-                withContext(Dispatchers.Main) {
-                    Toast.makeText(this@DaftarMahasiswaActivity, "Terjadi kesalahan jaringan", Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
+        val mahasiswaBaru = Mahasiswa("22013005", "Bob Marley", "E")
+        listMahasiswa.add(mahasiswaBaru)
+        mahasiswaAdapter.updateData(listMahasiswa)
     }
 
     private fun deleteMahasiswa(mahasiswa: Mahasiswa) {
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val response = ApiClient.apiService.deleteMahasiswa(mahasiswa.no)
-                withContext(Dispatchers.Main) {
-                    if (response.isSuccessful) {
-                        listMahasiswa.remove(mahasiswa)
-                        mahasiswaAdapter.updateData(listMahasiswa)
-                    } else {
-                        // Tangani error jika API gagal
-                        Toast.makeText(this@DaftarMahasiswaActivity, "Gagal menghapus mahasiswa", Toast.LENGTH_SHORT).show()
-                    }
-                }
-            } catch (e: Exception) {
-                withContext(Dispatchers.Main) {
-                    Toast.makeText(this@DaftarMahasiswaActivity, "Terjadi kesalahan jaringan", Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
+        // Logic untuk menghapus data mahasiswa
+        listMahasiswa.remove(mahasiswa)
+        mahasiswaAdapter.updateData(listMahasiswa)
+        Toast.makeText(this@DaftarMahasiswaActivity, "Mahasiswa berhasil dihapus", Toast.LENGTH_SHORT).show()
     }
 
     private fun cariMahasiswa(keyword: String) {

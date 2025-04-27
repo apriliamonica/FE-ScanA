@@ -1518,21 +1518,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-41:\\values-w600dp-land-v13_values-w600dp-land-v13.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\ACER\\.gradle\\caches\\8.10\\transforms\\aec880ee5a543bb20e25d3617ca202b3\\transformed\\material-1.9.0\\res\\values-w600dp-land-v13\\values-w600dp-land-v13.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "54",
-                        "endOffsets": "105"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-41:\\values-or_values-or.arsc.flat",
             "map": [
                 {
@@ -1586,6 +1571,21 @@
                         "startOffsets": "3493,3596,3698,3801,3906,4007,4109,8702",
                         "endColumns": "102,101,102,104,100,101,118,100",
                         "endOffsets": "3591,3693,3796,3901,4002,4104,4223,8798"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\ACER\\.gradle\\daemon\\8.10\\com.example.handscanattendance.app-merged_res-41:\\values-w600dp-land-v13_values-w600dp-land-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\ACER\\.gradle\\caches\\8.10\\transforms\\aec880ee5a543bb20e25d3617ca202b3\\transformed\\material-1.9.0\\res\\values-w600dp-land-v13\\values-w600dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "54",
+                        "endOffsets": "105"
                     }
                 }
             ]

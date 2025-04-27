@@ -10,7 +10,7 @@ import com.example.handscanattendance.R
 
 class MahasiswaAdapter(
     private var mahasiswaList: List<Mahasiswa>,
-    private val onDeleteClick: (Mahasiswa) -> Unit
+    private val onDeleteClick: (Mahasiswa) -> Unit // Callback untuk delete
 ) : RecyclerView.Adapter<MahasiswaAdapter.MahasiswaViewHolder>() {
 
     inner class MahasiswaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -29,18 +29,20 @@ class MahasiswaAdapter(
 
     override fun onBindViewHolder(holder: MahasiswaViewHolder, position: Int) {
         val mahasiswa = mahasiswaList[position]
-        holder.tvNo.text = mahasiswa.no.toString() // Jika field adalah "id" dari API, ganti dengan mahasiswa.id
+        holder.tvNo.text = (position + 1).toString() // Nomor urut otomatis
         holder.tvNim.text = mahasiswa.nim
         holder.tvNama.text = mahasiswa.nama
         holder.tvKelas.text = mahasiswa.kelas
 
+        // Mengatur tombol hapus
         holder.btnDelete.setOnClickListener {
-            onDeleteClick(mahasiswa)
+            onDeleteClick(mahasiswa) // Memanggil callback onDeleteClick saat tombol delete diklik
         }
     }
 
     override fun getItemCount(): Int = mahasiswaList.size
 
+    // Fungsi untuk memperbarui data pada adapter
     fun updateData(newList: List<Mahasiswa>) {
         mahasiswaList = newList
         notifyDataSetChanged()
