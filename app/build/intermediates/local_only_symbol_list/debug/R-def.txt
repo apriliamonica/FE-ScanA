@@ -33,6 +33,7 @@ id btnCari
 id btnDelete
 id btnLogin
 id btnRegister
+id btnSave
 id btnSimpan
 id btnTambahData
 id btnUploadLeftPalm
@@ -64,6 +65,7 @@ id logoScanA
 id logout_button
 id menu_grid
 id overlay
+id previewView
 id rvMahasiswa
 id rv_mata_kuliah
 id scanText
@@ -77,7 +79,6 @@ id spinner_semester
 id spinner_tahun
 id student_list_button
 id tableLayout
-id textureView
 id tvKelas
 id tvLoginRedirect
 id tvNama

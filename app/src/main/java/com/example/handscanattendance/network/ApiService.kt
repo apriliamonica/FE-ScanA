@@ -7,6 +7,8 @@ import com.example.handscanattendance.data.model.MataKuliahResponse
 import com.example.handscanattendance.data.model.MataKuliahRequest
 import com.example.handscanattendance.data.model.RegisterRequest
 import com.example.handscanattendance.data.model.RegisterResponse
+import com.example.handscanattendance.data.model.UploadPresensiRequest
+import com.example.handscanattendance.data.model.UploadPresensiResponse
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -30,6 +32,11 @@ interface ApiService {
     // Menghapus Mahasiswa berdasarkan ID
     @DELETE("mahasiswa/{id}")
     suspend fun hapusMahasiswa(@Path("id") id: String): Response<MahasiswaModel>
+
+    // Upload Foto Presensi
+    @POST("upload-presensi")
+    suspend fun uploadPresensi(@Body request: UploadPresensiRequest): Response<UploadPresensiResponse>
+
 
     // Mendapatkan Daftar Mata Kuliah
     @GET("mata-kuliah")
