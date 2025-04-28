@@ -3,6 +3,7 @@ package com.example.handscanattendance
 import android.app.Application
 import android.content.Context
 
+
 class MyApplication : Application() {
 
     override fun onCreate() {

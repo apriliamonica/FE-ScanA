@@ -1,7 +1,7 @@
 package com.example.handscanattendance.data.model
 
 data class LoginCredentials(
-    val username: String,
+    val email: String,
     val password: String
 )
 

@@ -1,101 +1,95 @@
 package com.example.handscanattendance.ui.admin
 
+import android.app.AlertDialog
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
+import android.view.LayoutInflater
 import android.widget.*
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.handscanattendance.R
-import com.example.handscanattendance.data.MataKuliahAdapter
-
-
-data class MataKuliah(
-    val idMK: String,
-    val namaMK: String,
-    val semester: String
-)
+import com.example.handscanattendance.data.MataKuliah
 
 class MataKuliahActivity : AppCompatActivity() {
 
-    private lateinit var btnKembali: Button
-    private lateinit var btnTambahMK: Button
-    private lateinit var edtSearch: EditText
     private lateinit var rvMataKuliah: RecyclerView
-    private lateinit var mataKuliahAdapter: MataKuliahAdapter
-
-    private val listMataKuliah = mutableListOf<MataKuliah>()
+    private lateinit var adapter: MataKuliahAdapter
+    private val mataKuliahList = mutableListOf<MataKuliah>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mata_kuliah)
 
-        btnKembali = findViewById(R.id.btn_kembali)
-        btnTambahMK = findViewById(R.id.btn_tambah_mk)
-        edtSearch = findViewById(R.id.edt_search)
         rvMataKuliah = findViewById(R.id.rv_mata_kuliah)
+        val btnTambah: Button = findViewById(R.id.btn_tambah_mk)
+        val btnKembali: Button = findViewById(R.id.btn_kembali)
 
-        setupRecyclerView()
+        rvMataKuliah.layoutManager = LinearLayoutManager(this)
+        adapter = MataKuliahAdapter(mataKuliahList)
+        rvMataKuliah.adapter = adapter
 
-        btnTambahMK.setOnClickListener {
-            showTambahMKDialog()
+        btnTambah.setOnClickListener {
+            showTambahMkDialog()
         }
 
         btnKembali.setOnClickListener {
             finish()
         }
-
-        edtSearch.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                filterMataKuliah(s.toString())
-            }
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
-        })
     }
 
-    private fun setupRecyclerView() {
-        mataKuliahAdapter = MataKuliahAdapter(listMataKuliah)
-        rvMataKuliah.layoutManager = LinearLayoutManager(this)
-        rvMataKuliah.adapter = mataKuliahAdapter
-    }
+    private fun showTambahMkDialog() {
+        val view = LayoutInflater.from(this).inflate(R.layout.dialog_tambah_mk, null)
 
-    private fun filterMataKuliah(query: String) {
-        val filteredList = listMataKuliah.filter {
-            it.namaMK.contains(query, ignoreCase = true)
-        }
-        mataKuliahAdapter.updateList(filteredList)
-    }
+        val spinnerSemester = view.findViewById<Spinner>(R.id.spinnerSemester)
+        val edtTahunAkademik = view.findViewById<EditText>(R.id.edtTahunAkademik)
+        val edtIdMk = view.findViewById<EditText>(R.id.edtIdMk)
+        val edtKelas = view.findViewById<EditText>(R.id.edtKelas)
+        val edtNamaMk = view.findViewById<EditText>(R.id.edtNamaMk)
+        val btnSimpan = view.findViewById<Button>(R.id.btnSimpan)
+        val btnBatal = view.findViewById<Button>(R.id.btnBatal)
 
-    private fun showTambahMKDialog() {
-        val view = layoutInflater.inflate(R.layout.dialog_tambah_mk, null)
+        val semesterAdapter = ArrayAdapter(
+            this,
+            android.R.layout.simple_spinner_item,
+            listOf("Ganjil", "Genap")
+        )
+        semesterAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerSemester.adapter = semesterAdapter
 
-        val edtIdMK = view.findViewById<EditText>(R.id.edt_id_mk)
-        val edtNamaMK = view.findViewById<EditText>(R.id.edt_nama_mk)
-        val edtSemester = view.findViewById<EditText>(R.id.edt_semester)
-
-        AlertDialog.Builder(this)
+        val dialog = AlertDialog.Builder(this)
             .setView(view)
-            .setTitle("Tambah Mata Kuliah")
-            .setPositiveButton("Simpan") { dialog, _ ->
-                val idMK = edtIdMK.text.toString()
-                val namaMK = edtNamaMK.text.toString()
-                val semester = edtSemester.text.toString()
-
-                if (idMK.isNotEmpty() && namaMK.isNotEmpty() && semester.isNotEmpty()) {
-                    listMataKuliah.add(MataKuliah(idMK, namaMK, semester))
-                    mataKuliahAdapter.updateList(listMataKuliah)
-                } else {
-                    Toast.makeText(this, "Semua field harus diisi", Toast.LENGTH_SHORT).show()
-                }
-                dialog.dismiss()
-            }
-            .setNegativeButton("Batal") { dialog, _ ->
-                dialog.dismiss()
-            }
             .create()
-            .show()
+
+        btnSimpan.setOnClickListener {
+            val semester = spinnerSemester.selectedItem.toString()
+            val tahunAkademik = edtTahunAkademik.text.toString()
+            val idMk = edtIdMk.text.toString()
+            val kelas = edtKelas.text.toString()
+            val namaMk = edtNamaMk.text.toString()
+
+            if (tahunAkademik.isNotEmpty() && idMk.isNotEmpty() && kelas.isNotEmpty() && namaMk.isNotEmpty()) {
+                val fullIdMk = "$idMk-$kelas-$tahunAkademik"
+                val mataKuliah = MataKuliah(
+                    id = "", // sementara kosong, nanti dari server
+                    idMk = fullIdMk,
+                    nama = namaMk,
+                    semester = semester,
+                    tahunAkademik = tahunAkademik
+                )
+
+                mataKuliahList.add(mataKuliah)
+                adapter.notifyItemInserted(mataKuliahList.size - 1)
+
+                dialog.dismiss()
+            } else {
+                Toast.makeText(this, "Semua field harus diisi!", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        btnBatal.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
     }
 }

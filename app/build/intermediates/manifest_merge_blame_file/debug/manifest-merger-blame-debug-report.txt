@@ -114,87 +114,71 @@
 71            android:exported="false" />
 71-->E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:39:93-117
 72
-73        <service
-73-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:24:9-33:19
-74            android:name="androidx.camera.core.impl.MetadataHolderService"
-74-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:25:13-75
-75            android:enabled="false"
-75-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:26:13-36
+73        <provider
+73-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+74            android:name="androidx.startup.InitializationProvider"
+74-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+75            android:authorities="com.example.handscanattendance.androidx-startup"
+75-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
 76            android:exported="false" >
-76-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:27:13-37
+76-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
 77            <meta-data
-77-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:30:13-32:89
-78                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
-78-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:31:17-103
-79                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
-79-->[androidx.camera:camera-camera2:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\3d57f9215b0ae0942b4432ac69fa0b4f\transformed\jetified-camera-camera2-1.3.0\AndroidManifest.xml:32:17-86
-80        </service>
-81
-82        <provider
-82-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-83            android:name="androidx.startup.InitializationProvider"
-83-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-84            android:authorities="com.example.handscanattendance.androidx-startup"
-84-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-85            android:exported="false" >
-85-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-86            <meta-data
-86-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-87                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-87-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-88                android:value="androidx.startup" />
-88-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-89            <meta-data
-89-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\a733f3cec3381a1d25b7996aa9fad013\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-90                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-90-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\a733f3cec3381a1d25b7996aa9fad013\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-91                android:value="androidx.startup" />
-91-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\a733f3cec3381a1d25b7996aa9fad013\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-92            <meta-data
-92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-93                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-94                android:value="androidx.startup" />
-94-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-95        </provider>
-96
-97        <receiver
-97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-98            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-99            android:directBootAware="false"
-99-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-100            android:enabled="true"
-100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-101            android:exported="true"
-101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-102            android:permission="android.permission.DUMP" >
-102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+77-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+78                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+78-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+79                android:value="androidx.startup" />
+79-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a6382641e22ee60fc2c34edc7b88d6de\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+80            <meta-data
+80-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\a733f3cec3381a1d25b7996aa9fad013\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+81                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+81-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\a733f3cec3381a1d25b7996aa9fad013\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+82                android:value="androidx.startup" />
+82-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\a733f3cec3381a1d25b7996aa9fad013\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+83            <meta-data
+83-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+84                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+84-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+85                android:value="androidx.startup" />
+85-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+86        </provider>
+87
+88        <receiver
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+89            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+89-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+90            android:directBootAware="false"
+90-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+91            android:enabled="true"
+91-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+92            android:exported="true"
+92-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+93            android:permission="android.permission.DUMP" >
+93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+94            <intent-filter>
+94-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+95                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+95-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+95-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+96            </intent-filter>
+97            <intent-filter>
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+98                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+99            </intent-filter>
+100            <intent-filter>
+100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+101                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+102            </intent-filter>
 103            <intent-filter>
-103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-104                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+104                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
 105            </intent-filter>
-106            <intent-filter>
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-107                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-108            </intent-filter>
-109            <intent-filter>
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-110                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-111            </intent-filter>
-112            <intent-filter>
-112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-113                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-114            </intent-filter>
-115        </receiver>
-116    </application>
-117
-118</manifest>
+106        </receiver>
+107    </application>
+108
+109</manifest>

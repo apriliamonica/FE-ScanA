@@ -631,7 +631,6 @@ attr imagePanX
 attr imagePanY
 attr imageRotate
 attr imageZoom
-attr implementationMode
 attr indeterminateAnimationType
 attr indeterminateProgressStyle
 attr indicatorColor
@@ -992,7 +991,6 @@ attr round
 attr roundPercent
 attr saturation
 attr scaleFromTextSize
-attr scaleType
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
@@ -2940,6 +2938,7 @@ drawable ic_camera
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_delete
+drawable ic_edit
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foregound
@@ -3134,14 +3133,16 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btnBack
+id btnBatal
 id btnCari
 id btnDelete
 id btnLogin
 id btnRegister
-id btnSave
+id btnSimpan
 id btnTambahData
 id btnUploadLeftPalm
 id btnUploadRightPalm
+id btn_edit
 id btn_kembali
 id btn_tambah
 id btn_tambah_mk
@@ -3170,7 +3171,6 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
-id compatible
 id compress
 id confirm_button
 id constraint
@@ -3224,6 +3224,11 @@ id east
 id edge
 id edit_query
 id edit_text_id
+id edtIdMk
+id edtKelas
+id edtNamaMk
+id edtTahunAkademik
+id edt_search
 id elastic
 id embed
 id end
@@ -3238,17 +3243,11 @@ id etPassword
 id etPhone
 id etSearchNama
 id etUsername
-id et_nama_mk
-id et_semester
-id et_tahun_akademik
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
 id fill
-id fillCenter
-id fillEnd
-id fillStart
 id fill_horizontal
 id fill_vertical
 id filled
@@ -3408,7 +3407,6 @@ id path
 id pathRelative
 id peekHeight
 id percent
-id performance
 id pin
 id position
 id postLayout
@@ -3486,10 +3484,10 @@ id spacer
 id special_effects_controller_view_tag
 id spinnerKelas
 id spinnerMk
+id spinnerSemester
 id spinner_mk
 id spinner_semester
 id spinner_tahun
-id spinner_tahun_ajaran
 id spline
 id split_action_bar
 id spread
@@ -3567,6 +3565,9 @@ id tvNim
 id tvNo
 id tvRegister
 id tvTitle
+id txt_id_mk
+id txt_nama_mk
+id txt_semester
 id unchecked
 id uniform
 id unlabeled
@@ -3727,7 +3728,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout dialog_tambah_mata_kuliah
+layout dialog_tambah_mahasiswa
+layout dialog_tambah_mk
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_mahasiswa
@@ -5197,7 +5199,6 @@ styleable OnClick clickAction targetId
 styleable OnSwipe autoCompleteMode dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp rotationCenterId springBoundary springDamping springMass springStiffness springStopThreshold touchAnchorId touchAnchorSide touchRegionId
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
-styleable PreviewView implementationMode scaleType
 styleable PropertySet android_visibility android_alpha layout_constraintTag motionProgress visibilityMode
 styleable RadialViewGroup materialCircleRadius
 styleable RangeSlider minSeparation values

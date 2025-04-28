@@ -6,11 +6,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.handscanattendance.R
 import com.example.handscanattendance.data.model.MahasiswaModel
-import com.example.handscanattendance.ui.adapter.MahasiswaAdapter
 import com.example.handscanattendance.network.RetrofitClient
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -67,21 +68,16 @@ class DaftarMahasiswaActivity : AppCompatActivity() {
     }
 
     private fun loadMahasiswa() {
-        RetrofitClient.apiService.getMahasiswa().enqueue(object : Callback<List<MahasiswaModel>> {
-            override fun onResponse(call: Call<List<MahasiswaModel>>, response: Response<List<MahasiswaModel>>) {
-                if (response.isSuccessful) {
-                    listMahasiswa.clear()
-                    listMahasiswa.addAll(response.body() ?: emptyList())
-                    filterMahasiswa()
-                } else {
-                    Toast.makeText(this@DaftarMahasiswaActivity, "Gagal mengambil data", Toast.LENGTH_SHORT).show()
-                }
+        lifecycleScope.launch {
+            try {
+                val mahasiswaList = RetrofitClient.apiService.getMahasiswa()
+                listMahasiswa.clear()
+                listMahasiswa.addAll(mahasiswaList)
+                filterMahasiswa()
+            } catch (e: Exception) {
+                Toast.makeText(this@DaftarMahasiswaActivity, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
             }
-
-            override fun onFailure(call: Call<List<MahasiswaModel>>, t: Throwable) {
-                Toast.makeText(this@DaftarMahasiswaActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
+        }
     }
 
     private fun filterMahasiswa() {
@@ -136,20 +132,20 @@ class DaftarMahasiswaActivity : AppCompatActivity() {
                 Toast.makeText(this, "Password tidak cocok!", Toast.LENGTH_SHORT).show()
             } else {
                 val mahasiswa = MahasiswaModel(nim, nama, password, email, phone)
-                RetrofitClient.apiService.addMahasiswa(mahasiswa).enqueue(object : Callback<MahasiswaModel> {
-                    override fun onResponse(call: Call<MahasiswaModel>, response: Response<MahasiswaModel>) {
+
+                lifecycleScope.launch {
+                    try {
+                        val response = RetrofitClient.apiService.addMahasiswa(mahasiswa)
                         if (response.isSuccessful) {
-                            loadMahasiswa()
+                            loadMahasiswa()  // Setelah mahasiswa ditambahkan, load ulang data
                             dialog.dismiss()
                         } else {
                             Toast.makeText(this@DaftarMahasiswaActivity, "Gagal menambahkan mahasiswa", Toast.LENGTH_SHORT).show()
                         }
+                    } catch (e: Exception) {
+                        Toast.makeText(this@DaftarMahasiswaActivity, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
                     }
-
-                    override fun onFailure(call: Call<MahasiswaModel>, t: Throwable) {
-                        Toast.makeText(this@DaftarMahasiswaActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
-                    }
-                })
+                }
             }
         }
 

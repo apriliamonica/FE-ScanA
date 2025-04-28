@@ -5,13 +5,16 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.handscanattendance.databinding.ActivityLoginBinding
-import com.example.handscanattendance.network.ApiClient
 import com.example.handscanattendance.data.model.LoginCredentials
 import com.example.handscanattendance.data.model.LoginResponse
+import com.example.handscanattendance.network.RetrofitClient
 import com.example.handscanattendance.ui.admin.AdminHomeActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
 
@@ -34,7 +37,6 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        // Menambahkan listener pada teks "Belum punya akun? Daftar"
         binding.tvRegister.setOnClickListener {
             // Menavigasi ke halaman registrasi
             val intent = Intent(this, RegisterActivity::class.java)
@@ -43,29 +45,24 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun loginUser(credentials: LoginCredentials) {
-        val apiService = ApiClient.getClient().create(ApiService::class.java)
-        val call = apiService.login(credentials)
-
-        call.enqueue(object : Callback<LoginResponse> {
-            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitClient.apiService.login(credentials)
                 if (response.isSuccessful) {
                     val loginResponse = response.body()
                     if (loginResponse != null && loginResponse.success) {
-                        val role = loginResponse.data?.role ?: "mahasiswa"  // Mengambil role
-                        val userName = loginResponse.data?.nama ?: "Pengguna"  // Mengambil nama
+                        val role = loginResponse.data?.role ?: "mahasiswa"
+                        val userName = loginResponse.data?.nama ?: "Pengguna"
 
-                        // Tampilkan nama pengguna dan role untuk testing (opsional)
                         Toast.makeText(
                             applicationContext,
                             "Welcome $userName, Role: $role",
                             Toast.LENGTH_SHORT
                         ).show()
 
-                        // Navigasi sesuai role
                         if (role == "admin") {
                             startActivity(Intent(this@LoginActivity, AdminHomeActivity::class.java))
                         } else {
-                            // Navigasi ke halaman mahasiswa (Jika ada)
                             // startActivity(Intent(this@LoginActivity, MahasiswaActivity::class.java))
                         }
 
@@ -84,15 +81,14 @@ class LoginActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
-            }
-
-            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+            } catch (e: Exception) {
                 Toast.makeText(
                     applicationContext,
                     "Gagal terkoneksi dengan server",
                     Toast.LENGTH_SHORT
                 ).show()
             }
-        })
+        }
     }
 }
+

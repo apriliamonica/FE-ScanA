@@ -1,0 +1,258 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Logo & Judul -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end|center_vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Daftar"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="@color/yellow"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/logoScanA"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:src="@drawable/logo_scana"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <View android:layout_height="30dp" android:layout_width="match_parent" />
+
+        <!-- NIM -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIM *"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etNIM"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_edittext"
+            android:padding="14dp"
+            android:textColor="@android:color/black"
+            android:hint="Masukkan NIM" />
+
+        <!-- Nama -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Lengkap *"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_edittext"
+            android:padding="14dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#888888"
+            android:hint="Masukkan nama" />
+
+        <!-- Nomor Telepon -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nomor Telepon *"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_edittext"
+            android:padding="14dp"
+            android:textColor="@android:color/black"
+            android:hint="08xxxxxxxxxx"
+            android:inputType="phone" />
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email *"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_edittext"
+            android:padding="14dp"
+            android:textColor="@android:color/black"
+            android:hint="Masukkan email"
+            android:inputType="textEmailAddress" />
+
+        <!-- Kelas -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelas *"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp" />
+
+        <Spinner
+            android:id="@+id/spinnerKelas"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_edittext"
+            android:padding="10dp" />
+
+        <!-- Kata Sandi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kata Sandi *"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Minimal 6 karakter"
+            android:inputType="textPassword"
+            android:background="@drawable/bg_edittext"
+            android:padding="14dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Konfirmasi Kata Sandi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Konfirmasi Kata Sandi *"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Ulangi kata sandi"
+            android:inputType="textPassword"
+            android:background="@drawable/bg_edittext"
+            android:padding="14dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Upload Telapak Tangan Kanan -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto Telapak Tangan Kanan"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnUploadRightPalm"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Unggah"
+                android:layout_marginBottom="10dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivRightPalmPreview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_edittext"
+            android:contentDescription="Preview Telapak Kanan"
+            android:visibility="gone" />
+
+        <!-- Upload Telapak Tangan Kiri -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto Telapak Tangan Kiri"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnUploadLeftPalm"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Unggah" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivLeftPalmPreview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_edittext"
+            android:contentDescription="Preview Telapak Kiri"
+            android:visibility="gone" />
+
+        <!-- Tombol Daftar -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Daftar"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:backgroundTint="@color/yellow"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Navigasi ke Login -->
+        <TextView
+            android:id="@+id/tvLoginRedirect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sudah punya akun? Masuk di sini"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</ScrollView>

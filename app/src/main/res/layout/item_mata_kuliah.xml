@@ -3,58 +3,67 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:gravity="center_vertical"
     android:padding="8dp"
-    android:background="@android:color/white">
+    android:gravity="center_vertical">
 
-    <!-- ID MK -->
     <TextView
         android:id="@+id/txt_id_mk"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:text="ID MK"
         android:textColor="@android:color/black"
-        android:textSize="14sp"/>
+        android:maxLines="1"
+        android:ellipsize="end"/>
 
-    <!-- Nama MK -->
     <TextView
         android:id="@+id/txt_nama_mk"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_weight="2"
+        android:layout_height="wrap_content"
         android:text="Nama Mata Kuliah"
         android:textColor="@android:color/black"
-        android:textSize="14sp"/>
+        android:maxLines="1"
+        android:ellipsize="end"/>
 
-    <!-- Semester -->
     <TextView
         android:id="@+id/txt_semester"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:text="Semester"
         android:textColor="@android:color/black"
-        android:textSize="14sp"/>
+        android:maxLines="1"
+        android:ellipsize="end"/>
 
-    <!-- Tombol Edit -->
-    <ImageButton
-        android:id="@+id/btn_edit"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/edit"
-        android:background="@android:color/transparent"
-        android:contentDescription="Edit"
-        android:textColor="@android:color/black"
-        android:layout_marginStart="8dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginStart="8dp">
 
-    <!-- Tombol Delete -->
-    <ImageButton
-        android:id="@+id/btn_delete"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/ic_delete"
-        android:background="@android:color/transparent"
-        android:contentDescription="Delete"
-        android:layout_marginStart="4dp"/>
+        <ImageButton
+            android:id="@+id/btn_edit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_edit"
+            android:background="@android:color/transparent"
+            android:contentDescription="Edit"
+            android:padding="8dp"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_delete"
+            android:background="@android:color/transparent"
+            android:contentDescription="Delete"
+            android:padding="8dp"/>
+    </LinearLayout>
+
 </LinearLayout>

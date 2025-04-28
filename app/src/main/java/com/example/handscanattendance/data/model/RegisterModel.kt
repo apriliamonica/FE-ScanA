@@ -4,14 +4,15 @@ data class RegisterRequest(
     val nim: String,
     val nama: String,
     val email: String,
-    val no_telp: String,
-    val kelas: String,
+    val phone: String,
     val password: String,
-    val foto_telapak_kanan: String?,
-    val foto_telapak_kiri: String?
+    val palmLeft: String,   // base64 dari telapak kiri
+    val palmRight: String   // base64 dari telapak kanan
 )
+
 
 data class RegisterResponse(
     val success: Boolean,
     val message: String
 )
+

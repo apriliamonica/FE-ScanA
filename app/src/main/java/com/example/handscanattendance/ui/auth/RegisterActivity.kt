@@ -17,6 +17,9 @@ import java.io.ByteArrayOutputStream
 import android.util.Base64
 import com.example.handscanattendance.data.model.RegisterResponse
 
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
+
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var etNIM: EditText
@@ -78,8 +81,9 @@ class RegisterActivity : AppCompatActivity() {
 
                 val registerRequest = RegisterRequest(nim, nama, email, phone, password, palmLeftBase64, palmRightBase64)
 
-                RetrofitClient.apiService.register(registerRequest).enqueue(object : Callback<RegisterResponse> {
-                    override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>) {
+                lifecycleScope.launch {
+                    try {
+                        val response = RetrofitClient.apiService.register(registerRequest)
                         if (response.isSuccessful) {
                             Toast.makeText(this@RegisterActivity, "Berhasil Daftar!", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
@@ -87,12 +91,10 @@ class RegisterActivity : AppCompatActivity() {
                         } else {
                             Toast.makeText(this@RegisterActivity, "Registrasi Gagal!", Toast.LENGTH_SHORT).show()
                         }
-                    }
-
-                    override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
+                    } catch (e: Exception) {
                         Toast.makeText(this@RegisterActivity, "Terjadi Kesalahan!", Toast.LENGTH_SHORT).show()
                     }
-                })
+                }
             }
         }
 
@@ -120,11 +122,11 @@ class RegisterActivity : AppCompatActivity() {
             when (requestCode) {
                 CAMERA_REQUEST_CODE_LEFT -> {
                     leftPalmBitmap = photo
-                    btnUploadLeftPalm.text = "Foto Kanan Tangan Terambil"
+                    btnUploadLeftPalm.text = "Foto Kiri Tangan Terambil"
                 }
                 CAMERA_REQUEST_CODE_RIGHT -> {
                     rightPalmBitmap = photo
-                    btnUploadRightPalm.text = "Foto Kiri Tangan Terambil"
+                    btnUploadRightPalm.text = "Foto Kanan Tangan Terambil"
                 }
             }
         }
