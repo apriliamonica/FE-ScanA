@@ -15,10 +15,11 @@ object RetrofitClient {
         .build()
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl("http://yourapi.com/") // Ganti ke URL API kamu
-        .client(httpClient) // Tambahkan OkHttp client
+        .baseUrl("http://192.168.159.39:8000/api/auth/login") // IP backend temanmu + port
+        .client(httpClient)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
+
 
     val apiService: ApiService = retrofit.create(ApiService::class.java)
 }

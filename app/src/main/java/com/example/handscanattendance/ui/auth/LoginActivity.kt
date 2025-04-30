@@ -48,25 +48,32 @@ class LoginActivity : AppCompatActivity() {
         lifecycleScope.launch {
             try {
                 val response = RetrofitClient.apiService.login(credentials)
+
+                // Memeriksa apakah respons sukses
                 if (response.isSuccessful) {
                     val loginResponse = response.body()
+
+                    // Pastikan loginResponse tidak null dan valid
                     if (loginResponse != null && loginResponse.success) {
                         val role = loginResponse.data?.role ?: "mahasiswa"
                         val userName = loginResponse.data?.nama ?: "Pengguna"
 
+                        // Tampilkan nama pengguna dan role
                         Toast.makeText(
                             applicationContext,
                             "Welcome $userName, Role: $role",
                             Toast.LENGTH_SHORT
                         ).show()
 
+                        // Navigasi berdasarkan role pengguna
                         if (role == "admin") {
                             startActivity(Intent(this@LoginActivity, AdminHomeActivity::class.java))
                         } else {
+                            // Misalnya, untuk mahasiswa, bisa diarahkan ke halaman mahasiswa
                             // startActivity(Intent(this@LoginActivity, MahasiswaActivity::class.java))
                         }
 
-                        finish()
+                        finish() // Menutup login activity setelah berhasil login
                     } else {
                         Toast.makeText(
                             applicationContext,
@@ -82,6 +89,7 @@ class LoginActivity : AppCompatActivity() {
                     ).show()
                 }
             } catch (e: Exception) {
+                // Jika terjadi exception, beri feedback ke pengguna
                 Toast.makeText(
                     applicationContext,
                     "Gagal terkoneksi dengan server",
@@ -91,4 +99,5 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 }
+
 

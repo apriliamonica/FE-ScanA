@@ -1,15 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="300dp"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="24dp"
-    android:background="@android:color/white">
+    android:background="#1E275D"
+    android:layout_gravity="center"
+    android:elevation="8dp"
+    android:layout_margin="16dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Semester" />
+        android:text="Tambah MK"
+        android:textColor="#E6FF60"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nomor MK"
+        android:textColor="#FFFFFF" />
+    <EditText
+        android:id="@+id/edtIdMk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contoh: IF123"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama MK"
+        android:textColor="#FFFFFF" />
+    <EditText
+        android:id="@+id/edtNamaMk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contoh: Pemrograman Lanjut"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kelas"
+        android:textColor="#FFFFFF" />
+    <EditText
+        android:id="@+id/edtKelas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contoh: A"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Semester"
+        android:textColor="#FFFFFF" />
     <Spinner
         android:id="@+id/spinnerSemester"
         android:layout_width="match_parent"
@@ -20,51 +73,21 @@
         android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tahun Akademik" />
+        android:text="Tahun Akademik"
+        android:textColor="#FFFFFF" />
     <EditText
         android:id="@+id/edtTahunAkademik"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Contoh: 2025" />
+        android:hint="Contoh: 2025"
+        android:background="@android:color/white" />
 
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ID MK" />
-    <EditText
-        android:id="@+id/edtIdMk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Contoh: IF123" />
-
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kelas" />
-    <EditText
-        android:id="@+id/edtKelas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Contoh: A" />
-
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nama MK" />
-    <EditText
-        android:id="@+id/edtNamaMk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Contoh: Pemrograman Lanjut" />
-
+    <!-- Tombol Simpan dan Batal -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="end"
+        android:gravity="center"
         android:layout_marginTop="16dp">
 
         <Button
@@ -73,16 +96,15 @@
             android:layout_height="wrap_content"
             android:text="Batal"
             android:backgroundTint="#CCCCCC"
-            android:textColor="@android:color/black"/>
+            android:textColor="#000000"
+            android:layout_marginEnd="8dp" />
 
         <Button
             android:id="@+id/btnSimpan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:text="Simpan"
-            android:backgroundTint="#FFD700"
-            android:textColor="@android:color/black"/>
+            android:backgroundTint="#E6FF60"
+            android:textColor="#000000" />
     </LinearLayout>
-
 </LinearLayout>
