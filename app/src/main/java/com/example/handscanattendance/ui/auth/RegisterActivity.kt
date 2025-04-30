@@ -1,17 +1,21 @@
 package com.example.handscanattendance.ui.auth
 
+import android.app.Activity
 import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.handscanattendance.R
 import com.example.handscanattendance.model.RegisterRequest
-import com.example.handscanattendance.model.RegisterResponse
 import com.example.handscanattendance.network.ApiService
 import com.example.handscanattendance.network.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.io.ByteArrayOutputStream
+import android.util.Base64
+import com.example.handscanattendance.model.RegisterResponse
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -26,6 +30,9 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var tvLoginRedirect: TextView
     private lateinit var btnUploadRightPalm: Button
     private lateinit var btnUploadLeftPalm: Button
+
+    private var rightPalmBitmap: Bitmap? = null
+    private var leftPalmBitmap: Bitmap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,6 +76,10 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            // Konversi foto telapak tangan ke base64
+            val rightPalmBase64 = rightPalmBitmap?.let { convertToBase64(it) }
+            val leftPalmBase64 = leftPalmBitmap?.let { convertToBase64(it) }
+
             // Buat objek RegisterRequest
             val credentials = RegisterRequest(
                 nim = nim,
@@ -77,8 +88,8 @@ class RegisterActivity : AppCompatActivity() {
                 no_telp = phone,
                 kelas = kelas,
                 password = password,
-                foto_telapak_kanan = null,  // sementara null, nanti bisa diisi hasil base64 image
-                foto_telapak_kiri = null
+                foto_telapak_kanan = rightPalmBase64,  // Kirim base64 foto telapak kanan
+                foto_telapak_kiri = leftPalmBase64    // Kirim base64 foto telapak kiri
             )
 
             registerUser(credentials)
@@ -90,14 +101,49 @@ class RegisterActivity : AppCompatActivity() {
             finish()
         }
 
-        // Tombol upload telapak tangan (dummy dulu)
+        // Tombol upload telapak tangan kanan
         btnUploadRightPalm.setOnClickListener {
-            Toast.makeText(this, "Upload telapak kanan (belum aktif)", Toast.LENGTH_SHORT).show()
+            openCameraForRightPalm()
         }
 
+        // Tombol upload telapak tangan kiri
         btnUploadLeftPalm.setOnClickListener {
-            Toast.makeText(this, "Upload telapak kiri (belum aktif)", Toast.LENGTH_SHORT).show()
+            openCameraForLeftPalm()
         }
+    }
+
+    private fun openCameraForRightPalm() {
+        val intent = Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE)
+        startActivityForResult(intent, REQUEST_CODE_RIGHT_PALM)
+    }
+
+    private fun openCameraForLeftPalm() {
+        val intent = Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE)
+        startActivityForResult(intent, REQUEST_CODE_LEFT_PALM)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK && data != null) {
+            val photo = data.extras?.get("data") as Bitmap
+            when (requestCode) {
+                REQUEST_CODE_RIGHT_PALM -> {
+                    rightPalmBitmap = photo
+                    Toast.makeText(this, "Telapak kanan diambil!", Toast.LENGTH_SHORT).show()
+                }
+                REQUEST_CODE_LEFT_PALM -> {
+                    leftPalmBitmap = photo
+                    Toast.makeText(this, "Telapak kiri diambil!", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
+    private fun convertToBase64(bitmap: Bitmap): String {
+        val baos = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos)
+        val byteArray = baos.toByteArray()
+        return Base64.encodeToString(byteArray, Base64.NO_WRAP)
     }
 
     private fun registerUser(credentials: RegisterRequest) {
@@ -126,5 +172,10 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this@RegisterActivity, "Gagal terkoneksi dengan server", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    companion object {
+        const val REQUEST_CODE_RIGHT_PALM = 101
+        const val REQUEST_CODE_LEFT_PALM = 102
     }
 }

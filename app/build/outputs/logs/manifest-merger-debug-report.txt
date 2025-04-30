@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:1:1-36:12
-INJECTED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:1:1-36:12
-INJECTED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:1:1-36:12
-INJECTED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:1:1-36:12
+ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:1:1-43:12
 MERGED from [androidx.databinding:viewbinding:8.1.0] C:\Users\ACER\.gradle\caches\8.10\transforms\579addaa200be03b31bc21b2ef24c41a\transformed\jetified-viewbinding-8.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\ACER\.gradle\caches\8.10\transforms\aec880ee5a543bb20e25d3617ca202b3\transformed\material-1.9.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\ACER\.gradle\caches\8.10\transforms\0946f922279e58c18eeee987985d7475\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -42,13 +42,14 @@ MERGED from [androidx.customview:customview:1.1.0] C:\Users\ACER\.gradle\caches\
 MERGED from [androidx.core:core:1.12.0] C:\Users\ACER\.gradle\caches\8.10\transforms\517c9e6ed70ce98b1c3d0491bfb8e689\transformed\core-1.12.0\AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\5479a729513f65bf8f384df09f6a8561\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\d74957f3736dc37f72c83eea14ea2cf8\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\30b8ad0edfbe3eca8e3dfb31e08411fa\transformed\jetified-lifecycle-runtime-ktx-2.6.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\f9187c1091f2388387acb16f27f368dd\transformed\jetified-lifecycle-livedata-ktx-2.6.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\fc77003d6cead2e5a749fbd691a1f7aa\transformed\jetified-lifecycle-viewmodel-ktx-2.6.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.1] C:\Users\ACER\.gradle\caches\8.10\transforms\bc130dda7c2034e29076eebf71544ee9\transformed\jetified-annotation-experimental-1.3.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\ACER\.gradle\caches\8.10\transforms\385bc16e705db0aeb9b5d6a55ae3f36b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\ACER\.gradle\caches\8.10\transforms\324cf64a9af699b5cf67611c91547096\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\ACER\.gradle\caches\8.10\transforms\ccf09fa2dae46ccd92203beaca76941f\transformed\jetified-gifdecoder-4.15.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\ACER\.gradle\caches\8.10\transforms\e5b6f840b537d5b8ddf8ff36e4641178\transformed\exifinterface-1.3.3\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\ACER\.gradle\caches\8.10\transforms\ccf09fa2dae46ccd92203beaca76941f\transformed\jetified-gifdecoder-4.15.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:17:1-55:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\ACER\.gradle\caches\8.10\transforms\911564f2608b917202c2a10b9cc10e77\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\ACER\.gradle\caches\8.10\transforms\a14b62259ba81316b16ca31461331a16\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -72,9 +73,13 @@ uses-permission#android.permission.INTERNET
 ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:4:5-67
 	android:name
 		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:4:22-64
+uses-permission#android.permission.CAMERA
+ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:5:5-65
+	android:name
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:5:22-62
 application
-ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:6:5-34:19
-INJECTED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:6:5-34:19
+ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:7:5-41:19
+INJECTED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:7:5-41:19
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\ACER\.gradle\caches\8.10\transforms\aec880ee5a543bb20e25d3617ca202b3\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\ACER\.gradle\caches\8.10\transforms\aec880ee5a543bb20e25d3617ca202b3\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\ACER\.gradle\caches\8.10\transforms\0946f922279e58c18eeee987985d7475\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -104,69 +109,71 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\AC
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] C:\Users\ACER\.gradle\caches\8.10\transforms\517c9e6ed70ce98b1c3d0491bfb8e689\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:9:9-41
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:11:9-41
 	android:roundIcon
 		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:10:9-54
 	android:icon
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:8:9-43
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:9:9-49
 	android:allowBackup
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:7:9-35
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:12:9-56
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:13:9-56
 activity#com.example.handscanattendance.ui.auth.LoginActivity
-ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:15:9-20:20
+ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:16:9-83
 	android:exported
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:15:57-80
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:16:57-80
 	android:name
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:15:19-56
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:16:13-19:29
-action#android.intent.action.MAIN
-ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:17:17-69
-	android:name
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:17:25-66
-category#android.intent.category.LAUNCHER
-ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:18:17-77
-	android:name
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:16:19-56
 activity#com.example.handscanattendance.view.MainActivity
-ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:23:9-110
+ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:19:9-110
 	android:exported
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:23:83-107
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:19:83-107
 	android:name
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:23:19-82
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:19:19-82
 activity#com.example.handscanattendance.ui.auth.RegisterActivity
-ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:26:9-116
+ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:22:9-116
 	android:exported
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:26:90-113
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:22:90-113
 	android:name
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:26:19-89
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:22:19-89
 activity#com.example.handscanattendance.ui.admin.AdminHomeActivity
-ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:29:9-119
+ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:27:9-32:20
 	android:exported
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:29:92-116
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:27:92-115
 	android:name
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:29:19-91
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:27:19-91
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:28:13-31:29
+action#android.intent.action.MAIN
+ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:29:17-69
+	android:name
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:29:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:30:27-74
 activity#com.example.handscanattendance.ui.admin.ScanActivity
-ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:30:9-114
+ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:35:9-37:52
+	android:screenOrientation
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:37:13-49
 	android:exported
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:30:87-111
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:30:19-86
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:35:19-86
 activity#com.example.handscanattendance.ui.admin.JadwalActivity
-ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:31:9-116
+ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:38:9-116
 	android:exported
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:31:89-113
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:38:89-113
 	android:name
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:31:19-88
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:38:19-88
 activity#com.example.handscanattendance.ui.admin.MataKuliahActivity
-ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:32:9-120
+ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:39:9-120
 	android:exported
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:32:93-117
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:39:93-117
 	android:name
-		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:32:19-92
+		ADDED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml:39:19-92
 uses-sdk
 INJECTED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\KULIAH\SEM 6\PPL\ScanA\FE-ScanA\app\src\main\AndroidManifest.xml
@@ -247,6 +254,8 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\ACER\.gradle\c
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\5479a729513f65bf8f384df09f6a8561\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\d74957f3736dc37f72c83eea14ea2cf8\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\d74957f3736dc37f72c83eea14ea2cf8\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\30b8ad0edfbe3eca8e3dfb31e08411fa\transformed\jetified-lifecycle-runtime-ktx-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\30b8ad0edfbe3eca8e3dfb31e08411fa\transformed\jetified-lifecycle-runtime-ktx-2.6.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\f9187c1091f2388387acb16f27f368dd\transformed\jetified-lifecycle-livedata-ktx-2.6.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\f9187c1091f2388387acb16f27f368dd\transformed\jetified-lifecycle-livedata-ktx-2.6.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] C:\Users\ACER\.gradle\caches\8.10\transforms\fc77003d6cead2e5a749fbd691a1f7aa\transformed\jetified-lifecycle-viewmodel-ktx-2.6.2\AndroidManifest.xml:20:5-44
@@ -257,10 +266,10 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\ACER\.gradle\c
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\ACER\.gradle\caches\8.10\transforms\385bc16e705db0aeb9b5d6a55ae3f36b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\ACER\.gradle\caches\8.10\transforms\324cf64a9af699b5cf67611c91547096\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\ACER\.gradle\caches\8.10\transforms\324cf64a9af699b5cf67611c91547096\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\ACER\.gradle\caches\8.10\transforms\ccf09fa2dae46ccd92203beaca76941f\transformed\jetified-gifdecoder-4.15.1\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\ACER\.gradle\caches\8.10\transforms\ccf09fa2dae46ccd92203beaca76941f\transformed\jetified-gifdecoder-4.15.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\ACER\.gradle\caches\8.10\transforms\e5b6f840b537d5b8ddf8ff36e4641178\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\ACER\.gradle\caches\8.10\transforms\e5b6f840b537d5b8ddf8ff36e4641178\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\ACER\.gradle\caches\8.10\transforms\ccf09fa2dae46ccd92203beaca76941f\transformed\jetified-gifdecoder-4.15.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\ACER\.gradle\caches\8.10\transforms\ccf09fa2dae46ccd92203beaca76941f\transformed\jetified-gifdecoder-4.15.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ACER\.gradle\caches\8.10\transforms\03da6e0d23226aa931455b1511ded112\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\ACER\.gradle\caches\8.10\transforms\911564f2608b917202c2a10b9cc10e77\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41

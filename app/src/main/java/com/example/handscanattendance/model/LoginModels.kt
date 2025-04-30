@@ -8,10 +8,10 @@ data class LoginCredentials(
 data class LoginResponse(
     val success: Boolean,
     val message: String,
-    val data: LoginData?  // Tambahkan field 'data' yang berisi LoginData
+    val data: LoginData? = null // Optional dengan default null
 )
 
 data class LoginData(
-    val role: String?,
-    val nama: String?
+    val role: String? = null,
+    val nama: String? = null
 )

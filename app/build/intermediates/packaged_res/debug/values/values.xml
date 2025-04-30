@@ -11,7 +11,7 @@
     <color name="yellow">#FFEB3B</color>
     <string name="admin">Halaman Admin</string>
     <string name="admin_scan_hand">Scan Telapak Tangan</string>
-    <string name="app_name">Presensi Telapak Tangan</string>
+    <string name="app_name">scanA</string>
     <string name="attendance_history">Riwayat Kehadiran</string>
     <string name="attendance_status">Status Kehadiran</string>
     <string name="confirm_password">Konfirmasi Password</string>

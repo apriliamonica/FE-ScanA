@@ -1,7 +1,10 @@
 package com.example.handscanattendance.data
 
+import com.google.gson.annotations.SerializedName
+
 data class Mahasiswa(
-    val nim: String,
-    val nama: String,
-    val kelas: String
+    @SerializedName("nim") val nim: String,
+    @SerializedName("nama") val nama: String,
+    @SerializedName("kelas") val kelas: String
 )
+
