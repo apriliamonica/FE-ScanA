@@ -35,9 +35,7 @@
 
         <!-- ScanActivity dengan orientasi portrait -->
         <activity android:name="com.example.handscanattendance.ui.admin.ScanActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity android:name="com.example.handscanattendance.ui.admin.JadwalActivity" android:exported="false" />
+            android:exported="false" />
         <activity android:name="com.example.handscanattendance.ui.admin.MataKuliahActivity" android:exported="false" />
 
     </application>

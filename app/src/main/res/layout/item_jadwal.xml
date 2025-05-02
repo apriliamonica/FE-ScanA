@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="4dp">
+
+    <!-- Pertemuan -->
+    <TextView
+        android:id="@+id/tvPertemuan"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <!-- Hari dan Tanggal -->
+    <TextView
+        android:id="@+id/tvTanggal"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:text="Senin, 01 Jan 2025"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <!-- Jam Masuk -->
+    <TextView
+        android:id="@+id/tvJamMasuk"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="07:00"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <!-- Jam Keluar -->
+    <TextView
+        android:id="@+id/tvJamKeluar"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="08:40"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <!-- Tombol Aksi (hapus/edit) -->
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        android:background="@android:color/transparent"
+        android:contentDescription="Hapus Jadwal"
+        android:tint="#FF0000" />
+
+</LinearLayout>

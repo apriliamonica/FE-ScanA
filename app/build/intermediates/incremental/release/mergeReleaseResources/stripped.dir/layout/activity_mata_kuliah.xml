@@ -30,15 +30,35 @@
         android:textStyle="bold"
         android:layout_marginTop="16dp" />
 
-    <!-- Tombol Tambah MK -->
-    <Button
-        android:id="@+id/btn_tambah_mk"
+    <!-- Filter Tahun Ajaran & Semester + Tombol Tambah -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tambah Mata Kuliah"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#FFD700"
-        android:textColor="#000000" />
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Cari Mata Kuliah..."
+            android:background="@android:color/white"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btn_tambah_mk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah"
+            android:backgroundTint="#FFD700"
+            android:textColor="#000000" />
+    </LinearLayout>
+
 
     <!-- Header Tabel -->
     <LinearLayout
@@ -64,9 +84,9 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Semester"
             android:textStyle="bold" />
 

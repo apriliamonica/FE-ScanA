@@ -9,10 +9,10 @@ import com.example.handscanattendance.data.model.LoginCredentials
 import com.example.handscanattendance.data.model.LoginResponse
 import com.example.handscanattendance.network.RetrofitClient
 import com.example.handscanattendance.ui.admin.AdminHomeActivity
+import com.example.handscanattendance.ui.mahasiswa.MahasiswaHomeActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 
@@ -68,9 +68,10 @@ class LoginActivity : AppCompatActivity() {
                         // Navigasi berdasarkan role pengguna
                         if (role == "admin") {
                             startActivity(Intent(this@LoginActivity, AdminHomeActivity::class.java))
+                        } else if (role == "mahasiswa") {
+                            startActivity(Intent(this@LoginActivity, MahasiswaHomeActivity::class.java)) // Halaman mahasiswa
                         } else {
-                            // Misalnya, untuk mahasiswa, bisa diarahkan ke halaman mahasiswa
-                            // startActivity(Intent(this@LoginActivity, MahasiswaActivity::class.java))
+                            Toast.makeText(applicationContext, "Role tidak dikenali", Toast.LENGTH_SHORT).show()
                         }
 
                         finish() // Menutup login activity setelah berhasil login
@@ -99,5 +100,3 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 }
-
-

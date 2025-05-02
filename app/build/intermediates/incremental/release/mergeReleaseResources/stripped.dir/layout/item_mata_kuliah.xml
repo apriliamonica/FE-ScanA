@@ -2,36 +2,68 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@android:color/white"
-    android:padding="16dp"
-    android:layout_marginBottom="8dp">
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical">
 
     <TextView
-        android:id="@+id/tv_nama_mk"
-        android:layout_width="match_parent"
+        android:id="@+id/txt_id_mk"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:text="Nama MK"
-        android:textStyle="bold"
-        android:textSize="16sp"/>
+        android:text="ID MK"
+        android:textColor="@android:color/black"
+        android:maxLines="1"
+        android:ellipsize="end"/>
 
     <TextView
-        android:id="@+id/tv_semester"
-        android:layout_width="match_parent"
+        android:id="@+id/txt_nama_mk"
+        android:layout_width="0dp"
+        android:layout_weight="2"
         android:layout_height="wrap_content"
-        android:text="Semester" />
+        android:text="Nama Mata Kuliah"
+        android:textColor="@android:color/black"
+        android:maxLines="1"
+        android:ellipsize="end"/>
 
     <TextView
-        android:id="@+id/tv_tahun"
-        android:layout_width="match_parent"
+        android:id="@+id/txt_semester"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:text="Tahun Akademik" />
+        android:text="Semester"
+        android:textColor="@android:color/black"
+        android:maxLines="1"
+        android:ellipsize="end"/>
 
-    <Button
-        android:id="@+id/btn_kelola"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kelola"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#FFD700"/>
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginStart="8dp">
+
+        <ImageButton
+            android:id="@+id/btn_edit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_edit"
+            android:background="@android:color/transparent"
+            android:contentDescription="Edit"
+            android:padding="8dp"/>
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_delete"
+            android:background="@android:color/transparent"
+            android:contentDescription="Delete"
+            android:padding="8dp"/>
+    </LinearLayout>
+
 </LinearLayout>

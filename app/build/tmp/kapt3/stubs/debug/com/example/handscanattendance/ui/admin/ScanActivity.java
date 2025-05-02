@@ -5,31 +5,31 @@ public final class ScanActivity extends androidx.appcompat.app.AppCompatActivity
     private com.example.handscanattendance.databinding.ActivityScanBinding binding;
     private androidx.camera.core.ImageCapture imageCapture;
     private java.util.concurrent.ExecutorService cameraExecutor;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private final kotlin.Lazy outputDirectory$delegate = null;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private static final java.lang.String TAG = "ScanActivity";
     private static final int REQUEST_CODE_PERMISSIONS = 10;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private static final java.lang.String FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS";
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public static final com.example.handscanattendance.ui.admin.ScanActivity.Companion Companion = null;
     
     public ScanActivity() {
         super();
     }
     
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
     
     private final void cekIzinKamera() {
     }
     
-    @java.lang.Override
-    public void onRequestPermissionsResult(int requestCode, @org.jetbrains.annotations.NotNull
-    java.lang.String[] permissions, @org.jetbrains.annotations.NotNull
+    @java.lang.Override()
+    public void onRequestPermissionsResult(int requestCode, @org.jetbrains.annotations.NotNull()
+    java.lang.String[] permissions, @org.jetbrains.annotations.NotNull()
     int[] grantResults) {
     }
     
@@ -43,7 +43,7 @@ public final class ScanActivity extends androidx.appcompat.app.AppCompatActivity
         return null;
     }
     
-    @java.lang.Override
+    @java.lang.Override()
     protected void onDestroy() {
     }
     

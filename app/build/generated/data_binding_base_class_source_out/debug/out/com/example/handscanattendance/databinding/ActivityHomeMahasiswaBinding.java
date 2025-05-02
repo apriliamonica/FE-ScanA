@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -32,11 +31,11 @@ public final class ActivityHomeMahasiswaBinding implements ViewBinding {
   public final ImageView logo;
 
   @NonNull
-  public final ImageButton logoutButton;
+  public final ImageView logoutButton;
 
   private ActivityHomeMahasiswaBinding(@NonNull ConstraintLayout rootView,
       @NonNull TextView appName, @NonNull Button attendanceHistoryButton, @NonNull ImageView logo,
-      @NonNull ImageButton logoutButton) {
+      @NonNull ImageView logoutButton) {
     this.rootView = rootView;
     this.appName = appName;
     this.attendanceHistoryButton = attendanceHistoryButton;
@@ -90,7 +89,7 @@ public final class ActivityHomeMahasiswaBinding implements ViewBinding {
       }
 
       id = R.id.logout_button;
-      ImageButton logoutButton = ViewBindings.findChildViewById(rootView, id);
+      ImageView logoutButton = ViewBindings.findChildViewById(rootView, id);
       if (logoutButton == null) {
         break missingId;
       }

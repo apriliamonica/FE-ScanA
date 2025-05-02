@@ -8,17 +8,17 @@ public final class DaftarMahasiswaActivity extends androidx.appcompat.app.AppCom
     private android.widget.Button btnTambahData;
     private androidx.recyclerview.widget.RecyclerView rvMahasiswa;
     private com.example.handscanattendance.ui.admin.MahasiswaAdapter mahasiswaAdapter;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private java.util.List<com.example.handscanattendance.data.model.MahasiswaModel> listMahasiswa;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private java.util.List<com.example.handscanattendance.data.model.MahasiswaModel> filteredMahasiswa;
     
     public DaftarMahasiswaActivity() {
         super();
     }
     
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
     

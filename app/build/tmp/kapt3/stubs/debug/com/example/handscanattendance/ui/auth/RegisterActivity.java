@@ -13,21 +13,21 @@ public final class RegisterActivity extends androidx.appcompat.app.AppCompatActi
     private android.widget.TextView tvLoginRedirect;
     private android.widget.Button btnUploadRightPalm;
     private android.widget.Button btnUploadLeftPalm;
-    @org.jetbrains.annotations.Nullable
+    @org.jetbrains.annotations.Nullable()
     private android.graphics.Bitmap rightPalmBitmap;
-    @org.jetbrains.annotations.Nullable
+    @org.jetbrains.annotations.Nullable()
     private android.graphics.Bitmap leftPalmBitmap;
     private static final int CAMERA_REQUEST_CODE_LEFT = 101;
     private static final int CAMERA_REQUEST_CODE_RIGHT = 102;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public static final com.example.handscanattendance.ui.auth.RegisterActivity.Companion Companion = null;
     
     public RegisterActivity() {
         super();
     }
     
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
     
@@ -44,8 +44,8 @@ public final class RegisterActivity extends androidx.appcompat.app.AppCompatActi
     private final void openCamera(int requestCode) {
     }
     
-    @java.lang.Override
-    protected void onActivityResult(int requestCode, int resultCode, @org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onActivityResult(int requestCode, int resultCode, @org.jetbrains.annotations.Nullable()
     android.content.Intent data) {
     }
     

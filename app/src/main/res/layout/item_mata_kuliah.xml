@@ -4,66 +4,49 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="8dp"
-    android:gravity="center_vertical">
+    android:background="@android:color/white">
 
     <TextView
-        android:id="@+id/txt_id_mk"
+        android:id="@+id/tv_no"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/tv_id_mk"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:text="ID MK"
-        android:textColor="@android:color/black"
-        android:maxLines="1"
-        android:ellipsize="end"/>
+        android:text="MK01" />
 
     <TextView
-        android:id="@+id/txt_nama_mk"
+        android:id="@+id/tv_nama_mk"
         android:layout_width="0dp"
         android:layout_weight="2"
         android:layout_height="wrap_content"
-        android:text="Nama Mata Kuliah"
-        android:textColor="@android:color/black"
-        android:maxLines="1"
-        android:ellipsize="end"/>
+        android:text="Pemrograman Mobile" />
 
-    <TextView
-        android:id="@+id/txt_semester"
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:text="Semester"
-        android:textColor="@android:color/black"
-        android:maxLines="1"
-        android:ellipsize="end"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="end"
-        android:layout_marginStart="8dp">
+        android:gravity="center">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/btn_edit"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:src="@drawable/ic_edit"
-            android:background="@android:color/transparent"
             android:contentDescription="Edit"
-            android:padding="8dp"/>
+            android:layout_marginEnd="16dp" />
 
-        <Space
-            android:layout_width="8dp"
-            android:layout_height="match_parent" />
-
-        <ImageButton
-            android:id="@+id/btnDelete"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+        <ImageView
+            android:id="@+id/btn_hapus"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:src="@drawable/ic_delete"
-            android:background="@android:color/transparent"
-            android:contentDescription="Delete"
-            android:padding="8dp"/>
+            android:contentDescription="Hapus" />
     </LinearLayout>
-
 </LinearLayout>

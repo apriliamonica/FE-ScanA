@@ -32,7 +32,7 @@
                 android:id="@+id/logoScanA"
                 android:layout_width="120dp"
                 android:layout_height="80dp"
-                android:src="@drawable/logo_scanA"
+                android:src="@drawable/logo_scana"
                 android:layout_marginStart="8dp" />
         </LinearLayout>
 
@@ -165,7 +165,7 @@
             android:padding="14dp"
             android:textColor="@android:color/black" />
 
-        <!-- Upload Telapak Tangan -->
+        <!-- Upload Telapak Tangan Kanan -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -190,6 +190,17 @@
                 android:layout_marginBottom="10dp" />
         </LinearLayout>
 
+        <ImageView
+            android:id="@+id/ivRightPalmPreview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_edittext"
+            android:contentDescription="Preview Telapak Kanan"
+            android:visibility="gone" />
+
+        <!-- Upload Telapak Tangan Kiri -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -211,6 +222,16 @@
                 android:layout_height="50dp"
                 android:text="Unggah" />
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivLeftPalmPreview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_edittext"
+            android:contentDescription="Preview Telapak Kiri"
+            android:visibility="gone" />
 
         <!-- Tombol Daftar -->
         <Button

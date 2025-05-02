@@ -4,14 +4,9 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        // Update to the latest compatible version of Android Gradle Plugin (AGP)
-        classpath "com.android.tools.build:gradle:8.1.0"  // Versi terbaru AGP
-
-        // Kotlin plugin yang sesuai dengan JDK 11
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0"  // Versi terbaru Kotlin
-
-        // Hilt Gradle plugin
-        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.50'  // Pastikan Hilt sesuai versi yang digunakan
+        classpath "com.android.tools.build:gradle:8.4.0" // AGP terbaru
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22" // Kotlin terbaru
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.50" // Hilt cocok dengan project kamu
     }
 }
 

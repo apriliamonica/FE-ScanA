@@ -4,15 +4,15 @@ package com.example.handscanattendance.ui.admin;
 public final class MataKuliahActivity extends androidx.appcompat.app.AppCompatActivity {
     private androidx.recyclerview.widget.RecyclerView rvMataKuliah;
     private com.example.handscanattendance.ui.admin.MataKuliahAdapter adapter;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private final java.util.List<com.example.handscanattendance.data.MataKuliah> mataKuliahList = null;
     
     public MataKuliahActivity() {
         super();
     }
     
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
     

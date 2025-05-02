@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -36,7 +35,7 @@ public final class ActivityHomeAdminBinding implements ViewBinding {
   public final ImageView logo;
 
   @NonNull
-  public final ImageButton logoutButton;
+  public final ImageView logoutButton;
 
   @NonNull
   public final LinearLayout menuGrid;
@@ -52,7 +51,7 @@ public final class ActivityHomeAdminBinding implements ViewBinding {
 
   private ActivityHomeAdminBinding(@NonNull ConstraintLayout rootView, @NonNull TextView appName,
       @NonNull Button attendanceHistoryButton, @NonNull Button courseButton,
-      @NonNull ImageView logo, @NonNull ImageButton logoutButton, @NonNull LinearLayout menuGrid,
+      @NonNull ImageView logo, @NonNull ImageView logoutButton, @NonNull LinearLayout menuGrid,
       @NonNull Button scanButton, @NonNull Button scheduleButton,
       @NonNull Button studentListButton) {
     this.rootView = rootView;
@@ -119,7 +118,7 @@ public final class ActivityHomeAdminBinding implements ViewBinding {
       }
 
       id = R.id.logout_button;
-      ImageButton logoutButton = ViewBindings.findChildViewById(rootView, id);
+      ImageView logoutButton = ViewBindings.findChildViewById(rootView, id);
       if (logoutButton == null) {
         break missingId;
       }

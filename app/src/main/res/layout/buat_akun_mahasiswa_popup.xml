@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#1E275D"
+    android:padding="16dp"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    android:elevation="4dp"
+    android:layout_margin="16dp"
+    android:backgroundTint="@null">
+
+<!-- Judul -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Buat Akun Mahasiswa"
+    android:textColor="#FFFFFF"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:layout_marginBottom="16dp" />
+
+<!-- NIM -->
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:hint="NIM *"
+    android:background="#FFFFFF"
+    android:paddingHorizontal="12dp"
+    android:layout_marginBottom="8dp"/>
+
+<!-- Nama Lengkap -->
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:hint="Nama Lengkap *"
+    android:background="#FFFFFF"
+    android:paddingHorizontal="12dp"
+    android:layout_marginBottom="8dp"/>
+
+<!-- Kata Sandi -->
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:hint="Kata Sandi *"
+    android:background="#FFFFFF"
+    android:inputType="textPassword"
+    android:paddingHorizontal="12dp"
+    android:layout_marginBottom="8dp"/>
+
+<!-- Konfirmasi Kata Sandi -->
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:hint="Konfirmasi Kata Sandi *"
+    android:background="#FFFFFF"
+    android:inputType="textPassword"
+    android:paddingHorizontal="12dp"
+    android:layout_marginBottom="8dp"/>
+
+<!-- Email -->
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:hint="Email"
+    android:background="#FFFFFF"
+    android:inputType="textEmailAddress"
+    android:paddingHorizontal="12dp"
+    android:layout_marginBottom="8dp"/>
+
+<!-- Nomor Telepon -->
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:hint="Nomor Telepon"
+    android:background="#FFFFFF"
+    android:inputType="phone"
+    android:paddingHorizontal="12dp"
+    android:layout_marginBottom="16dp"/>
+
+<!-- Foto Telapak Tangan Kanan -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Foto Telapak tangan Kanan"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/btnUploadKanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unggah"
+        android:backgroundTint="#FFF500"
+        android:textColor="#1E2A78"/>
+</LinearLayout>
+
+<!-- Foto Telapak Tangan Kiri -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="16dp">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Foto Telapak tangan Kiri"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/btnUploadKiri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unggah"
+        android:backgroundTint="#FFF500"
+        android:textColor="#1E2A78"/>
+</LinearLayout>
+
+<!-- Tombol Tambah -->
+<Button
+    android:id="@+id/btnTambahMahasiswa"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Tambah"
+    android:backgroundTint="#FFF500"
+    android:textColor="#1E2A78"
+    android:paddingHorizontal="24dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="8dp" />
+</LinearLayout>
+    </ScrollView>

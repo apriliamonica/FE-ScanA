@@ -655,15 +655,21 @@
     <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
     <color name="bright_foreground_material_dark">@android:color/white</color>
     <color name="bright_foreground_material_light">@android:color/black</color>
+    <color name="button_default_color">#6200EE</color>
+    <color name="button_focused_color">#2196F3</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <color name="button_pressed_color">#FF4081</color>
     <color name="call_notification_answer_color">#1d873b</color>
     <color name="call_notification_decline_color">#d93025</color>
     <color name="cardview_dark_background">#FF424242</color>
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
-    <color name="dark_blue">#1C274C</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="dark_blue">#001F3F</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_dark_default_color_background">#121212</color>
     <color name="design_dark_default_color_error">#CF6679</color>
@@ -971,7 +977,7 @@
     <color name="tooltip_background_light">#e6FFFFFF</color>
     <color name="white">#FFFFFF</color>
     <color name="white_yellow">#FAFFA2</color>
-    <color name="yellow">#FFD700</color>
+    <color name="yellow">#FFEB3B</color>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_content_inset_with_nav">72dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -1960,7 +1966,7 @@
     <string name="admin">Halaman Admin</string>
     <string name="admin_scan_hand">Scan Telapak Tangan</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
-    <string name="app_name">Presensi Telapak Tangan</string>
+    <string name="app_name">scanA</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="attendance_history">Riwayat Kehadiran</string>
     <string name="attendance_status">Status Kehadiran</string>
@@ -6366,6 +6372,23 @@
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
   </style>
+    <style name="Theme.HandScanAttendance" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="colorPrimaryDark">@color/gray</item>
+        <item name="colorAccent">@color/yellow</item>
+
+        
+        <item name="android:statusBarColor">@color/dark_blue</item>
+        <item name="android:navigationBarColor">@color/gray</item>
+
+        
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+
+        
+        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
+    </style>
     <style name="Theme.Material3.Dark" parent="Base.Theme.Material3.Dark"/>
     <style name="Theme.Material3.Dark.BottomSheetDialog" parent="Base.Theme.Material3.Dark.BottomSheetDialog"/>
     <style name="Theme.Material3.Dark.Dialog" parent="Base.Theme.Material3.Dark.Dialog"/>
