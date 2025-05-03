@@ -1,4 +1,4 @@
-#Fri May 02 21:52:30 WITA 2025
+#Sat May 03 14:05:00 WITA 2025
 path.4=14/classes.dex
 path.3=13/classes.dex
 path.2=10/classes.dex
@@ -9,7 +9,6 @@ path.8=6/classes.dex
 path.7=5/classes.dex
 path.6=4/classes.dex
 path.5=2/classes.dex
-renamed.11=classes12.dex
 renamed.10=classes11.dex
 path.0=classes.dex
 base.4=E\:\\KULIAH\\SEM 6\\PPL\\ScanA\\FE-ScanA\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
@@ -20,11 +19,10 @@ base.0=E\:\\KULIAH\\SEM 6\\PPL\\ScanA\\FE-ScanA\\app\\build\\intermediates\\dex\
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
-path.10=9/classes.dex
+path.10=classes2.dex
 renamed.0=classes.dex
-base.9=E\:\\KULIAH\\SEM 6\\PPL\\ScanA\\FE-ScanA\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
-path.9=8/classes.dex
-path.11=classes2.dex
+base.9=E\:\\KULIAH\\SEM 6\\PPL\\ScanA\\FE-ScanA\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+path.9=9/classes.dex
 renamed.7=classes8.dex
 base.8=E\:\\KULIAH\\SEM 6\\PPL\\ScanA\\FE-ScanA\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
 renamed.6=classes7.dex
@@ -33,5 +31,4 @@ renamed.5=classes6.dex
 base.6=E\:\\KULIAH\\SEM 6\\PPL\\ScanA\\FE-ScanA\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 renamed.4=classes5.dex
 base.5=E\:\\KULIAH\\SEM 6\\PPL\\ScanA\\FE-ScanA\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
-base.11=E\:\\KULIAH\\SEM 6\\PPL\\ScanA\\FE-ScanA\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.10=E\:\\KULIAH\\SEM 6\\PPL\\ScanA\\FE-ScanA\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.10=E\:\\KULIAH\\SEM 6\\PPL\\ScanA\\FE-ScanA\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex

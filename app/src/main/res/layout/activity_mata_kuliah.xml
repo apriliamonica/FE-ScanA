@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:background="#1A2345"
-    tools:context=".ui.admin.MataKuliahActivity">
+    tools:context="com.example.handscanattendance.ui.admin.MataKuliahActivity">
 
     <!-- Tombol Kembali -->
     <ImageButton
@@ -48,7 +48,8 @@
             android:id="@+id/spinner_tahun_akademik"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="Pilih Tahun Akademik"
             android:layout_marginEnd="16dp" />
 
         <TextView
@@ -62,7 +63,8 @@
             android:id="@+id/spinner_semester"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/white" />
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="Pilih Semester" />
     </LinearLayout>
 
     <!-- Pencarian dan Tombol Tambah -->
@@ -79,7 +81,7 @@
             android:layout_height="wrap_content"
             android:hint="Cari Mata Kuliah..."
             android:background="@android:color/white"
-            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:drawableStart="@android:drawable/ic_menu_search"
             android:padding="8dp"
             android:textColor="#000000"
             android:textColorHint="#888888"
@@ -138,6 +140,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:minHeight="200dp" />
 
 </LinearLayout>

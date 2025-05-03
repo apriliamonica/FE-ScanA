@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1A2345"
-    tools:context=".ui.admin.AdminHomeActivity">
+    tools:context="com.example.handscanattendance.ui.admin.AdminHomeActivity">
 
     <!-- Tombol Logout -->
     <ImageView

@@ -42,8 +42,8 @@ class AdminHomeActivity : AppCompatActivity() {
             requestPermissionLauncher.launch(REQUIRED_PERMISSION)
         }
 
-        val logoutButton: ImageButton = findViewById(R.id.logout_button)
         val scanButton: Button = findViewById(R.id.scan_button)
+        val logoutButton: ImageView = findViewById(R.id.logout_button)
         val courseButton: Button = findViewById(R.id.course_button)
 
         // Logic untuk logout

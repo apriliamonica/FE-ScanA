@@ -29,8 +29,7 @@ class MataKuliahActivity : AppCompatActivity() {
         val btnTambahMk: Button = findViewById(R.id.btn_tambah_mk)
 
         adapter = MataKuliahAdapter(daftarMk) { mk ->
-            // Intent ke MahasiswaPerMkActivity
-            val intent = Intent(this, MahasiswaPerMkActivity::class.java)
+            val intent = Intent(this, MahasiswaPerMKActivity::class.java)
             intent.putExtra("idMk", mk.idMk)
             intent.putExtra("namaMk", mk.namaMk)
             intent.putExtra("kelas", mk.kelas)
@@ -85,18 +84,32 @@ class MataKuliahActivity : AppCompatActivity() {
         spinnerSemester.adapter = adapterSpinner
 
         btnSimpan.setOnClickListener {
-            if (edtIdMk.text.isBlank() || edtNamaMk.text.isBlank() || edtKelas.text.isBlank() || edtTahunAkademik.text.isBlank()) {
+            val idMk = edtIdMk.text.toString()
+            val namaMk = edtNamaMk.text.toString()
+            val kelas = edtKelas.text.toString()
+            val semester = spinnerSemester.selectedItem.toString()
+            val tahunAkademik = edtTahunAkademik.text.toString()
+
+            // Validasi input
+            if (idMk.isBlank() || namaMk.isBlank() || kelas.isBlank() || tahunAkademik.isBlank()) {
                 Toast.makeText(this, "Semua kolom wajib diisi", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            val mk = MataKuliah(
-                idMk = edtIdMk.text.toString(),
-                namaMk = edtNamaMk.text.toString(),
-                kelas = edtKelas.text.toString(),
-                semester = spinnerSemester.selectedItem.toString(),
-                tahunAkademik = edtTahunAkademik.text.toString()
-            )
+            // Validasi format tahun akademik
+            val tahunRegex = Regex("\\d{4}/\\d{4}")
+            if (!tahunRegex.matches(tahunAkademik)) {
+                Toast.makeText(this, "Format Tahun Akademik harus ####/####", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            // Cek duplikat ID
+            if (daftarMk.any { it.idMk == idMk }) {
+                Toast.makeText(this, "ID Mata Kuliah sudah ada", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            val mk = MataKuliah(idMk, namaMk, kelas, semester, tahunAkademik)
 
             ApiClient.instance.tambahMataKuliah(mk).enqueue(object : Callback<MataKuliah> {
                 override fun onResponse(call: Call<MataKuliah>, response: Response<MataKuliah>) {
@@ -106,7 +119,7 @@ class MataKuliahActivity : AppCompatActivity() {
                         Toast.makeText(this@MataKuliahActivity, "Berhasil disimpan", Toast.LENGTH_SHORT).show()
                         dialog.dismiss()
                     } else {
-                        Toast.makeText(this@MataKuliahActivity, "Gagal simpan ke server", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@MataKuliahActivity, "Gagal simpan: ${response.message()}", Toast.LENGTH_SHORT).show()
                     }
                 }
 

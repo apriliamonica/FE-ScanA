@@ -18,14 +18,14 @@
         android:theme="@style/Theme.HandScanAttendance">
 
         <!-- Login Activity (TIDAK LAGI jadi launcher) -->
-        <activity android:name=".ui.auth.LoginActivity" android:exported="true" />
+        <activity android:name="com.example.handscanattendance.ui.auth.LoginActivity" android:exported="true" />
 
         <!-- Register Activity -->
         <activity android:name="com.example.handscanattendance.ui.auth.RegisterActivity" android:exported="true" />
 
         <!-- Admin Activities -->
         <!-- AdminHomeActivity SEKARANG jadi launcher -->
-        <activity android:name=".ui.admin.AdminHomeActivity" android:exported="true">
+        <activity android:name="com.example.handscanattendance.ui.admin.AdminHomeActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -35,9 +35,7 @@
         <!-- ScanActivity dengan orientasi portrait -->
         <activity android:name="com.example.handscanattendance.ui.admin.ScanActivity"
             android:exported="false" />
-        <activity android:name="com.example.handscanattendance.ui.admin.MataKuliahActivity" android:exported="false" />
-
-        <activity android:name=".ui.admin.MahasiswaPerMkActivity" />
+        <activity android:name="com.example.handscanattendance.ui.admin.MataKuliahActivity" android:exported="true" />
 
     </application>
 
