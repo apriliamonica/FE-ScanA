@@ -9,7 +9,7 @@ import com.example.handscanattendance.data.model.LoginCredentials
 import com.example.handscanattendance.data.model.LoginResponse
 import com.example.handscanattendance.network.RetrofitClient
 import com.example.handscanattendance.ui.admin.AdminHomeActivity
-import com.example.handscanattendance.ui.mahasiswa.MahasiswaHomeActivity
+//import com.example.handscanattendance.ui.mahasiswa.MahasiswaHomeActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -68,8 +68,8 @@ class LoginActivity : AppCompatActivity() {
                         // Navigasi berdasarkan role pengguna
                         if (role == "admin") {
                             startActivity(Intent(this@LoginActivity, AdminHomeActivity::class.java))
-                        } else if (role == "mahasiswa") {
-                            startActivity(Intent(this@LoginActivity, MahasiswaHomeActivity::class.java)) // Halaman mahasiswa
+//                        } else if (role == "mahasiswa") {
+//                            startActivity(Intent(this@LoginActivity, MahasiswaHomeActivity::class.java)) // Halaman mahasiswa
                         } else {
                             Toast.makeText(applicationContext, "Role tidak dikenali", Toast.LENGTH_SHORT).show()
                         }

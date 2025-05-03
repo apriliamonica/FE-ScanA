@@ -15,10 +15,9 @@
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_arrow_back"
-            android:contentDescription="Kembali"
-            android:tint="@android:color/white" />
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Kembali" />
 
         <!-- Judul -->
         <TextView
@@ -41,8 +40,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="space_between">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"

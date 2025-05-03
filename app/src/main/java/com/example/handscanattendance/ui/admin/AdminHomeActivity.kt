@@ -44,10 +44,7 @@ class AdminHomeActivity : AppCompatActivity() {
 
         val logoutButton: ImageButton = findViewById(R.id.logout_button)
         val scanButton: Button = findViewById(R.id.scan_button)
-        val scheduleButton: Button = findViewById(R.id.schedule_button)
-        val studentListButton: Button = findViewById(R.id.student_list_button)
         val courseButton: Button = findViewById(R.id.course_button)
-        val attendanceHistoryButton: Button = findViewById(R.id.attendance_history_button)
 
         // Logic untuk logout
         logoutButton.setOnClickListener {
@@ -62,20 +59,8 @@ class AdminHomeActivity : AppCompatActivity() {
             startActivity(Intent(this, ScanActivity::class.java))
         }
 
-        scheduleButton.setOnClickListener {
-            startActivity(Intent(this, JadwalActivity::class.java))
-        }
-
-        studentListButton.setOnClickListener {
-            startActivity(Intent(this, DaftarMahasiswaActivity::class.java))
-        }
-
         courseButton.setOnClickListener {
             startActivity(Intent(this, MataKuliahActivity::class.java))
-        }
-
-        attendanceHistoryButton.setOnClickListener {
-            startActivity(Intent(this, RiwayatKehadiranActivity::class.java))
         }
     }
 

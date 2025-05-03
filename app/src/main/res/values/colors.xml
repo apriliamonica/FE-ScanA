@@ -7,6 +7,7 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="gray">#262525</color>
+    <color name="light_gray">#D3D3D3</color>
 
     <!-- Required colors for theme -->
     <color name="colorPrimary">#6200EE</color> <!-- Ganti dengan warna yang kamu inginkan -->

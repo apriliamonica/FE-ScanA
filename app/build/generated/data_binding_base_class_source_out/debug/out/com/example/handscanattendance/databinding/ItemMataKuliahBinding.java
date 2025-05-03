@@ -4,7 +4,6 @@ package com.example.handscanattendance.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -21,29 +20,20 @@ public final class ItemMataKuliahBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final ImageButton btnDelete;
+  public final TextView tvIdMk;
 
   @NonNull
-  public final ImageButton btnEdit;
+  public final TextView tvKelas;
 
   @NonNull
-  public final TextView txtIdMk;
+  public final TextView tvNamaMk;
 
-  @NonNull
-  public final TextView txtNamaMk;
-
-  @NonNull
-  public final TextView txtSemester;
-
-  private ItemMataKuliahBinding(@NonNull LinearLayout rootView, @NonNull ImageButton btnDelete,
-      @NonNull ImageButton btnEdit, @NonNull TextView txtIdMk, @NonNull TextView txtNamaMk,
-      @NonNull TextView txtSemester) {
+  private ItemMataKuliahBinding(@NonNull LinearLayout rootView, @NonNull TextView tvIdMk,
+      @NonNull TextView tvKelas, @NonNull TextView tvNamaMk) {
     this.rootView = rootView;
-    this.btnDelete = btnDelete;
-    this.btnEdit = btnEdit;
-    this.txtIdMk = txtIdMk;
-    this.txtNamaMk = txtNamaMk;
-    this.txtSemester = txtSemester;
+    this.tvIdMk = tvIdMk;
+    this.tvKelas = tvKelas;
+    this.tvNamaMk = tvNamaMk;
   }
 
   @Override
@@ -73,38 +63,25 @@ public final class ItemMataKuliahBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnDelete;
-      ImageButton btnDelete = ViewBindings.findChildViewById(rootView, id);
-      if (btnDelete == null) {
+      id = R.id.tvIdMk;
+      TextView tvIdMk = ViewBindings.findChildViewById(rootView, id);
+      if (tvIdMk == null) {
         break missingId;
       }
 
-      id = R.id.btn_edit;
-      ImageButton btnEdit = ViewBindings.findChildViewById(rootView, id);
-      if (btnEdit == null) {
+      id = R.id.tvKelas;
+      TextView tvKelas = ViewBindings.findChildViewById(rootView, id);
+      if (tvKelas == null) {
         break missingId;
       }
 
-      id = R.id.txt_id_mk;
-      TextView txtIdMk = ViewBindings.findChildViewById(rootView, id);
-      if (txtIdMk == null) {
+      id = R.id.tvNamaMk;
+      TextView tvNamaMk = ViewBindings.findChildViewById(rootView, id);
+      if (tvNamaMk == null) {
         break missingId;
       }
 
-      id = R.id.txt_nama_mk;
-      TextView txtNamaMk = ViewBindings.findChildViewById(rootView, id);
-      if (txtNamaMk == null) {
-        break missingId;
-      }
-
-      id = R.id.txt_semester;
-      TextView txtSemester = ViewBindings.findChildViewById(rootView, id);
-      if (txtSemester == null) {
-        break missingId;
-      }
-
-      return new ItemMataKuliahBinding((LinearLayout) rootView, btnDelete, btnEdit, txtIdMk,
-          txtNamaMk, txtSemester);
+      return new ItemMataKuliahBinding((LinearLayout) rootView, tvIdMk, tvKelas, tvNamaMk);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

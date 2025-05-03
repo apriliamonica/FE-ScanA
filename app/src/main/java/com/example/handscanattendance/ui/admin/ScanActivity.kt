@@ -106,7 +106,7 @@ class ScanActivity : AppCompatActivity() {
     }
 
     private fun ambilFoto() {
-        val imageCapture = imageCapture ?: return
+        val imageCapture = imageCapture
 
         // Buat file untuk hasil foto
         val photoFile = File(

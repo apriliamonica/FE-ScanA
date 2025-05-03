@@ -24,9 +24,8 @@
         <activity android:name="com.example.handscanattendance.ui.auth.RegisterActivity" android:exported="true" />
 
         <!-- Admin Activities -->
-
         <!-- AdminHomeActivity SEKARANG jadi launcher -->
-        <activity android:name="com.example.handscanattendance.ui.admin.AdminHomeActivity" android:exported="true">
+        <activity android:name=".ui.admin.AdminHomeActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -37,6 +36,8 @@
         <activity android:name="com.example.handscanattendance.ui.admin.ScanActivity"
             android:exported="false" />
         <activity android:name="com.example.handscanattendance.ui.admin.MataKuliahActivity" android:exported="false" />
+
+        <activity android:name=".ui.admin.MahasiswaPerMkActivity" />
 
     </application>
 

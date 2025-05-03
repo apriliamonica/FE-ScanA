@@ -6,10 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -26,7 +26,7 @@ public final class ActivityHomeAdminBinding implements ViewBinding {
   public final TextView appName;
 
   @NonNull
-  public final Button attendanceHistoryButton;
+  public final CardView bottomContainer;
 
   @NonNull
   public final Button courseButton;
@@ -38,32 +38,18 @@ public final class ActivityHomeAdminBinding implements ViewBinding {
   public final ImageView logoutButton;
 
   @NonNull
-  public final LinearLayout menuGrid;
-
-  @NonNull
   public final Button scanButton;
 
-  @NonNull
-  public final Button scheduleButton;
-
-  @NonNull
-  public final Button studentListButton;
-
   private ActivityHomeAdminBinding(@NonNull ConstraintLayout rootView, @NonNull TextView appName,
-      @NonNull Button attendanceHistoryButton, @NonNull Button courseButton,
-      @NonNull ImageView logo, @NonNull ImageView logoutButton, @NonNull LinearLayout menuGrid,
-      @NonNull Button scanButton, @NonNull Button scheduleButton,
-      @NonNull Button studentListButton) {
+      @NonNull CardView bottomContainer, @NonNull Button courseButton, @NonNull ImageView logo,
+      @NonNull ImageView logoutButton, @NonNull Button scanButton) {
     this.rootView = rootView;
     this.appName = appName;
-    this.attendanceHistoryButton = attendanceHistoryButton;
+    this.bottomContainer = bottomContainer;
     this.courseButton = courseButton;
     this.logo = logo;
     this.logoutButton = logoutButton;
-    this.menuGrid = menuGrid;
     this.scanButton = scanButton;
-    this.scheduleButton = scheduleButton;
-    this.studentListButton = studentListButton;
   }
 
   @Override
@@ -99,9 +85,9 @@ public final class ActivityHomeAdminBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.attendance_history_button;
-      Button attendanceHistoryButton = ViewBindings.findChildViewById(rootView, id);
-      if (attendanceHistoryButton == null) {
+      id = R.id.bottom_container;
+      CardView bottomContainer = ViewBindings.findChildViewById(rootView, id);
+      if (bottomContainer == null) {
         break missingId;
       }
 
@@ -123,33 +109,14 @@ public final class ActivityHomeAdminBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.menu_grid;
-      LinearLayout menuGrid = ViewBindings.findChildViewById(rootView, id);
-      if (menuGrid == null) {
-        break missingId;
-      }
-
       id = R.id.scan_button;
       Button scanButton = ViewBindings.findChildViewById(rootView, id);
       if (scanButton == null) {
         break missingId;
       }
 
-      id = R.id.schedule_button;
-      Button scheduleButton = ViewBindings.findChildViewById(rootView, id);
-      if (scheduleButton == null) {
-        break missingId;
-      }
-
-      id = R.id.student_list_button;
-      Button studentListButton = ViewBindings.findChildViewById(rootView, id);
-      if (studentListButton == null) {
-        break missingId;
-      }
-
-      return new ActivityHomeAdminBinding((ConstraintLayout) rootView, appName,
-          attendanceHistoryButton, courseButton, logo, logoutButton, menuGrid, scanButton,
-          scheduleButton, studentListButton);
+      return new ActivityHomeAdminBinding((ConstraintLayout) rootView, appName, bottomContainer,
+          courseButton, logo, logoutButton, scanButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
